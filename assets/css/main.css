@@ -3785,10 +3785,10 @@ input, select, textarea {
 		-webkit-transition: -webkit-transform 0.35s ease, opacity 0.35s ease, visibility 0.35s;
 		-ms-transition: -ms-transform 0.35s ease, opacity 0.35s ease, visibility 0.35s;
 		transition: transform 0.35s ease, opacity 0.35s ease, visibility 0.35s;
-		-moz-align-items: center;
-		-webkit-align-items: center;
-		-ms-align-items: center;
-		align-items: center;
+		-moz-align-items: flex-start;
+		-webkit-align-items: flex-start;
+		-ms-align-items: flex-start;
+		align-items: flex-start;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
