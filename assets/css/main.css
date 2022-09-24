@@ -3207,7 +3207,6 @@ input, select, textarea {
 						position: absolute;
 						right: 1.5em;
 						top: 0;
-						vertical-align: middle;
 						width: 24px;
 					}
 
@@ -3828,7 +3827,7 @@ input, select, textarea {
 			overflow: auto;
 			text-align: center;
 			visibility: hidden;
-			width: 18em;
+			width: 30em;
 		}
 
 			#menu .inner > :first-child {
