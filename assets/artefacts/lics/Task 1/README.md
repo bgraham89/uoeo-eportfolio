@@ -13,6 +13,8 @@ The rubrik was as follows:
 | Test Plan | 20% | 10% | + "The student has normally talked about that the test is required" <br> - "There is a lack of evidence of appropriate test plan itself" <br> - "There is no real plan" <br> - "There is no clear evidence of the identified checkpoints that the student would like to test and there is no outline of a test plan" <br> - "There is no evidence of actual and expected test results." |
 | Academic Intregrity | 10% | 7% | + "It is evident that you have used different sources throughout your report, which shows that the student has clear knowledge and understanding of the citation and references" |
 
+In total, my score was 75%.
+
 ## Reflection
 
 Overall, I'm happy with the score, but I found some of the feedback to be more confusing than explicitly helpful.
