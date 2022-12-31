@@ -59,4 +59,4 @@ I recognise the 'Test Plan' section to be the biggest area I could have improved
 
 ### <ins>Academic Integrity</ins>
 
-Once again, I would like to know how the feedback correlates to the mark, as I was given no indicator of how to improve, but I wasn't awarded full marks. I should find out if it's even possible to get full marks, so I am able to channel my effort.
+Once again, I would like to know how the feedback correlates to the mark, as I was given no indicator of how to improve, but I wasn't awarded full marks. I should find out if it's even possible to get full marks.
