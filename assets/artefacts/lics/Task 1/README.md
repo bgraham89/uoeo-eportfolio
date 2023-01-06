@@ -21,7 +21,7 @@ Overall, I'm happy with the score, I enjoyed the task but I found some of the fe
 
 This task gave me the oppurtunity to begin to explore digital assistant technology, and consider how a knowledge base might be organised, and uncover some of the layers behind the technology.
 
-Below I've reflected upon the feedback I recieved for this assignment.
+Below I've reflected upon the feedback that I received for this assignment.
 
 ### <ins>1. Outline of Application</ins>
 
@@ -53,16 +53,16 @@ Overall, I definitely found the 'Outline of Application' section quite confusing
 
 All of my feedback was good, so that's nice. I've been given no information on how to improve the 'Designing Data Structures and Algorithms', so I wonder how to improve here. I wonder why I received 52/60 despite only receiving positive feedback. There was no model answer, or comments to build upon, so I have nothing to go by. That's abit confusing. I wasn't completely disappointed by my score in this section, but the grading appears arbitrary.
 
-On a side note, I would never use [Flode](https://docs.codio.com/instructors/setupcourses/resources/resourcetools/flode.html) again. It was quite limited. I also didn't find creating flow charts of algorithms very helpful. 
+On a side note, I would never use [Flode](https://docs.codio.com/instructors/setupcourses/resources/resourcetools/flode.html) again. It was quite limited. I also didn't find creating flow charts of algorithms very helpful.
 
 Pseudocode is much easier to work with, and is the standard used in [MIT's 6.006 Introduction to Algorithms](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/) course, and [Cormen et al.'s  Introduction to Algorithms](http://mitpress.mit.edu/9780262046305/introduction-to-algorithms/) textbook, which I believe are trustworthy. Judging by the single lecture provided by UoEO on data structures, and supplementary course material, compared to the quality of materials provided for free by MIT; I can't put my trust in UoEO over MIT.
 
 ### <ins>3. Test Plan</ins>
 
-I recognise the 'Test Plan' section to be the biggest area I could have improved on, simply because it wasn't structured as instructions. I mentioned key parts of testing, without forming an actual plan. If there had been a model answer, it would have been clearer what sort of structure the university was looking for. 
+I recognise the 'Test Plan' section to be the biggest area I could have improved on, simply because it wasn't structured as instructions. I mentioned key parts of testing, without forming an actual plan. If there had been a model answer, it would have been clearer what sort of structure the university was looking for.
 
 I think it's worth mentioning too that none of the course material was about creating test plans (or outlining application functions, purposes and execution plans) at this point in the course. I'm not convinced that leaving out fundamental material to our assignments is ethical when there are marks for specifically demonstrating an understanding of the materials. If the assignment is a test of research, then surely the content of the course should include material on research skills, to be tested? It didn't. And the mark scheme already allocates 10% of marks to 'Academic Integrity', a clear indicator of research. The current system avoids scaffolding altogether, which is suprising for an educational establishment. I definately expected some reference by the university to the material that we would be assessed on.
 
 ### <ins>4. Academic Integrity</ins>
 
-I received all positiive feedback for this section, but I would like to know how the feedback correlates to the mark, as I was given no indicator of how to improve, but I wasn't awarded full marks. I should find out if it's even possible to get full marks, because this blanket of mystery isn't helpful to students looking to improve.
+I received all positive feedback for this section, but I would like to know how the feedback correlates to the mark, as I was given no indicator of how to improve, but I wasn't awarded full marks. I should find out if it's even possible to get full marks, because this blanket of mystery isn't helpful to students looking to improve.

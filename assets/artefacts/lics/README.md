@@ -20,10 +20,10 @@ My submissions:
 | Task 1 | 75% | **App**: Food Inventory Assistant <br> **Data structure(s)**: hashmap, linked list & dynamic array <br> **UI**: voice-based <br> **Testing strategy**: unit, integration, peformance & black box testing  |
 | Task 2 | 77% | **Language**: Python <br> **Paradigm**: Object Oriented <br> **Details**: Seperate objects encapsulated entities such as the data structures, the non-relational database, the command-line interface, the sorting algorithms, the quality assertions, and the test data generator.
 | Task 3 | 93% | **Language**: SQL |
-| Task 4 | 52% | **Company**: Department for Education <br> **Recomendation**: Digital Assitants|
+| Task 4 | 52% | **Company**: Department for Education <br> **Recomendation**: Digital Assistants|
 
 Overall Grade: 69.8%
 
 ## Reflections
 
-Feedback and reflections for task 4 are coming soon...
+Reflections for task 4 are coming soon...
