@@ -26,4 +26,8 @@ Overall Grade: 69.8%
 
 ## Reflections
 
-Reflections for task 4 are coming soon...
+Overall, I'm content with the scores that I received, and I enjoyed the assignments, but I found the feedback to be terrible. While the purpose of scoring is to gatekeep qualifications, feedback is to provide students the oppurtunity to learn. The feedback we received completely missed that function. It was largely nonconstructive, and often dismissive and arbitrary. We were provided rubriks for each assignment, which would be helpful had it been used to organise feedback, but it wasn't. What we actually got was not critical at all.
+
+Generally, the quality of guidance, instruction and assistance for this first module has been very low, and that has made it even more difficult to produce the flawless work expected of postgraduate students. It's left me disappointed, and I wonder now if I took the feedback too seriously. At the end of the day, the qualification for completing the course is what employers will care about.
+
+I've actually enjoyed writing this reflection though as it's helped me think over things. A personal goal for me during the next module is to focus less on what I perceive as incompetence, and more upon the unassessed benefits of the course, such as the things I learn while completing assignments. I'm not expecting any changes in guidance, instruction, assistance and feedback quality in future modules, but I don't think it's worth dwelling on. I definately learnt things about digital assistants and academia from this first module.
