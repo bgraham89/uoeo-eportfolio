@@ -3948,3 +3948,8 @@ input, select, textarea {
 			opacity: 1;
 			visibility: visible;
 		}
+	pre code {
+		display: block;
+		margin-left: -45em;
+		overflow: hidden;
+	}
