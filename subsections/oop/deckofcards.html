@@ -49,12 +49,13 @@
 								<pre><code>
 									class Card(object):
 									  	def __init__(self, suit, value):
-											self.__SUITS = ("♠","♡","♢","♣")
-
+											self.__SUITS = (
+												"♠","♡","♢","♣"
+											)
 											self.__VALUES = (
 												"2","3","4","5","6","7","8",
-												"9","10","J","Q","K","A")
-
+												"9","10","J","Q","K","A"
+											)
 											self.suit = self.__SUITS[suit]
 											self.value = self.__VALUES[value]
 								</code></pre>
@@ -84,13 +85,14 @@
 											super.__init__(self, suit, value)  
 											self.__PRIMES = (
 												2, 3, 5, 7, 11, 13, 17,
-												19, 23, 29, 31, 37, 41)
+												19, 23, 29, 31, 37, 41
 											)
 											self.__integer = (
 												self.__PRIMES[value]
 												+ (value << 8)
 												+ ((2 ** suit) << 12)
-												+ ((2 ** value) << 16))
+												+ ((2 ** value) << 16)
+											)
 										
 										def __int__(self):
 											return self.__integer
@@ -103,8 +105,50 @@
 									Instances of the <code>IntegerCard</code> can be passed
 									as an argument to the <code>int()</code> function to obtain an integer 
 									encoding of the card. The algorithm used to encode the integer makes use of
-									a bitmask, from which features may be extracted.
+									a bitmask designed to speed up card comparisons.
 								</p>
+								<h2><u>PokerHand Class</u></h2>
+								<pre><code>
+									from random import randint
+
+									class PokerHand(list):
+									  	def __init__(self):
+											super.__init__(self, amount_cards)  
+											self._CreateCards(amount_cards)
+										
+										def _CreateCards(self, amount_cards=5):
+											while True:
+												cards = [IntegerCard(randint(0,3), randint(0,12)) for _ in range(amount_cards)]
+												if len(set(cards)) == amount_cards:
+													self.extend(cards)
+													break
+										
+										def HasFlush(self):
+											return sum([int(c) for c in self]) && (15 << 12) > 0
+										
+										def HasPair(self):
+											return bin(sum([int(c) for c in self]) && (4096 << 16)).count("1") < len(self)
+
+
+								</code></pre>
+								<p>
+									The (incomplete) <code>PokerHand</code>class encapsulates the abstraction details of a physical poker hand.
+									<b>Encapsulation</b> is the provision of a clear boundary to something. The objects of
+									OOP naturally encapsulate all of it's attributes and methods. A good name for a class clarifies
+									it's purpose, for example it's clear that the <code>PokerHand</code> class represents a 
+									physical poker hand. Classes don't need to mimic physical objects either, it's also common
+									to name classes after design patterns.
+								</p>
+								<p>
+									The last thing to point out is that, when a class inherits from another class, it's also good practise
+									to maintain the super classes interface, or public method names and functionality. 
+									This idea is known as <b>polymorphism</b> and generally improves the coordination of abstractions.
+								</p>
+								<p>
+									If you would like to learn more about implementing a game of five card draw poker using OOP, check out
+									my old <a href="https://github.com/bgraham89/fivecarddraw" target="_blank"><b>home project</b></a>. 
+								</p>
+
 							</div>
 						</section>
 					</div>
