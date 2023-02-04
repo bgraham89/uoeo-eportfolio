@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Web Architecture - BGraham89 UoEO ePortfolio</title>
+		<title>Code Showcase - BGraham89 UoEO ePortfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../../assets/css/main.css" />
@@ -41,12 +41,12 @@
 						<section id="one">
 							<div class="inner">
 								<header class="major">
-									<h1>A Deck of Cards</h1>
+									<h1>Deck of Cards</h1>
 								</header>
 								<!-- <span class="image main"><img src="#" alt="" /></span> -->
-								<p>This is a implementation of a deck of cards using the OOP paradigm. The purpose of this implementation is to showcase
+								<p>This is an implementation of a deck of cards using the OOP paradigm. The purpose of this implementation is to showcase
 									some of the features of object-oriented programming that make it great. The other purpose is to provide
-									a reference of my familiarity with OOP and Python, from the beginning of this module.
+									a snapshot of my familiarity with OOP and Python at the beginning of this module. 
 								</p>
 								<h2><u>Card Class</u></h2>
 								<pre><code>
@@ -64,8 +64,8 @@
 								</code></pre>
 								<p>
 									The<code>Card</code>class above has two private attributes and two public attributes. 
-									<b>Private attributes</b> are class attributes not intended for access from an instance.
-									<b>Public attributes</b> are class attributes that are intended to be accessed from an instance.
+									<b>Private attributes</b> are attributes not intended for access from outside an instance.
+									<b>Public attributes</b> are attributes that are free to be accessed from ouside an instance.
 								</p>
 								<h2><u>Deck Class</u></h2>
 								<pre><code>
@@ -77,9 +77,9 @@
 								<p>
 									The<code>Deck</code>class above inherits from the list class. 
 									<b>Inheritence</b> is a feature of OOP, which allows the adoption of attributes and
-									methods from one class by another. By inheriting from the list class, instances
-									of the <code>Deck</code> class may be passed as an argument to <code>len()</code>
-									or followed by the <code>.sort()</code> method for example.
+									methods from one class to another. By inheriting from the list class, instances
+									of the <code>Deck</code> class may be passed as an argument to the <code>len()</code> function, 
+									or followed by the <code>.sort()</code> list method; for example.
 								</p>
 								<h2><u>IntegerCard Class</u></h2>
 								<pre><code>
@@ -101,14 +101,14 @@
 											return self.__integer
 								</code></pre>
 								<p>
-									The<code>IntegerCard</code>class inherits from the <code>Card</code> class
+									The<code>IntegerCard</code>class above inherits from the <code>Card</code> class
 									and further abstracts the features of a physical card.
-									<b>Abstraction</b> is the manipulation of the details of a concept into a
-									more general concept, and is a general technique of OOP.
+									<b>Abstraction</b> is the manipulation of the details of a concept to arrive at 
+									a more general concept, and is a general technique of OOP.
 									Instances of the <code>IntegerCard</code> can be passed
-									as an argument to the <code>int()</code> function to obtain an integer 
-									encoding of the card. The algorithm used to encode the integer makes use of
-									a bitmask designed to speed up card comparisons.
+									as an argument to the <code>int()</code> function to obtain an integer that 
+									encodes the details of the card. The algorithm used to encode the details makes use of
+									a bitmask that was designed specifically to speed up card comparisons when ranking poker hands.
 								</p>
 								<h2><u>PokerHand Class</u></h2>
 								<pre><code>
@@ -135,23 +135,23 @@
 
 								</code></pre>
 								<p>
-									The (incomplete) <code>PokerHand</code>class encapsulates the abstraction details of a physical poker hand.
+									The<code>PokerHand</code>class above encapsulates details connected to a physical poker hand, although it is not yet complete.
 									<b>Encapsulation</b> is the provision of a clear boundary to something. The objects of
-									OOP naturally encapsulate all of it's attributes and methods. A good name for a class clarifies
+									OOP naturally encapsulate information in the form of attributes and methods. A good name for a class clarifies
 									it's purpose, for example it's clear that the <code>PokerHand</code> class represents a 
-									physical poker hand. Classes don't need to mimic physical objects either, it's also common
-									to name classes after design patterns.
+									physical poker hand. That doesn't mean classes need to mimic physical objects though. It's also common
+									to name classes after <b>design patterns</b>, which are abstractions of structure that is unique to OOP.
 								</p>
 								<p>
-									The last thing to point out is that, when a class inherits from another class, it's also good practise
-									to maintain the super classes interface, or public method names and functionality. 
-									This idea is known as <b>polymorphism</b> and generally improves the coordination of abstractions.
+									The last thing to point I'd like to point out is, when a class inherits from another class, it's also 
+									good practise to maintain the super classes interface, by using the same public method names. This  
+									idea is known as <b>polymorphism</b> and generally improves the compatibility and coordination of objects.
 								</p>
 								<p>
 									If you would like to learn more about implementing a game of five card draw poker using OOP, check out
-									my old <a href="https://github.com/bgraham89/fivecarddraw" target="_blank"><b>home project</b></a>. 
+									my old <a href="https://github.com/bgraham89/fivecarddraw" target="_blank"><b>home project</b></a>. If 
+									you would like to learn more about OOP, then checkout the other module artefacts. 
 								</p>
-
 							</div>
 						</section>
 					</div>
