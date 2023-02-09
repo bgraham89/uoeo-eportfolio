@@ -112,6 +112,7 @@
 								</p>
 								<h2><u>PokerHand Class</u></h2>
 								<pre><code>
+									from functools import reduce
 									from random import randint
 
 									class PokerHand(list):
@@ -127,10 +128,10 @@
 													break
 										
 										def HasFlush(self):
-											return sum([int(c) for c in self]) && (15 << 12) > 0
+											return reduce(lambda x, y: int(x) & int(y), self) & (15 << 12) > 0
 										
 										def HasPair(self):
-											return bin(sum([int(c) for c in self]) && (4096 << 16)).count("1") < len(self)
+											return bin(reduce(lambda x, y: int(x) & int(y), self) & (4096 << 16)).count("1") < len(self)
 
 
 								</code></pre>
