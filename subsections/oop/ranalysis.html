@@ -45,6 +45,7 @@
 								</header>
 								<!-- <span class="image main"><img src="#" alt="" /></span> -->
 								<p>Miscellaneous notes related to requirements analysis, drawing on course material and further reading:</p>
+								<h2></h2>
 								<h2><u>Use Case Diagrams</u></h2>
 								<ul>
 									<li>A use case is a functional requirement that an information system is expected to meet.</li>
@@ -52,7 +53,7 @@
 									<li>Relationships may exist between use cases such as generalizations, inclusions and extensions.</li>
 									<li>Relationships among cases and actors can be modelled using a use case diagram.</li>
 								</ul>
-								<h2>Example</h2>
+								<h3>Example</h3>
 								<p style="
 										text-align: center;
 										">
@@ -68,6 +69,77 @@
 										padding: 20px;
 										max-width: 90vw;
 								"/>
+								<h3>Review</h3>
+								<p>
+									I don't believe that use case diagrams have much value, despite their
+									acceptance into UML for the following reasons:
+								</p>
+								<ul>
+									<li>
+										The informality of them makes them redundant to technical modelling.
+									</li>
+									<li>
+										The structure that they are confined to restricts their potential as an infographic.
+									</li>
+									<li>
+										I could have chosen multiple different viable sets of imperative phrases 
+										that accurately label expected responses, and resulted in different versions
+										of the diagram above. So consistency is ignored. 
+										That being said, an ensemble attempt of building a use case
+										diagram might resolve any interpersonal ambiguities. The construction 
+										process may more important than the result.
+									</li>
+									<li>
+										An actor may be involved in many use cases, resulting in either visual clutter,
+										or the absence of lines where there should be.
+									</li>
+									<li>
+										The extension-relationship between use cases is a baroque way to say
+										"sometimes do this", and doesn't provide rigor to the model beyond that
+										of a checklist. Other diagrams capture this information more succintly.
+									</li> 
+									<li>
+										Relationships between actors and use cases are ambigious. For example;
+										the relationship between a 'passenger' and a 'establish route' use case, 
+										in the example above, is two fold. The passenger may choose to drive themself,
+										and establish a route with the aid of a satnav built into the car,
+										or the passenger may request the car to establish a route to drive itself.
+										The diagram lacks the notion of interfaces, which is essential to modelling
+										the requirements of a system relative to actors.
+									</li>
+									<li>
+										Details of the relationships between use cases are more accessible when using
+										other types of diagram which offer more detail. Details of the relationships between actors and use cases
+										are not included in use case diagrams, making a use case diagram little more use 
+										than a list of actors and their expectations. Perhaps that is the point. But then 
+										why doesn't a checklist suffice?
+									</li>
+									<li>
+										The diagrams are too rigid for developmental value. 
+										Use cases and systems are treated different
+										conceptually. The relationships beween actors and use cases are 
+										fundamentally different to the relationships between use cases too. 
+										Being able to incorporate the flexbility
+										of circuit diagrams into use case digrams is something I'd like to explore.
+										This would enable models to be built as combinations of use case diagrams,
+										using actors/interfaces as anchors. It would
+										also give a means to provide more detail about use cases, using sub diagrams.
+										Overall, I believe this would adhere to more iterative software development lifecycles.
+									</li>
+								</ul>
+
+								<br>
+								<h2><u>Jackson Diagrams</u></h2>
+								<p>
+									In my opinion, diagrams such as Jackson diagrams offer greater clarity of the relationships
+									between actions, because they incorporate granularity,
+									which is a consequence of the imposed ordinality. The additional detail that Jackson diagrams provide 
+									is simple to grasp, but allows more rigorous verfication of the requirements model. 
+									I would also like to point out that information about actors could feasibly 
+									be included through the use of tags. This idea is something
+									I would like to explore further. I wonder whether the relationships between actors
+									could be read from augmented Jackson diagrams too.
+								</p>	
 								<br>
 								<h2><u>Pen Portraits</u></h2>
 								<ul>
@@ -75,7 +147,7 @@
 									<li>Groups of users are clustered together when shared descriptions have predictive value.</li>
 									<li>A pen portrait is an informal description of a person or group of people.</li>
 								</ul>
-								<h2>Example</h2>
+								<h3>Example</h3>
 								<p style="
 										text-align: center;
 										">
