@@ -104,11 +104,11 @@
 									The<code>IntegerCard</code>class above inherits from the <code>Card</code> class
 									and further abstracts the features of a physical card.
 									<b>Abstraction</b> is the manipulation of the details of a concept to arrive at 
-									a more general concept, and is a general technique of OOP.
-									Instances of the <code>IntegerCard</code> can be passed
-									as an argument to the <code>int()</code> function to obtain an integer that 
-									encodes the details of the card. The algorithm used to encode the details makes use of
-									a bitmask that was designed specifically to speed up card comparisons when ranking poker hands.
+									a more general concept, and is a general technique of OOP. Sometimes it's useful to
+									design abstract classes to provide an interface for other classes to implement.
+									In the above example, the <code>IntegerCard</code> is not an abstract class though.
+									It's an abstraction in the sense that it's structure was designed primarily to 
+									allow the implementation of a quick algorithm.
 								</p>
 								<h2><u>PokerHand Class</u></h2>
 								<pre><code>
@@ -145,8 +145,10 @@
 								</p>
 								<p>
 									The last thing I'd like to point out is, when a class inherits from another class, it's also 
-									good practise to maintain the super classes interface, by using the same public method names. This  
+									good practise to maintain the super classes interface, by using the same public method names. This
 									idea is known as <b>polymorphism</b> and generally improves the compatibility and coordination of objects.
+									Sometimes it might be worth overidding methods with a new procedure, or overloading the method with additional
+									functionality for a different sets of paramaters. Either is accpetable in OOP.
 								</p>
 								<p>
 									If you would like to learn more about implementing a game of five card draw poker using OOP, check out
