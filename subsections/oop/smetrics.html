@@ -48,17 +48,47 @@
 						<h1>Software Metrics</h1>
 					</header>
 					<!-- <span class="image main"><img src="#" alt="" /></span> -->
-					<h2><u>Reusability</u></h2>
-					<p>
-						Reusability is desirable trait in many business models. The extent that software
-						and related assets can be reusable is matter of ongoing research. The drive for
-						reusability is emphasized in component-based software engineering, but it's also
-						taken for granted in most programming paradigms, that make use of reuasble assets.
-						Metrics for specifically measuring the reusability of software is something that
-						I'm interested in.
-					</p>
-					<h3>Useful Links</h3>
+					<p>Miscellaneous notes related to software metrics, drawing on course material and further
+						reading:</p>
+					<h2><u>Polymorphism</u></h2>
 					<ul>
+						<li>
+							Polymorphism helps make code reusable.  
+						</li>
+						<li>
+							The goal of retroactively auto-type checking programmes written in some dynamic languages 
+							is difficult due to polymorphism.
+						</li>
+						<li>
+							<b>Åkerblom, B & Wrigstad, T. (2015)
+							'Measuring polymorphism in python programs'.
+							<i>Proceedings of the 11th Symposium on Dynamic Languages (DLS 2015)</i>. 
+							Pittsburgh, USA, 2015. New York: Association for Computing Machinery. 114–128.
+							<a href="https://doi.org/10.1145/2816707.2816717">DOI.</a></b> - Åkerblom &  Wrigstad 
+							measure polymorphism by observing and counting types that methods are called from
+							during a programme. They classify polymorphic methods by how many different types the
+							methods are called from, and whether those types share a common superclass with the
+							method defined. Åkerblom & Wrigstad then consider clusters of methods that share 
+							the same caller, and classify the clusters as to whether the different callers share 
+							a common superclass that has all the clustered methods defined. They classify those
+							clusters by whether all callers share a subclass too.
+						</li>
+					<ul>
+					<br>
+					<h2><u>Reusability</u></h2>
+					<ul>
+						<li>
+							Reusability is desirable trait in many business models.
+						</li>
+						<li>
+							The extent that software and related assets can be reusable is matter of ongoing research.
+						</li>
+						<li>
+							Reusability is embraced in component-based software engineering.
+						</li>
+						<li>
+							Reusability is embraced in most programming paradigms, that feature reusable entities.
+						</li>
 						<li>
 							<b>Padhy, N., Satapathy, S. & Singh, R. (2017)
 								'State-of-the-Art Object-Oriented Metrics and It's Reusability: A Decade Review'.
@@ -72,18 +102,15 @@
 					</ul>
 					<h3>Discussion</h3>
 					<p>
-						As part of a collaborative activity with my peers, we discussed <b>'which of the 11 assets
+						As a collaborative activity with my peers, we discussed <b>'which of the 11 assets
 							identified by Padhy et al (2017), should be prioritised to maximise the reusablility of
 							software?'</b>. Each of us made an initial post to answer that question, and then we
 						responded
-						to those with our own development questions.
+						to those with our own development questions. The full discussion can be found 
+						<a href="../../assets/artefacts/oop/Reusability/Discussion.pdf"
+							target="_blank"><b>here</b></a>. The following is summary post of my contributions to the discussion:
 					</p>
-					<p>
-						The full discussion can be found <a href="../../assets/artefacts/oop/Reusability/Discussion.pdf"
-							target="_blank"><b>here</b></a>.
-						The following is summary of my contributions to the discussion:
-					</p>
-					<p>
+					<quote>
 						"In my initial post, I created a priority list for the 11 reusability properties of
 						object-oriented software given by Padhy et al., (2018), prioritised by how they
 						affect the reusability of software. I considered three different ways that software
@@ -94,8 +121,8 @@
 						the reusability of software, because there are more software users than software
 						developers, and developers are more likely to recycle code of applications that
 						are frequently reused.
-					</p>
-					<p>
+					</quote>
+					<quote>
 						I learnt from others, many different interpretations of how to prioritise
 						properties to increase the reusability of software. I had already suspected
 						that a priority list was doomed to what the language philosopher Wittgenstein (1953)
@@ -105,25 +132,15 @@
 						initial posts of others, I learnt that many people believe that prioritisation
 						should take into account project specifications, and not everybody agreed that
 						all properties contributed to the reusability of software in a significant way.
-					</p>
-					<p>
+					</quote>
+					<quote>
 						During discussions I asked the following questions:
-					</p>
-					<ul>
-						<li>
-							Is it possible to of make each type of asset reusable across projects?
-						</li>
-						<li>
-							What specific steps can be taken to make different assets more reusable?
-						</li>
-						<li>
-							Which types of assets are easiest / most difficult to document?
-						</li>
-						<li>
-							Is it important to document the lesson's learnt from a project?
-						</li>
-					</ul>
-					<p>
+						<b>Is it possible to of make each type of asset reusable across projects?</b>,
+						<b>What specific steps can be taken to make different assets more reusable?</b>,
+						<b>Which types of assets are easiest / most difficult to document?</b>, and
+						<b>Is it important to document the lesson's learnt from a project?</b>
+					</quote>
+					<quote>
 						I asked questions because I wanted to gain some practical tips, and
 						challenge my own and others perspectives, to learn. I learned that some project
 						specifications may promote a position of disregard to the reusability of
@@ -131,8 +148,8 @@
 						I learned that documentation of experiences gained during a project may have
 						some educational value, and I learned that formal documentation is a process that
 						exists as part of DevOps for some businesses.
-					</p>
-					<p>
+					</quote>
+					<quote>
 						In my own discussion thread, I asked "<b>How is the reusability of software a useful
 							metric?</b>".
 						This question ended up being reflected back at me, but that allowed me to reflect on my own
@@ -150,12 +167,12 @@
 						attempted to provide an alternative metric to evaluate software, to avoid some of the
 						problems associated with a single focus on reusability, but my attempt was awfully vague,
 						and could do with more thought.
-					</p>
-					<p>
+					</quote>
+					<quote>
 						Overall, I appreciate the effort that went into discussions. Reusability is no doubt,
 						an important metric in many projects, and I managed to take away some things about
-						it from the discussion activity. I also enjoyed thinking about it myself.
-					</p>
+						it from the discussion activity. I also enjoyed thinking about it myself."
+					</quote>
 					<h4>References</h4>
 					<ul>
 						<li>
@@ -165,7 +182,7 @@
 								and Informatics. Smart Innovation, Systems and Technologies.</i> 77. Springer.
 						</li>
 						<li>
-							Wittgenstein, L. (1953). The philosophical investigations. ISBN: 0-631-23127-7"
+							Wittgenstein, L. (1953). The philosophical investigations. ISBN: 0-631-23127-7
 						</li>
 					</ul>
 					<p>
