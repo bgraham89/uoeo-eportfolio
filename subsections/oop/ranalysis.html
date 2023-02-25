@@ -5,62 +5,67 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Requirements Analysis - BGraham89 UoEO ePortfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="../../assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<head>
+	<title>Requirements Analysis - BGraham89 UoEO ePortfolio</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="../../assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="../../assets/css/noscript.css" />
+	</noscript>
+</head>
 
-				<!-- Header -->
-					<header id="header">
-						<a href="../../index.html" class="logo">Bradley Graham</a>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<a href="../../index.html" class="logo">Bradley Graham</a>
+			<nav>
+				<a href="#menu">Menu</a>
+			</nav>
+		</header>
+
+		<!-- Menu -->
+		<nav id="menu">
+			<ul class="links">
+				<li><a href="../../index.html">Home</a></li>
+				<li><a href="../../sections/lics.html">Launching into Computer Science</a></li>
+				<li><a href="../../sections/oop.html">Object Oriented Programming</a></li>
+			</ul>
+		</nav>
+
+		<!-- Main -->
+		<div id="main" class="alt">
+
+			<!-- Links -->
+			<section id="one">
+				<div class="inner">
+					<header class="major">
+						<h1>Requirements Analysis</h1>
 					</header>
-
-				<!-- Menu -->
-					<nav id="menu">
-						<ul class="links">
-							<li><a href="../../index.html">Home</a></li>
-							<li><a href="../../sections/lics.html">Launching into Computer Science</a></li>
-							<li><a href="../../sections/oop.html">Object Oriented Programming</a></li>
-						</ul>
-					</nav>
-
-				<!-- Main -->
-					<div id="main" class="alt">
-
-						<!-- Links -->
-						<section id="one">
-							<div class="inner">
-								<header class="major">
-									<h1>Requirements Analysis</h1>
-								</header>
-								<!-- <span class="image main"><img src="#" alt="" /></span> -->
-								<p>Miscellaneous notes related to requirements analysis, drawing on course material and further reading:</p>
-								<h2></h2>
-								<h2><u>Use Case Diagrams</u></h2>
-								<ul>
-									<li>A use case is a functional requirement that an information system is expected to meet.</li>
-									<li>A use case can be associated with particular categories of users, or actors.</li>
-									<li>Relationships may exist between use cases such as generalizations, inclusions and extensions.</li>
-									<li>Relationships among cases and actors can be modelled using a use case diagram.</li>
-								</ul>
-								<h3>Example</h3>
-								<p style="
+					<!-- <span class="image main"><img src="#" alt="" /></span> -->
+					<p>Miscellaneous notes related to requirements analysis, drawing on course material and further
+						reading:</p>
+					<h2></h2>
+					<h2><u>Use Case Diagrams</u></h2>
+					<ul>
+						<li>A use case is a functional requirement that an information system is expected to meet.</li>
+						<li>A use case can be associated with particular categories of users, or actors.</li>
+						<li>Relationships may exist between use cases such as generalizations, inclusions and
+							extensions.</li>
+						<li>Relationships among cases and actors can be modelled using a use case diagram.</li>
+					</ul>
+					<h3>Example</h3>
+					<p style="
 										text-align: center;
 										">
-									An example of a use case diagram for an autonomous car. 
-								</p>
-								<img src="../../assets/images/diagrams/use_case_sea_level.png" 
-									style="
+						An example of a use case diagram for an autonomous car.
+					</p>
+					<img src="../../assets/images/diagrams/use_case_sea_level.png" style="
 										display: block; 
 										margin-left: auto; 
 										margin-right: auto;
@@ -68,90 +73,93 @@
 										border-style: solid;
 										padding: 20px;
 										max-width: 90vw;
-								"/>
-								<br>
-								<h3>Review</h3>
-								<p>
-									I don't really like use case diagrams, despite their
-									acceptance into UML for the following reasons:
-								</p>
-								<ul>
-									<li>
-										The informality of them makes them redundant to technical modelling.
-									</li>
-									<li>
-										The structure that they are confined to restricts their potential as an infographic.
-									</li>
-									<li>
-										I could have chosen multiple different viable sets of imperative phrases 
-										that accurately label expected responses, and resulted in different versions
-										of the diagram above. So consistency is ignored. 
-										That being said, an ensemble attempt of building a use case
-										diagram might resolve any interpersonal ambiguities. The construction 
-										process may more important than the result.
-									</li>
-									<li>
-										An actor may be involved in many use cases, resulting in either visual clutter,
-										or the absence of lines where there should be.
-									</li>
-									<li>
-										The extension-relationship between use cases is a baroque way to say
-										"sometimes do this", and doesn't provide rigor to the model beyond that
-										of a checklist. Other diagrams capture this information more completely.
-									</li> 
-									<li>
-										Relationships between actors and use cases are ambigious. For example;
-										the relationship between a 'passenger' and a 'establish route' use case, 
-										in the example above, is two fold. The passenger may choose to drive themself,
-										and establish a route with the aid of a satnav built into the car,
-										or the passenger may request the car to establish a route to drive itself.
-										The diagram lacks the notion of interfaces, which is essential to modelling
-										the requirements of a system relative to actors.
-									</li>
-									<li>
-										Details of the relationships between use cases are more accessible when using
-										other types of diagram which offer more detail. Details of the relationships between actors and use cases
-										are not included in use case diagrams, making a use case diagram little more use 
-										than a list of actors and expectations. Perhaps that is the point. But then 
-										why doesn't a checklist suffice?
-									</li>
-									<li>
-										The diagrams are too rigid for developmental value. 
-										Use cases and systems are treated different
-										conceptually, and the relationships beween actors and use cases are 
-										fundamentally different to the relationships between use cases too.
-										This seems limiting in a bad way. 
-										I'd like to explore the abstraction of use case diagrams to gain
-										some of the properties that circuit diagrams have.
-										It would be interesting to be able to combine use case diagrams in a modular way,
-										by using actors/interfaces as anchor points. It would
-										also be interesting to be able to deconstruct use cases, into more granular use case diagrams,
-										using use case interfaces as actors. Overall, I believe this would create more value
-										of the architecture that use case diagrams provide, especially in an incremental software 
-										development lifecycle, where streamlining the transition between analysis and design is valuable.
-									</li>
-									<li>
-										The value of a use case diagrams has largely been narrowed to depicting business use cases,
-										and relevant actors, so internal relationships between use cases are little more than decoration,
-										and potentially a distraction. There are much cooler diagrams to impress stakeholders 
-										with irrelavnt details. 
-									</li>
-								</ul>
-								<br>
-								<h2><u>Pen Portraits</u></h2>
-								<ul>
-									<li>Users are an essential requirement for the success of software.</li>
-									<li>Groups of users are clustered together when shared descriptions have predictive value.</li>
-									<li>A pen portrait is an informal description of a person or group of people.</li>
-								</ul>
-								<h3>Example</h3>
-								<p style="
+								" />
+					<br>
+					<h3>Review</h3>
+					<p>
+						I don't really like use case diagrams, despite their
+						acceptance into UML for the following reasons:
+					</p>
+					<ul>
+						<li>
+							The informality of them makes them redundant to technical modelling.
+						</li>
+						<li>
+							The structure that they are confined to restricts their potential as an infographic.
+						</li>
+						<li>
+							I could have chosen multiple different viable sets of imperative phrases
+							that accurately label expected responses, and resulted in different versions
+							of the diagram above. So consistency is ignored.
+							That being said, an ensemble attempt of building a use case
+							diagram might resolve any interpersonal ambiguities. The construction
+							process may more important than the result.
+						</li>
+						<li>
+							An actor may be involved in many use cases, resulting in either visual clutter,
+							or the absence of lines where there should be.
+						</li>
+						<li>
+							The extension-relationship between use cases is a baroque way to say
+							"sometimes do this", and doesn't provide rigor to the model beyond that
+							of a checklist. Other diagrams capture this information more completely.
+						</li>
+						<li>
+							Relationships between actors and use cases are ambigious. For example;
+							the relationship between a 'passenger' and a 'establish route' use case,
+							in the example above, is two fold. The passenger may choose to drive themself,
+							and establish a route with the aid of a satnav built into the car,
+							or the passenger may request the car to establish a route to drive itself.
+							The diagram lacks the notion of interfaces, which is essential to modelling
+							the requirements of a system relative to actors.
+						</li>
+						<li>
+							Details of the relationships between use cases are more accessible when using
+							other types of diagram which offer more detail. Details of the relationships between actors
+							and use cases
+							are not included in use case diagrams, making a use case diagram little more use
+							than a list of actors and expectations. Perhaps that is the point. But then
+							why doesn't a checklist suffice?
+						</li>
+						<li>
+							The diagrams are too rigid for developmental value.
+							Use cases and systems are treated different
+							conceptually, and the relationships beween actors and use cases are
+							fundamentally different to the relationships between use cases too.
+							This seems limiting in a bad way.
+							I'd like to explore the abstraction of use case diagrams to gain
+							some of the properties that circuit diagrams have.
+							It would be interesting to be able to combine use case diagrams in a modular way,
+							by using actors/interfaces as anchor points. It would
+							also be interesting to be able to deconstruct use cases, into more granular use case
+							diagrams,
+							using use case interfaces as actors. Overall, I believe this would create more value
+							of the architecture that use case diagrams provide, especially in an incremental software
+							development lifecycle, where streamlining the transition between analysis and design is
+							valuable.
+						</li>
+						<li>
+							The value of a use case diagrams has largely been narrowed to depicting business use cases,
+							and relevant actors, so internal relationships between use cases are little more than
+							decoration,
+							and potentially a distraction. There are much cooler diagrams to impress stakeholders
+							with irrelavnt details.
+						</li>
+					</ul>
+					<br>
+					<h2><u>Pen Portraits</u></h2>
+					<ul>
+						<li>Users are an essential requirement for the success of software.</li>
+						<li>Groups of users are clustered together when shared descriptions have predictive value.</li>
+						<li>A pen portrait is an informal description of a person or group of people.</li>
+					</ul>
+					<h3>Example</h3>
+					<p style="
 										text-align: center;
 										">
-									An example of a pen portrait for the users of autonomous car. 
-								</p>
-								<img src="../../assets/images/diagrams/pen_portait.png" 
-								style="
+						An example of a pen portrait for the users of autonomous car.
+					</p>
+					<img src="../../assets/images/diagrams/pen_portait.png" style="
 									display: block; 
 									margin-left: auto; 
 									margin-right: auto;
@@ -159,22 +167,23 @@
 									border-style: solid;
 									padding: 20px;
 									max-width: 90vw;
-								"/>
-								<br>
-								<h2><u>Activity Diagrams</u></h2>
-								<ul>
-									<li>Activity states are chunks of computation.</li>
-									<li>An activity diagram is a model of the flow between Activity states of an information system.</li>
-									<li>An activity diagram can include conditional branching, concurrent branching and computational swimlanes.</li>
-								</ul>
-								<h3>Example</h3>
-								<p style="
+								" />
+					<br>
+					<h2><u>Activity Diagrams</u></h2>
+					<ul>
+						<li>Activity states are chunks of computation.</li>
+						<li>An activity diagram is a model of the flow between Activity states of an information system.
+						</li>
+						<li>An activity diagram can include conditional branching, concurrent branching and
+							computational swimlanes.</li>
+					</ul>
+					<h3>Example</h3>
+					<p style="
 										text-align: center;
 										">
-									An example of an activity diagram a autonomous car. 
-								</p>
-								<img src="../../assets/images/diagrams/activity_diagram.png" 
-								style="
+						An example of an activity diagram a autonomous car.
+					</p>
+					<img src="../../assets/images/diagrams/activity_diagram.png" style="
 									display: block; 
 									margin-left: auto; 
 									margin-right: auto;
@@ -182,77 +191,83 @@
 									border-style: solid;
 									padding: 20px;
 									max-width: 90vw;
-							"/>
-						</section>
-					</div>
+								" />
+				</div>
+			</section>
+		</div>
 
-				<!-- Contact -->
-					<section id="contact">
-						<div class="inner">
-							<section>
-								<form method="" action="">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="6"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Clear" /></li>
-									</ul>
-								</form>
-							</section>
-							<section class="split">
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-envelope"></span>
-										<h3>Email</h3>
-										<p>bg22514@essex.ac.uk</p>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-home"></span>
-										<h3>Address</h3>
-										<span>Bath, United Kingdom</span>
-									</div>
-								</section>
-							</section>
+		<!-- Contact -->
+		<section id="contact">
+			<div class="inner">
+				<section>
+					<form method="" action="">
+						<div class="fields">
+							<div class="field half">
+								<label for="name">Name</label>
+								<input type="text" name="name" id="name" />
+							</div>
+							<div class="field half">
+								<label for="email">Email</label>
+								<input type="text" name="email" id="email" />
+							</div>
+							<div class="field">
+								<label for="message">Message</label>
+								<textarea name="message" id="message" rows="6"></textarea>
+							</div>
+						</div>
+						<ul class="actions">
+							<li><input type="submit" value="Send Message" class="primary" /></li>
+							<li><input type="reset" value="Clear" /></li>
+						</ul>
+					</form>
+				</section>
+				<section class="split">
+					<section>
+						<div class="contact-method">
+							<span class="icon solid alt fa-envelope"></span>
+							<h3>Email</h3>
+							<p>bg22514@essex.ac.uk</p>
 						</div>
 					</section>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<ul class="icons">
-								<li><a href="https://github.com/bgraham89" class="icon brands alt fa-github"><span class="label" target="_blank">GitHub</span></a></li>
-								<li><a href="https://www.linkedin.com/in/bradley-graham-a7bb4a136/" class="icon brands alt fa-linkedin-in" target="_blank"><span class="label">LinkedIn</span></a></li>
-							</ul>
-							<ul class="copyright">
-								<li>Bradley Graham</li><li>Design: <a href="https://html5up.net" target="_blank">HTML5 UP</a></li>
-							</ul>
+					<section>
+						<div class="contact-method">
+							<span class="icon solid alt fa-home"></span>
+							<h3>Address</h3>
+							<span>Bath, United Kingdom</span>
 						</div>
-					</footer>
-
+					</section>
+				</section>
 			</div>
+		</section>
 
-		<!-- Scripts -->
-			<script src="../../assets/js/jquery.min.js"></script>
-			<script src="../../assets/js/jquery.scrolly.min.js"></script>
-			<script src="../../assets/js/jquery.scrollex.min.js"></script>
-			<script src="../../assets/js/browser.min.js"></script>
-			<script src="../../assets/js/breakpoints.min.js"></script>
-			<script src="../../assets/js/util.js"></script>
-			<script src="../../assets/js/main.js"></script>
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<ul class="icons">
+					<li><a href="https://github.com/bgraham89" class="icon brands alt fa-github"><span class="label"
+								target="_blank">GitHub</span></a></li>
+					<li><a href="https://www.linkedin.com/in/bradley-graham-a7bb4a136/"
+							class="icon brands alt fa-linkedin-in" target="_blank"><span
+								class="label">LinkedIn</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>Bradley Graham</li>
+					<li>Design: <a href="https://html5up.net" target="_blank">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</footer>
 
-	</body>
+	</div>
+
+	<!-- Scripts -->
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/jquery.scrolly.min.js"></script>
+	<script src="../../assets/js/jquery.scrollex.min.js"></script>
+	<script src="../../assets/js/browser.min.js"></script>
+	<script src="../../assets/js/breakpoints.min.js"></script>
+	<script src="../../assets/js/util.js"></script>
+	<script src="../../assets/js/main.js"></script>
+
+</body>
+
 </html>

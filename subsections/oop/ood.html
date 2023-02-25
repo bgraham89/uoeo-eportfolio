@@ -5,171 +5,184 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Object-Oriented Design - BGraham89 UoEO ePortfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="../../assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<head>
+	<title>Object-Oriented Design - BGraham89 UoEO ePortfolio</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="../../assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="../../assets/css/noscript.css" />
+	</noscript>
+</head>
 
-				<!-- Header -->
-					<header id="header">
-						<a href="../../index.html" class="logo">Bradley Graham</a>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<a href="../../index.html" class="logo">Bradley Graham</a>
+			<nav>
+				<a href="#menu">Menu</a>
+			</nav>
+		</header>
+
+		<!-- Menu -->
+		<nav id="menu">
+			<ul class="links">
+				<li><a href="../../index.html">Home</a></li>
+				<li><a href="../../sections/lics.html">Launching into Computer Science</a></li>
+				<li><a href="../../sections/oop.html">Object Oriented Programming</a></li>
+			</ul>
+		</nav>
+
+		<!-- Main -->
+		<div id="main" class="alt">
+
+			<!-- Links -->
+			<section id="one">
+				<div class="inner">
+					<header class="major">
+						<h1>Object-Oriented Design</h1>
 					</header>
+					<!-- <span class="image main"><img src="#" alt="" /></span> -->
+					<p>Miscellaneous notes related to object-oriented design, drawing on course material and further
+						reading:</p>
+					<h2><u>Class Diagrams</u></h2>
+					<ul>
+						<li>A class is a template for an object.</li>
+						<li>A class may consists of attributes and methods.</li>
+						<li>Attributes and methods may be qualified as private or public.</li>
+						<li>An attribute may be constrained to selected datatypes.</li>
+						<li>A method may require parameters, perform procedures, alter states and return information.
+						</li>
+						<li>An interface is a set of names given to a class' methods.</li>
+						<li>Classes may be structurally related to each other through composition, abstraction,
+							inheritence and aggregation.</li>
+						<li>Classes may be architecturally related to each other through design patterns.</li>
+						<li>A class diagram is a object-oriented design for software, portraying classes and details
+							amongst them.</li>
+					</ul>
+					<h3>Example</h3>
+					<p style="
+										text-align: center;
+										">
+						An example of a class diagram for a poker engine.
+					</p>
+					<img src="../../assets/images/diagrams/class_diagram.png" style="
+										display: block; 
+										margin-left: auto; 
+										margin-right: auto;
+										border-width: 5px;
+										border-style: solid;
+										padding: 20px;
+										max-width: 90vw;
+								" />
+					<br>
+					<h2><u>State Machine Diagrams</u></h2>
+					<ul>
+						<li>A state is a period of time within an objects lifecycle.</li>
+						<li>A transition is a change between states.</li>
+						<li>Transitions are caused by a triggering event.</li>
+						<li>A guardian is a boolean condition that must be true for a transition to occur.</li>
+						<li>An action is an excution of instructions, that happens on entry or on exit of a state; a
+							part of a transition.</li>
+						<li>A state machine is a graph of states and transitions.</li>
+						<li>A state machine diagram is a design for a state machine including triggering events,
+							guardians and actions.</li>
+					</ul>
+					<h3>Example</h3>
+					<p style="
+										text-align: center;
+										">
+						An example of a state machine diagram for a poker engine.
+					</p>
+					<img src="../../assets/images/diagrams/state_machine.png" style="
+										display: block; 
+										margin-left: auto; 
+										margin-right: auto;
+										border-width: 5px;
+										border-style: solid;
+										padding: 20px;
+										max-width: 90vw;
+								" />
+			</section>
+		</div>
 
-				<!-- Menu -->
-					<nav id="menu">
-						<ul class="links">
-							<li><a href="../../index.html">Home</a></li>
-							<li><a href="../../sections/lics.html">Launching into Computer Science</a></li>
-							<li><a href="../../sections/oop.html">Object Oriented Programming</a></li>
+		<!-- Contact -->
+		<section id="contact">
+			<div class="inner">
+				<section>
+					<form method="" action="">
+						<div class="fields">
+							<div class="field half">
+								<label for="name">Name</label>
+								<input type="text" name="name" id="name" />
+							</div>
+							<div class="field half">
+								<label for="email">Email</label>
+								<input type="text" name="email" id="email" />
+							</div>
+							<div class="field">
+								<label for="message">Message</label>
+								<textarea name="message" id="message" rows="6"></textarea>
+							</div>
+						</div>
+						<ul class="actions">
+							<li><input type="submit" value="Send Message" class="primary" /></li>
+							<li><input type="reset" value="Clear" /></li>
 						</ul>
-					</nav>
-
-				<!-- Main -->
-					<div id="main" class="alt">
-
-						<!-- Links -->
-						<section id="one">
-							<div class="inner">
-								<header class="major">
-									<h1>Object-Oriented Design</h1>
-								</header>
-								<!-- <span class="image main"><img src="#" alt="" /></span> -->
-								<p>Miscellaneous notes related to object-oriented design, drawing on course material and further reading:</p>
-								<h2><u>Class Diagrams</u></h2>
-								<ul>
-									<li>A class is a template for an object.</li>
-									<li>A class may consists of attributes and methods.</li>
-									<li>Attributes and methods may be qualified as private or public.</li>
-									<li>An attribute may be constrained to selected datatypes.</li>
-									<li>A method may require parameters, perform procedures, alter states and return information.</li>
-									<li>An interface is a set of names given to a class' methods.</li>
-									<li>Classes may be structurally related to each other through composition, abstraction, inheritence and aggregation.</li>
-									<li>Classes may be architecturally related to each other through design patterns.</li>
-									<li>A class diagram is a object-oriented design for software, portraying classes and details amongst them.</li>
-								</ul>
-								<h3>Example</h3>
-								<p style="
-										text-align: center;
-										">
-									An example of a class diagram for a poker engine. 
-								</p>
-								<img src="../../assets/images/diagrams/class_diagram.png" 
-									style="
-										display: block; 
-										margin-left: auto; 
-										margin-right: auto;
-										border-width: 5px;
-										border-style: solid;
-										padding: 20px;
-										max-width: 90vw;
-								"/>
-								<br>
-								<h2><u>State Machine Diagrams</u></h2>
-								<ul>
-									<li>A state is a period of time within an objects lifecycle.</li>
-									<li>A transition is a change between states.</li>
-									<li>Transitions are caused by a triggering event.</li>
-									<li>A guardian is a boolean condition that must be true for a transition to occur.</li>
-									<li>An action is an excution of instructions, that happens on entry or on exit of a state; a part of a transition.</li>
-									<li>A state machine is a graph of states and transitions.</li>
-									<li>A state machine diagram is a design for a state machine including triggering events, guardians and actions.</li>
-								</ul>
-								<h3>Example</h3>
-								<p style="
-										text-align: center;
-										">
-									An example of a state machine diagram for a poker engine. 
-								</p>
-								<img src="../../assets/images/diagrams/state_machine.png" 
-									style="
-										display: block; 
-										margin-left: auto; 
-										margin-right: auto;
-										border-width: 5px;
-										border-style: solid;
-										padding: 20px;
-										max-width: 90vw;
-								"/>
-						</section>
-					</div>
-
-				<!-- Contact -->
-					<section id="contact">
-						<div class="inner">
-							<section>
-								<form method="" action="">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="6"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Clear" /></li>
-									</ul>
-								</form>
-							</section>
-							<section class="split">
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-envelope"></span>
-										<h3>Email</h3>
-										<p>bg22514@essex.ac.uk</p>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-home"></span>
-										<h3>Address</h3>
-										<span>Bath, United Kingdom</span>
-									</div>
-								</section>
-							</section>
+					</form>
+				</section>
+				<section class="split">
+					<section>
+						<div class="contact-method">
+							<span class="icon solid alt fa-envelope"></span>
+							<h3>Email</h3>
+							<p>bg22514@essex.ac.uk</p>
 						</div>
 					</section>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<ul class="icons">
-								<li><a href="https://github.com/bgraham89" class="icon brands alt fa-github"><span class="label" target="_blank">GitHub</span></a></li>
-								<li><a href="https://www.linkedin.com/in/bradley-graham-a7bb4a136/" class="icon brands alt fa-linkedin-in" target="_blank"><span class="label">LinkedIn</span></a></li>
-							</ul>
-							<ul class="copyright">
-								<li>Bradley Graham</li><li>Design: <a href="https://html5up.net" target="_blank">HTML5 UP</a></li>
-							</ul>
+					<section>
+						<div class="contact-method">
+							<span class="icon solid alt fa-home"></span>
+							<h3>Address</h3>
+							<span>Bath, United Kingdom</span>
 						</div>
-					</footer>
-
+					</section>
+				</section>
 			</div>
+		</section>
 
-		<!-- Scripts -->
-			<script src="../../assets/js/jquery.min.js"></script>
-			<script src="../../assets/js/jquery.scrolly.min.js"></script>
-			<script src="../../assets/js/jquery.scrollex.min.js"></script>
-			<script src="../../assets/js/browser.min.js"></script>
-			<script src="../../assets/js/breakpoints.min.js"></script>
-			<script src="../../assets/js/util.js"></script>
-			<script src="../../assets/js/main.js"></script>
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<ul class="icons">
+					<li><a href="https://github.com/bgraham89" class="icon brands alt fa-github"><span class="label"
+								target="_blank">GitHub</span></a></li>
+					<li><a href="https://www.linkedin.com/in/bradley-graham-a7bb4a136/"
+							class="icon brands alt fa-linkedin-in" target="_blank"><span
+								class="label">LinkedIn</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>Bradley Graham</li>
+					<li>Design: <a href="https://html5up.net" target="_blank">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</footer>
 
-	</body>
+	</div>
+
+	<!-- Scripts -->
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/jquery.scrolly.min.js"></script>
+	<script src="../../assets/js/jquery.scrollex.min.js"></script>
+	<script src="../../assets/js/browser.min.js"></script>
+	<script src="../../assets/js/breakpoints.min.js"></script>
+	<script src="../../assets/js/util.js"></script>
+	<script src="../../assets/js/main.js"></script>
+
+</body>
+
 </html>

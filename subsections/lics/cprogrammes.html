@@ -5,157 +5,190 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Computer Programmes - BGraham89 UoEO ePortfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="../../assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<head>
+	<title>Computer Programmes - BGraham89 UoEO ePortfolio</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="../../assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="../../assets/css/noscript.css" />
+	</noscript>
+</head>
 
-				<!-- Header -->
-					<header id="header">
-						<a href="../../index.html" class="logo">Bradley Graham</a>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<a href="../../index.html" class="logo">Bradley Graham</a>
+			<nav>
+				<a href="#menu">Menu</a>
+			</nav>
+		</header>
+
+		<!-- Menu -->
+		<nav id="menu">
+			<ul class="links">
+				<li><a href="../../index.html">Home</a></li>
+				<li><a href="../../sections/lics.html">Launching into Computer Science</a></li>
+				<li><a href="../../sections/oop.html">Object Oriented Programming</a></li>
+			</ul>
+		</nav>
+
+		<!-- Main -->
+		<div id="main" class="alt">
+
+			<!-- Links -->
+			<section id="one">
+				<div class="inner">
+					<header class="major">
+						<h1>Computer Programmes</h1>
 					</header>
+					<!-- <span class="image main"><img src="#" alt="" /></span> -->
+					<p>Miscellaneous notes related to computer programmes, drawing on course material and past learning:
+					</p>
+					<h2><u>Instructions</u></h2>
+					<ul>
+						<li>Instructions are encoded as bit patterns in memory, and a CPU is able to fetch, decode and
+							execute them.</li>
+						<li>An instruction set architecture specifies how to encode instructions as bit patterns.</li>
+						<li>An encoded instruction consists of an opcode portion to specify an action, and an operand
+							portion to tailor the action.</li>
+						<li>Instructions are typically either ALU instructions, data instructions or control
+							instructions.</li>
+						<li>ALU instructions include arithemetic or bitwise operations, and data stored in registers.
+						</li>
+						<li>Data instructions include loading and storing operations, resulting in the movement of data
+							between registers and the main memory unit.</li>
+						<li>Control instructions result in the alteration of a pointer value, to point to different
+							blocks of memory that contains other instructions.</li>
+						<li>An ISA that tries to minimise the amount of instructions needed for a programme, is called a
+							CISC architecture.</li>
+						<li><b><a href="https://www.intel.co.uk/content/www/uk/en/homepage.html">Intel</a></b> and <b><a
+									href="https://www.amd.com/en">AMD</a></b>
+							are manufacturers that create CISC processors.</li>
+						<li>An ISA that tries to minimise the amount of possible instructions, is called a RISC
+							architecture.</li>
+						<li><b><a href="https://riscv.org/technical/specifications/" target="_blank">RISC-V
+									specification</a></b> is an example of a RISC specification.</li>
+						<li><b><a href="https://www.arm.com/">ARM (Advanced RISC Machines)</a></b> is a manufacturer
+							that specifically creates RISC processors.</li>
+					</ul>
+					<h2><u>Programmes</u></h2>
+					<ul>
+						<li>Programmes are an ordering of instructions.</li>
+						<li>Programmes can range from small, simple sequences of instructions, to large, complex, cyclic
+							graphs with conditional branching.</li>
+						<li>Efficient programmes make use of algorithms and data structures to save time and space in
+							memory.</li>
+						<li>The execution of a programme is called a process.</li>
+						<li>A programme counter is a pointer value that indicates which instruction to execute next in a
+							process.</li>
+						<li>Multiple processes can execute simultaneously on a computer with a parallel computing
+							architecture.</li>
+						<li>A combination of programmes and data is called software.</li>
+					</ul>
+					<h2><u>Operating Systems</u></h2>
+					<ul>
+						<li>An operating system is a type of software designed to provide functionality to a computer's
+							hardware.</li>
+						<li>Examples of operating systems include: <b><a
+									href="https://www.microsoft.com/en-gb/windows/windows-11">Windows 11</a></b>,
+							<b><a href="https://www.apple.com/uk/macos/ventura/">MacOS Ventura</a></b>, and <b><a
+									href="https://ubuntu.com/desktop/features">Ubuntu</a></b> (which uses a Linux
+							kernel).
+						</li>
+						<li>The main programme of an operating system is called the kernel.</li>
+						<li>The kernel is stored in non-volatile memory for long term storage, and is loaded into main
+							memory upon computer startup
+							by instruction of a bootloader programme that's immediately accessible to the CPU.</li>
+						<li>Once the kernel has been loaded, it governs the execution of all other programmes.</li>
+						<li>The kernel manages resource access too, such as access to memory, peripherals, and
+							processing units by processes.</li>
+						<li>The kernel also provides common services to processes such as the displaying of content in
+							windows, and the organisation of files using directories.</li>
+						<li>When a computer is turned off, the kernel is erased from main memory.</li>
+					</ul>
+				</div>
+			</section>
 
-				<!-- Menu -->
-					<nav id="menu">
-						<ul class="links">
-							<li><a href="../../index.html">Home</a></li>
-							<li><a href="../../sections/lics.html">Launching into Computer Science</a></li>
-							<li><a href="../../sections/oop.html">Object Oriented Programming</a></li>
+		</div>
+
+		<!-- Contact -->
+		<section id="contact">
+			<div class="inner">
+				<section>
+					<form method="" action="">
+						<div class="fields">
+							<div class="field half">
+								<label for="name">Name</label>
+								<input type="text" name="name" id="name" />
+							</div>
+							<div class="field half">
+								<label for="email">Email</label>
+								<input type="text" name="email" id="email" />
+							</div>
+							<div class="field">
+								<label for="message">Message</label>
+								<textarea name="message" id="message" rows="6"></textarea>
+							</div>
+						</div>
+						<ul class="actions">
+							<li><input type="submit" value="Send Message" class="primary" /></li>
+							<li><input type="reset" value="Clear" /></li>
 						</ul>
-					</nav>
-
-				<!-- Main -->
-					<div id="main" class="alt">
-
-						<!-- Links -->
-							<section id="one">
-								<div class="inner">
-									<header class="major">
-										<h1>Computer Programmes</h1>
-									</header>
-									<!-- <span class="image main"><img src="#" alt="" /></span> -->
-									<p>Miscellaneous notes related to computer programmes, drawing on course material and past learning:</p>
-									<h2><u>Instructions</u></h2>
-									<ul>
-										<li>Instructions are encoded as bit patterns in memory, and a CPU is able to fetch, decode and execute them.</li>
-										<li>An instruction set architecture specifies how to encode instructions as bit patterns.</li>
-										<li>An encoded instruction consists of an opcode portion to specify an action, and an operand portion to tailor the action.</li>
-										<li>Instructions are typically either ALU instructions, data instructions or control instructions.</li>
-										<li>ALU instructions include arithemetic or bitwise operations, and data stored in registers.</li>
-										<li>Data instructions include loading and storing operations, resulting in the movement of data between registers and the main memory unit.</li>
-										<li>Control instructions result in the alteration of a pointer value, to point to different blocks of memory that contains other instructions.</li>
-										<li>An ISA that tries to minimise the amount of instructions needed for a programme, is called a CISC architecture.</li>
-										<li><b><a href="https://www.intel.co.uk/content/www/uk/en/homepage.html">Intel</a></b> and <b><a href="https://www.amd.com/en">AMD</a></b>
-										are manufacturers that create CISC processors.</li>
-										<li>An ISA that tries to minimise the amount of possible instructions, is called a RISC architecture.</li>
-										<li><b><a href="https://riscv.org/technical/specifications/" target="_blank">RISC-V specification</a></b> is an example of a RISC specification.</li>
-										<li><b><a href="https://www.arm.com/">ARM (Advanced RISC Machines)</a></b> is a manufacturer that specifically creates RISC processors.</li>
-									</ul>
-									<h2><u>Programmes</u></h2>
-									<ul>
-										<li>Programmes are an ordering of instructions.</li>
-										<li>Programmes can range from small, simple sequences of instructions, to large, complex, cyclic graphs with conditional branching.</li>
-										<li>Efficient programmes make use of algorithms and data structures to save time and space in memory.</li>
-										<li>The execution of a programme is called a process.</li>
-										<li>A programme counter is a pointer value that indicates which instruction to execute next in a process.</li>
-										<li>Multiple processes can execute simultaneously on a computer with a parallel computing architecture.</li>
-										<li>A combination of programmes and data is called software.</li>
-									</ul>
-									<h2><u>Operating Systems</u></h2>
-									<ul>
-										<li>An operating system is a type of software designed to provide functionality to a computer's hardware.</li>
-										<li>Examples of operating systems include: <b><a href="https://www.microsoft.com/en-gb/windows/windows-11">Windows 11</a></b>, 
-											<b><a href="https://www.apple.com/uk/macos/ventura/">MacOS Ventura</a></b>, and <b><a href="https://ubuntu.com/desktop/features">Ubuntu</a></b> (which uses a Linux kernel).</li>
-										<li>The main programme of an operating system is called the kernel.</li>
-										<li>The kernel is stored in non-volatile memory for long term storage, and is loaded into main memory upon computer startup
-											by instruction of a bootloader programme that's immediately accessible to the CPU.</li>
-										<li>Once the kernel has been loaded, it governs the execution of all other programmes.</li>
-										<li>The kernel manages resource access too, such as access to memory, peripherals, and processing units by processes.</li>
-										<li>The kernel also provides common services to processes such as the displaying of content in windows, and the organisation of files using directories.</li>
-										<li>When a computer is turned off, the kernel is erased from main memory.</li>
-									</ul>
-								</div>
-							</section>
-
-					</div>
-
-				<!-- Contact -->
-					<section id="contact">
-						<div class="inner">
-							<section>
-								<form method="" action="">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="6"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Clear" /></li>
-									</ul>
-								</form>
-							</section>
-							<section class="split">
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-envelope"></span>
-										<h3>Email</h3>
-										<p>bg22514@essex.ac.uk</p>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-home"></span>
-										<h3>Address</h3>
-										<span>Bath, United Kingdom</span>
-									</div>
-								</section>
-							</section>
+					</form>
+				</section>
+				<section class="split">
+					<section>
+						<div class="contact-method">
+							<span class="icon solid alt fa-envelope"></span>
+							<h3>Email</h3>
+							<p>bg22514@essex.ac.uk</p>
 						</div>
 					</section>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<ul class="icons">
-								<li><a href="https://github.com/bgraham89" class="icon brands alt fa-github"><span class="label" target="_blank">GitHub</span></a></li>
-								<li><a href="https://www.linkedin.com/in/bradley-graham-a7bb4a136/" class="icon brands alt fa-linkedin-in" target="_blank"><span class="label">LinkedIn</span></a></li>
-							</ul>
-							<ul class="copyright">
-								<li>Bradley Graham</li><li>Design: <a href="https://html5up.net" target="_blank">HTML5 UP</a></li>
-							</ul>
+					<section>
+						<div class="contact-method">
+							<span class="icon solid alt fa-home"></span>
+							<h3>Address</h3>
+							<span>Bath, United Kingdom</span>
 						</div>
-					</footer>
-
+					</section>
+				</section>
 			</div>
+		</section>
 
-		<!-- Scripts -->
-			<script src="../../assets/js/jquery.min.js"></script>
-			<script src="../../assets/js/jquery.scrolly.min.js"></script>
-			<script src="../../assets/js/jquery.scrollex.min.js"></script>
-			<script src="../../assets/js/browser.min.js"></script>
-			<script src="../../assets/js/breakpoints.min.js"></script>
-			<script src="../../assets/js/util.js"></script>
-			<script src="../../assets/js/main.js"></script>
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<ul class="icons">
+					<li><a href="https://github.com/bgraham89" class="icon brands alt fa-github"><span class="label"
+								target="_blank">GitHub</span></a></li>
+					<li><a href="https://www.linkedin.com/in/bradley-graham-a7bb4a136/"
+							class="icon brands alt fa-linkedin-in" target="_blank"><span
+								class="label">LinkedIn</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>Bradley Graham</li>
+					<li>Design: <a href="https://html5up.net" target="_blank">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</footer>
 
-	</body>
+	</div>
+
+	<!-- Scripts -->
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/jquery.scrolly.min.js"></script>
+	<script src="../../assets/js/jquery.scrollex.min.js"></script>
+	<script src="../../assets/js/browser.min.js"></script>
+	<script src="../../assets/js/breakpoints.min.js"></script>
+	<script src="../../assets/js/util.js"></script>
+	<script src="../../assets/js/main.js"></script>
+
+</body>
+
 </html>
