@@ -48,8 +48,7 @@
 						<h1>Requirements Analysis</h1>
 					</header>
 					<!-- <span class="image main"><img src="#" alt="" /></span> -->
-					<p>Miscellaneous notes related to requirements analysis, drawing on course material and further
-						reading:</p>
+					<p>This is a collection of notes and examples of modelling tools for Requirements Analysis:</p>
 					<h2></h2>
 					<h2><u>Use Case Diagrams</u></h2>
 					<ul>
@@ -88,62 +87,45 @@
 							The structure that they are confined to restricts their potential as an infographic.
 						</li>
 						<li>
-							I could have chosen multiple different viable sets of imperative phrases
-							that accurately label expected responses, and resulted in different versions
-							of the diagram above. So consistency is ignored.
-							That being said, an ensemble attempt of building a use case
-							diagram might resolve any interpersonal ambiguities. The construction
-							process may more important than the result.
+							Use case diagrams provide little more information than a list of actors and 
+							software expectations, at the cost of visual complexity. This is detrimental to the purpose 
+							of use case diagrams as an infographic, which tends to be to depict business use cases,
+							and relevant actors.
+						</li>
+						<li>
+							It's possible to choose multiple different viable sets of use cases
+							that accurately label expected responses of software, making validation more difficult.
 						</li>
 						<li>
 							An actor may be involved in many use cases, resulting in either visual clutter,
-							or the absence of lines where there should be.
+							or the aesthetic absence of relationships from diagrams and loss of information.
 						</li>
 						<li>
 							The extension-relationship between use cases is a baroque way to say
-							"sometimes do this", and doesn't provide rigor to the model beyond that
-							of a checklist. Other diagrams capture this information more completely.
+							"sometimes do this".
 						</li>
 						<li>
-							Relationships between actors and use cases are ambigious. For example;
-							the relationship between a 'passenger' and a 'establish route' use case,
-							in the example above, is two fold. The passenger may choose to drive themself,
-							and establish a route with the aid of a satnav built into the car,
-							or the passenger may request the car to establish a route to drive itself.
-							The diagram lacks the notion of interfaces, which is essential to modelling
-							the requirements of a system relative to actors.
-						</li>
-						<li>
-							Details of the relationships between use cases are more accessible when using
-							other types of diagram which offer more detail. Details of the relationships between actors
-							and use cases
-							are not included in use case diagrams, making a use case diagram little more use
-							than a list of actors and expectations. Perhaps that is the point. But then
-							why doesn't a checklist suffice?
+							Use case diagrams lack the notion of interfaces, which is essential to modelling
+							detail related to how actors expect to use software.
 						</li>
 						<li>
 							The diagrams are too rigid for developmental value.
-							Use cases and systems are treated different
-							conceptually, and the relationships beween actors and use cases are
-							fundamentally different to the relationships between use cases too.
-							This seems limiting in a bad way.
-							I'd like to explore the abstraction of use case diagrams to gain
-							some of the properties that circuit diagrams have.
-							It would be interesting to be able to combine use case diagrams in a modular way,
-							by using actors/interfaces as anchor points. It would
-							also be interesting to be able to deconstruct use cases, into more granular use case
-							diagrams,
-							using use case interfaces as actors. Overall, I believe this would create more value
-							of the architecture that use case diagrams provide, especially in an incremental software
-							development lifecycle, where streamlining the transition between analysis and design is
-							valuable.
+							The distinction between use case relationships and actor-use case relationships is 
+							too restrictive. I'd like to explore the abstraction of use case diagrams to gain
+							properties such as <b>modularity</b>, by using actors/interfaces as anchor points to combine,
+							use case diagrams, and <b>recursion</b>, by allowing use case interfaces to replace actors, for the 
+							replacement of a use case by a use case diagram. Overall, I believe this would create more value
+							in an incremental software development lifecycle, where streamlining the transition 
+							between analysis and design saves time and money.
 						</li>
+					</ul>
+					<p>
+						Despite the weaknesses, I agree there is some value to be gained from use case diagrams:
+					</p>
+					<ul>
 						<li>
-							The value of a use case diagrams has largely been narrowed to depicting business use cases,
-							and relevant actors, so internal relationships between use cases are little more than
-							decoration,
-							and potentially a distraction. There are much cooler diagrams to impress stakeholders
-							with irrelavnt details.
+							The creation of an ensemble of use case diagrams, could be a medium to resolve any 
+							interpersonal ambiguities about requirements. The construction process is educationally valuable.
 						</li>
 					</ul>
 					<br>
