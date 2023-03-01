@@ -48,7 +48,7 @@
 						<h1>Software Metrics</h1>
 					</header>
 					<!-- <span class="image main"><img src="#" alt="" /></span> -->
-					<p>This is a collection software metrics, categorised by concern, as a means to organise:</p>
+					<p>This is a collection of notes on software metrics, organised by software concerns:</p>
 					<h2><u>Life Cycle</u></h2>
 					<ul>
 						<li>
@@ -60,8 +60,17 @@
 							process and content decisions. 
 						</li>
 						<li>
+							Examples of lifecycle metrics include: <b>total working hours</b>, which is the amount of people-hours
+							have been spent on developing the software, and <b>time to deployment</b>, which is the amount of 
+							calendar time between initial conception of software, and it's development.
+						</li>
+					</ul>
+					<h3>References and Links</h3>
+					<ul>
+						<li>
 							<b>Fenton, N & Bieman, J. (2015) <i>Software metrics: a rigorous and practical approach</i>. 3rd ed.
-							Boca Raton: CRC Press. ISBN 9780367659028</b> - A textbook that outlines a goal-based project framework
+							Boca Raton: CRC Press. ISBN 9780367659028</b> - Fenton and Bieman provide a textbook that 
+							outlines a goal-based project framework for software development,
 							which is a framework that relies on software metrics. The textbook includes theory on measurment in general, 
 							types of metrics such as process, product and resource metrics; data collection
 							and investigation techniques, data analysis techniques, prediction models and validation techniques. 
@@ -70,63 +79,79 @@
 					<h2><u>Polymorphism</u></h2>
 					<ul>
 						<li>
-							Polymorphism is the provision of a common interface to different objects and allows the 
-							same procedure to be used for different objects. 
+							Polymorphism is the use of a shared procedure for different objects of different types. 
 						</li>
 						<li>
-							Polymorphism can be achieved through inheritence in all object-oriented languages, and
-							through duck typing in some languages.
+							Polymorphism is possible as a result of object inheritence in all object-oriented languages, and
+							is possible with duck typing too, in languages that support it.
 						</li>
 						<li>
 							Metrics that measure polymorphism in a programme can indicate whether it's trivial to retroactively 
 							add static type checkers to programmes written in dynamic languages or not. 
 						</li>
+					</ul>
+					<h3>References and Links</h3>
+					<ul>
 						<li>
 							<b>Åkerblom, B & Wrigstad, T. (2015)
 							'Measuring polymorphism in python programs'.
 							<i>Proceedings of the 11th Symposium on Dynamic Languages (DLS 2015)</i>. 
 							Pittsburgh, USA, 2015. New York: Association for Computing Machinery. 114–128.
 							<a href="https://doi.org/10.1145/2816707.2816717">DOI.</a></b> - Åkerblom & Wrigstad 
-							outline measures of polymorphism such as observing and counting how many types of objects
+							outline measures of polymorphism, such as observing and counting how many types of objects
 							call each method in a programme, classifying each method by whether it's callers share a common superclass 
-							definition, and classifying whether clusters of methods that share 
-							the same caller have been defined in some superclass of the cluster's callers, and if those callers share a 
-							common subclass too.
+							definition, classifying whether clusters of methods that share 
+							the same caller have been defined in some superclass of the cluster's callers, and classifying 
+							if those callers share a common subclass too.
 						</li>
 					</ul>
-					<br>
 					<h2><u>Reliability</u></h2>
 					<ul>
 						<li>
 							A software development lifecycle usually involves at least one stage specifically geared towards achieving
-							the quality and assurance, or reliability of software. Reliability contributes to a software's reusability as a product, 
+							quality and assurance, or reliability of software. Reliability contributes to a software's reusability as a product, 
 							and can decrease the software's future maintenence costs.
 						</li>
 						<li>
 							Software testing is one way to increase software reliability. Types of testing include:
-							unit testing, integration testing, performance testing and black-box testing. Automatic testing is common too.
-							Code linters for example offer a level of automated code testing while it's being written, whilst more advanced automated testing 
-							is achievable using software such as <a href="https://docs.sonarqube.org/latest/" target="_blank">SonarQube</a>.
+							unit testing, integration testing, performance testing and black-box testing. Some testing may be automatable too.
+							Code linters for example offer a level of automated testing while code is being written, and software such
+							as <a href="https://docs.sonarqube.org/latest/" target="_blank">SonarQube</a> can perform testing while code is
+							in a git repository.
 						</li>
 						<li>
-							Test-centred metrics of software include <b>test coverage</b>, which is the percentage of a programme that has been tested, and
+							Examples of test-centred metrics include: <b>test coverage</b>, which is the percentage of a programme that has been tested, and
 							<b>test effectiveness</b>, which is the ratio of software bugs found to number of tests.
 						</li>
-						<b>Fenton, N & Bieman, J. (2015) 'Software Reliability, Measurement and Prediction', in: Fenton, N & Bieman, J. (2015) 
+					</ul>
+					<h3>References and Links</h3>
+					<ul>
+						<li>
+							<b>Fenton, N & Bieman, J. (2015) 'Software Reliability, Measurement and Prediction', in: Fenton, N & Bieman, J. (2015) 
 							<i>Software metrics: a rigorous and  practical approach</i>. 3rd ed. Boca Raton: CRC Press. 475-523. ISBN 9780367659028</b> 
-							- A chapter of a textbook that speciifcally talks about reliability theory and software failure prediction models.
+							- Fenton and Biemann include a chapter which is specifically about software reliability in a
+							goal-based project framework. It talks about reliability theory and software failure prediction models.
+						</li>
 					</ul>
 					<br>
 					<h2><u>Reusability</u></h2>
 					<ul>
 						<li>
-							Software reusability can be recognised through the notions of reusable assets, processess, products and services.
+							Software reusability can be conceptualised through the notions of assets, processess, products and services.
 						</li>
 						<li>
 							Component-based software engineering is a discipline that explicitly makes use of resuable assets.
 							However, all programming paradigms implicitly depend upon some reusability of entities, so reusability 
 							is inheritent to all software engineering too.
 						</li>
+						<li>
+							Examples of reusability metrics include: <b>renewal effectiveness</b>, which is the ratio
+							of users who renew a software subscription to those that don't, and <b>active user count</b>,
+							which is the number of concurrent users of a software.
+						</li>
+					</ul>
+					<h3>References and Links</h3>
+					<ul>
 						<li>
 							<b>Padhy, N., Satapathy, S. & Singh, R. (2017)
 								'State-of-the-Art Object-Oriented Metrics and It's Reusability: A Decade Review'.
@@ -223,7 +248,7 @@
 							Wittgenstein, L. (1953). The philosophical investigations. ISBN: 0-631-23127-7
 						</li>
 					</ul>
-					<h3>Development</h3>
+					<h3>Reflection</h3>
 					<p>
 						If I were to diffract from what i've learnt about reusability so far, I would explore
 						metrics of sociobiological origin. That's because sociobiology
@@ -232,8 +257,8 @@
 						assessment generally isn't restricted to a financial assessment for the sake of a businesses success. 
 						Therefore it provides a wide framework to consider the long-term harm of maximising reusability that 
 						businesses (and governments) might overlook. That being said, I have no doubt that any sociobiological 
-						metric would ultimately be reduced to finanical phenomena by businesses, but new metrics might inspire 
-						new types of businesses.
+						metric would ultimately be reduced to finanical phenomena by businesses. Nevertheless, new metrics 
+						might inspire new types of businesses or laws. I'm especially sympathetic to addicts.
 					</p>
 				</div>
 			</section>
