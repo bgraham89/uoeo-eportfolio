@@ -48,37 +48,54 @@
 						<h1>Requirements Analysis</h1>
 					</header>
 					<!-- <span class="image main"><img src="#" alt="" /></span> -->
-					<p>This is a collection of notes and examples of modelling tools for Requirements Analysis:</p>
+					<p>Examples of modelling tools for Requirements Analysis, including conceptual 
+						scaffolding and evaluations.</p>
 					<h2></h2>
 					<h2><u>Use Case Diagrams</u></h2>
 					<ul>
-						<li>A use case is a functional requirement that an information system is expected to meet.</li>
-						<li>A use case can be associated with particular categories of users, or actors.</li>
-						<li>Relationships may exist between use cases such as generalizations, inclusions and
-							extensions.</li>
-						<li>Relationships among cases and actors can be modelled using a use case diagram.</li>
+						<li>
+							A use case is a functional requirement that an information system is expected to meet.
+						</li>
+						<li>
+							A use case can be associated with particular categories of users, or actors.
+						</li>
+						<li>
+							Relationships may exist between use cases such as generalizations, inclusions and
+							extensions.
+						</li>
+						<li>
+							Relationships among cases and actors can be modelled using a use case diagram.
+						</li>
 					</ul>
 					<h3>Example</h3>
 					<p style="
-										text-align: center;
-										">
-						An example of a use case diagram for an autonomous car.
+							text-align: center;
+							">
+						An example of a use case diagram for an autonomous cars.
 					</p>
 					<img src="../../assets/images/diagrams/use_case_sea_level.png" style="
-										display: block; 
-										margin-left: auto; 
-										margin-right: auto;
-										border-width: 5px;
-										border-style: solid;
-										padding: 20px;
-										max-width: 90vw;
-								" />
+						display: block; 
+						margin-left: auto; 
+						margin-right: auto;
+						border-width: 5px;
+						border-style: solid;
+						padding: 20px;
+						max-width: 90vw;
+					" />
 					<br>
-					<h3>Review</h3>
-					<p>
-						I don't really like use case diagrams, despite their
-						acceptance into UML for the following reasons:
-					</p>
+					<h3>Evaluation</h3>
+					<h4>
+						Benefits:
+					</h4>
+					<ul>
+						<li>
+							The creation of an ensemble of use case diagrams, could be a medium to resolve any 
+							interpersonal ambiguities about requirements. The construction process is educationally valuable.
+						</li>
+					</ul>
+					<h4>
+						Problems:
+					</h4>
 					<ul>
 						<li>
 							The informality of them makes them redundant to technical modelling.
@@ -88,13 +105,12 @@
 						</li>
 						<li>
 							Use case diagrams provide little more information than a list of actors and 
-							software expectations, at the cost of visual complexity. This is detrimental to the purpose 
-							of use case diagrams as an infographic, which tends to be to depict business use cases,
-							and relevant actors.
+							software expectations, at the cost of visual complexity.
 						</li>
 						<li>
 							It's possible to choose multiple different viable sets of use cases
-							that accurately label expected responses of software, making validation more difficult.
+							that accurately label expected responses of software, making validation of them as models 
+							difficult.
 						</li>
 						<li>
 							An actor may be involved in many use cases, resulting in either visual clutter,
@@ -119,15 +135,6 @@
 							between analysis and design saves time and money.
 						</li>
 					</ul>
-					<p>
-						Despite the weaknesses, I agree there is some value to be gained from use case diagrams:
-					</p>
-					<ul>
-						<li>
-							The creation of an ensemble of use case diagrams, could be a medium to resolve any 
-							interpersonal ambiguities about requirements. The construction process is educationally valuable.
-						</li>
-					</ul>
 					<br>
 					<h2><u>Pen Portraits</u></h2>
 					<ul>
@@ -137,27 +144,63 @@
 					</ul>
 					<h3>Example</h3>
 					<p style="
-										text-align: center;
-										">
+							text-align: center;
+							">
 						An example of a pen portrait for the users of autonomous car.
 					</p>
 					<img src="../../assets/images/diagrams/pen_portait.png" style="
-									display: block; 
-									margin-left: auto; 
-									margin-right: auto;
-									border-width: 5px;
-									border-style: solid;
-									padding: 20px;
-									max-width: 90vw;
-								" />
+						display: block; 
+						margin-left: auto; 
+						margin-right: auto;
+						border-width: 5px;
+						border-style: solid;
+						padding: 20px;
+						max-width: 90vw;
+					" />
+					<br>
+					<h3>Evaluation</h3>
+					<h4>
+						Benefits:
+					</h4>
+					<ul>
+						<li>
+							A range of adjectives clearly depicts a range of potential users.
+						</li>
+						<li>
+							User descriptions enhance user context models, and can highlight 
+							potential values users might have, which might be informative to
+							design and marketing decisions.
+						</li>
+					</ul>
+					<h4>
+						Problems:
+					</h4>
+					<ul>
+						<li>
+							The informality of pen portraits makes them redundant to technical modelling.
+						</li>
+						<li>
+							The meaning of descriptions may be open to interpetation.
+						</li>
+						<li>
+							Pen portraits don't depict the relationships between descriptions.
+							Clusters of descriptions may describe certain types of users exclusively,
+							while other descriptions may be inclusive of all users.
+						</li>
+					</ul>
 					<br>
 					<h2><u>Activity Diagrams</u></h2>
 					<ul>
-						<li>Activity states are chunks of computation.</li>
-						<li>An activity diagram is a model of the flow between Activity states of an information system.
+						<li>
+							Activity states are chunks of computation.
 						</li>
-						<li>An activity diagram can include conditional branching, concurrent branching and
-							computational swimlanes.</li>
+						<li>
+							An activity diagram is a model of the flow between Activity states of an information system.
+						</li>
+						<li>
+							An activity diagram can include conditional branching, concurrent branching and
+							computational swimlanes.
+						</li>
 					</ul>
 					<h3>Example</h3>
 					<p style="
@@ -166,14 +209,42 @@
 						An example of an activity diagram a autonomous car.
 					</p>
 					<img src="../../assets/images/diagrams/activity_diagram.png" style="
-									display: block; 
-									margin-left: auto; 
-									margin-right: auto;
-									border-width: 5px;
-									border-style: solid;
-									padding: 20px;
-									max-width: 90vw;
-								" />
+						display: block; 
+						margin-left: auto; 
+						margin-right: auto;
+						border-width: 5px;
+						border-style: solid;
+						padding: 20px;
+						max-width: 90vw;
+					" />
+					<br>
+					<h3>Evaluation</h3>
+					<h4>
+						Benefits:
+					</h4>
+					<ul>
+						<li>
+							Details of interactions between users is clear, providing information
+							useful to interface design.
+						</li>
+						<li>
+							Details of computational flow is included, and provides a way 
+							to validate the model. 
+						</li>
+						<li>
+							The relationships between computational chunks resemble 
+							programming logic to some granularity, minimising the gap between requirements
+							analysis and programme design.
+						</li>
+					</ul>
+					<h4>
+						Problems:
+					</h4>
+					<ul>
+						<li>
+							Lots of users on a single diagram is visually complex.
+						</li>
+					</ul>
 				</div>
 			</section>
 		</div>
