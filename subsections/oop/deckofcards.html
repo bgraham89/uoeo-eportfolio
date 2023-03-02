@@ -109,11 +109,13 @@
 						The<code>IntegerCard</code>class above inherits from the <code>Card</code> class
 						and further abstracts the features of a physical card.
 						<b>Abstraction</b> is the manipulation of the details of a concept to arrive at
-						a more general concept, and is a general technique of OOP. Sometimes it's useful to
-						design abstract classes to provide an interface for other classes to implement.
-						In the above example, the <code>IntegerCard</code> is not an abstract class though.
-						It's an abstraction in the sense that it's structure was designed primarily to
-						allow the implementation of a quick algorithm.
+						a more general concept, and is a general technique of OOP. Usually abstraction
+						refers to the creation of abstract classes, which are classes that provide an 
+						interface for other classes to implement.
+						But in the above example, the <code>IntegerCard</code> is not an abstract class.
+						It's an abstraction in the sense that the details of a physical card have been
+						encoded to a non-human readable format in preparation to the implementation of a 
+						quick algorithm.
 					</p>
 					<h2><u>PokerHand Class</u></h2>
 					<pre><code>
@@ -153,14 +155,11 @@
 						to OOP.
 					</p>
 					<p>
-						The last thing I'd like to point out is, when a class inherits from another class, it's also
-						good practise to maintain the super classes interface, by using the same public method names.
-						This
-						idea is known as <b>polymorphism</b> and generally improves the compatibility and coordination
-						of objects.
-						Sometimes it might be worth overidding methods with a new procedure, or overloading the method
-						with additional
-						functionality for a different sets of paramaters. Either is accpetable in OOP.
+						The last thing I'd like to point out is that it's usually
+						good practise to maintain common interfaces for your classes where possible.
+						This can simplify programmes to a large degree, by allowing a single procedure to be enough
+						for a bunch of different objects, which share the same interface. This idea is known as 
+						<b>polymorphism</b>.
 					</p>
 					<p>
 						If you would like to learn more about implementing a game of five card draw poker using OOP,

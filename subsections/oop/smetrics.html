@@ -45,115 +45,154 @@
 			<section id="one">
 				<div class="inner">
 					<header class="major">
-						<h1>Software Metrics</h1>
+						<h1>Software Concerns & Metrics</h1>
 					</header>
 					<!-- <span class="image main"><img src="#" alt="" /></span> -->
 					<p>This is a collection of notes on software metrics, organised by software concerns:</p>
-					<h2><u>Life Cycle</u></h2>
+					<h2><u>The Software Development Life Cycle</u></h2>
+					<p> The software development life cycle of a project is a central concern to a project manager.
+						Metrics describing software development life cycles are either retrospective or predictive.
+						Retrospective metrics are essential to project evaluation, while predictive metrics can
+						influence
+						process and content decisions.
+					</p>
+					<h3><u>Metrics</u></h3>
 					<ul>
 						<li>
-							The software development life cycle of a project is a central concern to a project manager.
+							<b style="color:gold">Project Length</b> - The amount of days taken to progress from
+							requirements analysis to deployment.
 						</li>
 						<li>
-							Metrics describing software development life cycles are either retrospective or predictive. 
-							Retrospective metrics are essential to project evaluation, while predictive metrics can influence 
-							process and content decisions. 
+							<b style="color:gold">Project Throughput</b> - The amount of days taken to complete the
+							longest stage of a series of pipelined projects.
 						</li>
 						<li>
-							Examples of lifecycle metrics include: <b>total working hours</b>, which is the amount of people-hours
-							have been spent on developing the software, and <b>time to deployment</b>, which is the amount of 
-							calendar time between initial conception of software, and it's development.
+							<b style="color:gold">Total Working Hours</b> - The amount of hours that
+							have been spent on developing a piece of software, across all workers.
+						</li>
+						<li>
+							<b style="color:gold">Time Until Deployment</b> - A predicted amount of time until a project
+							can be deployed.
 						</li>
 					</ul>
-					<h3>References and Links</h3>
-					<ul>
+					<h3><u>References and Links</u></h3>
+					<ul style="color:blanchedalmond">
 						<li>
-							<b>Fenton, N & Bieman, J. (2015) <i>Software metrics: a rigorous and practical approach</i>. 3rd ed.
-							Boca Raton: CRC Press. ISBN 9780367659028</b> - Fenton and Bieman provide a textbook that 
+							<b syle="color:white">Fenton, N & Bieman, J. (2015) <i>Software metrics: a rigorous and
+									practical approach</i>. 3rd ed.
+								Boca Raton: CRC Press. ISBN 9780367659028</b> - Fenton and Bieman provide a textbook
+							that
 							outlines a goal-based project framework for software development,
-							which is a framework that relies on software metrics. The textbook includes theory on measurment in general, 
+							which is a framework that relies on software metrics. The textbook includes theory on
+							measurment in general,
 							types of metrics such as process, product and resource metrics; data collection
-							and investigation techniques, data analysis techniques, prediction models and validation techniques. 
+							and investigation techniques, data analysis techniques, prediction models and validation
+							techniques.
 						</li>
 					</ul>
+					<br>
 					<h2><u>Polymorphism</u></h2>
+					<p> Polymorphism is the use of a shared procedure for different objects of different types.
+						Polymorphism is possible as a result of object inheritence in all object-oriented languages, and
+						is possible with duck typing too, in languages that support it.
+						Metrics that measure polymorphism in a programme can indicate whether it's trivial to
+						retroactively
+						add static type checkers to programmes written in dynamic languages or not, which might be
+						required in the
+						translation of softewware from one language to another.
+					</p>
+					<h3><u>Metrics</u></h3>
 					<ul>
 						<li>
-							Polymorphism is the use of a shared procedure for different objects of different types. 
-						</li>
-						<li>
-							Polymorphism is possible as a result of object inheritence in all object-oriented languages, and
-							is possible with duck typing too, in languages that support it.
-						</li>
-						<li>
-							Metrics that measure polymorphism in a programme can indicate whether it's trivial to retroactively 
-							add static type checkers to programmes written in dynamic languages or not. 
+							<b style="color:gold">Polymorphic Degree</b> - The amount of different types that call a
+							method
+							during a programme.
 						</li>
 					</ul>
-					<h3>References and Links</h3>
-					<ul>
+					<h3><u>References and Links</u></h3>
+					<ul style="color:blanchedalmond">
 						<li>
-							<b>Åkerblom, B & Wrigstad, T. (2015)
-							'Measuring polymorphism in python programs'.
-							<i>Proceedings of the 11th Symposium on Dynamic Languages (DLS 2015)</i>. 
-							Pittsburgh, USA, 2015. New York: Association for Computing Machinery. 114–128.
-							<a href="https://doi.org/10.1145/2816707.2816717">DOI.</a></b> - Åkerblom & Wrigstad 
+							<b style="color:white">Åkerblom, B & Wrigstad, T. (2015)
+								'Measuring polymorphism in python programs'.
+								<i>Proceedings of the 11th Symposium on Dynamic Languages (DLS 2015)</i>.
+								Pittsburgh, USA, 2015. New York: Association for Computing Machinery. 114–128.
+								<a href="https://doi.org/10.1145/2816707.2816717">DOI.</a></b> - Åkerblom & Wrigstad
 							outline measures of polymorphism, such as observing and counting how many types of objects
-							call each method in a programme, classifying each method by whether it's callers share a common superclass 
-							definition, classifying whether clusters of methods that share 
-							the same caller have been defined in some superclass of the cluster's callers, and classifying 
+							call each method in a programme, classifying each method by whether it's callers share a
+							common superclass
+							definition, classifying whether clusters of methods that share
+							the same caller have been defined in some superclass of the cluster's callers, and
+							classifying
 							if those callers share a common subclass too.
 						</li>
 					</ul>
+					<br>
 					<h2><u>Reliability</u></h2>
+					<p>
+						A software development lifecycle usually involves at least one stage specifically geared towards
+						achieving
+						quality and assurance, or reliability of software. Reliability contributes to a software's
+						reusability as a product,
+						and can decrease the software's future maintenence costs.
+						Software testing is one way to increase software reliability. Types of testing include:
+						unit testing, integration testing, performance testing and black-box testing. Some testing may
+						be automatable too.
+						Code linters for example offer a level of automated testing while code is being written, and
+						software such
+						as <a href="https://docs.sonarqube.org/latest/" target="_blank">SonarQube</a> can perform
+						testing while code is
+						stored in a git repository.
+					</p>
+					<h3><u>Metrics</u></h3>
 					<ul>
 						<li>
-							A software development lifecycle usually involves at least one stage specifically geared towards achieving
-							quality and assurance, or reliability of software. Reliability contributes to a software's reusability as a product, 
-							and can decrease the software's future maintenence costs.
+							<b style="color:gold">Test Coverage</b> - The percentage of a programme that has been
+							tested.
 						</li>
 						<li>
-							Software testing is one way to increase software reliability. Types of testing include:
-							unit testing, integration testing, performance testing and black-box testing. Some testing may be automatable too.
-							Code linters for example offer a level of automated testing while code is being written, and software such
-							as <a href="https://docs.sonarqube.org/latest/" target="_blank">SonarQube</a> can perform testing while code is
-							in a git repository.
-						</li>
-						<li>
-							Examples of test-centred metrics include: <b>test coverage</b>, which is the percentage of a programme that has been tested, and
-							<b>test effectiveness</b>, which is the ratio of software bugs found to number of tests.
+							<b style="color:gold">Test Effectiveness</b> - The ratio of software bugs found, to number
+							of tests written.
 						</li>
 					</ul>
-					<h3>References and Links</h3>
-					<ul>
+					<h3><u>References and Links</u></h3>
+					<ul style="color:blanchedalmond">
 						<li>
-							<b>Fenton, N & Bieman, J. (2015) 'Software Reliability, Measurement and Prediction', in: Fenton, N & Bieman, J. (2015) 
-							<i>Software metrics: a rigorous and  practical approach</i>. 3rd ed. Boca Raton: CRC Press. 475-523. ISBN 9780367659028</b> 
+							<b style="color:white">Fenton, N & Bieman, J. (2015) 'Software Reliability, Measurement and
+								Prediction', in: Fenton, N & Bieman, J. (2015)
+								<i>Software metrics: a rigorous and practical approach</i>. 3rd ed. Boca Raton: CRC
+								Press. 475-523. ISBN 9780367659028</b>
 							- Fenton and Biemann include a chapter which is specifically about software reliability in a
-							goal-based project framework. It talks about reliability theory and software failure prediction models.
+							goal-based project framework. It talks about reliability theory and software failure
+							prediction models.
 						</li>
 					</ul>
 					<br>
 					<h2><u>Reusability</u></h2>
+					<p>
+						Software reusability can be conceptualised through the notions of assets, processess, products
+						and services.
+						Component-based software engineering is a discipline that explicitly makes use of resuable
+						assets.
+						However, all programming paradigms implicitly depend upon some reusability of entities, so
+						reusability
+						is inheritent to all software engineering too. Most businesses aim to produce reusable
+						products or services.
+					</p>
+					<h3><u>Metrics</u></h3>
 					<ul>
 						<li>
-							Software reusability can be conceptualised through the notions of assets, processess, products and services.
+							<b style="color:gold">Active User Count</b> - The number of concurrent users of a piece of
+							software.
 						</li>
 						<li>
-							Component-based software engineering is a discipline that explicitly makes use of resuable assets.
-							However, all programming paradigms implicitly depend upon some reusability of entities, so reusability 
-							is inheritent to all software engineering too.
-						</li>
-						<li>
-							Examples of reusability metrics include: <b>renewal effectiveness</b>, which is the ratio
-							of users who renew a software subscription to those that don't, and <b>active user count</b>,
-							which is the number of concurrent users of a software.
+							<b style="color:gold">Renewal Ratio</b> - The ratio of users who renew a software
+							subscription to those that don't.
 						</li>
 					</ul>
-					<h3>References and Links</h3>
+					<h3><u>References and Links</u></h3>
 					<ul>
-						<li>
-							<b>Padhy, N., Satapathy, S. & Singh, R. (2017)
+						<li style="color:blanchedalmond">
+							<b style="color:white">Padhy, N., Satapathy, S. & Singh, R. (2017)
 								'State-of-the-Art Object-Oriented Metrics and It's Reusability: A Decade Review'.
 								<i>Smart Computing and Informatics: Proceedings of the First International
 									Conference on SCI 2016, Volume 1</i>. Visakhapatnam, India, 2022.
@@ -163,17 +202,18 @@
 							knowledge, models, requirements, services and tests.
 						</li>
 					</ul>
-					<h3>Discussion</h3>
+					<h3><u>Peer Discussion</u></h3>
 					<p>
-						As a collaborative activity with my peers, we discussed <b>'which of the 11 assets
+						As a collaborative activity with my peers, we discussed <b style="color:powderblue">'which of
+							the 11 assets
 							identified by Padhy et al (2017), should be prioritised to maximise the reusablility of
 							software?'</b>. Each of us made an initial post to answer that question, and then we
 						responded
-						to those with our own development questions. The full discussion can be found 
-						<a href="../../assets/artefacts/oop/Reusability/Discussion.pdf"
-							target="_blank"><b>here</b></a>. The following is summary post that I wrote at the end of the discussion:
+						to those with our own development questions. The full discussion can be found
+						<a href="../../assets/artefacts/oop/Reusability/Discussion.pdf" target="_blank"><b>here</b></a>.
+						The following is summary post that I wrote at the end of the discussion:
 					</p>
-					<quote>
+					<quote style="color:blanchedalmond">
 						"In my initial post, I created a priority list for the 11 reusability properties of
 						object-oriented software given by Padhy et al., (2018), prioritised by how they
 						affect the reusability of software. I considered three different ways that software
@@ -185,7 +225,7 @@
 						developers, and developers are more likely to recycle code of applications that
 						are frequently reused.
 					</quote>
-					<quote>
+					<quote style="color:blanchedalmond">
 						I learnt from others, many different interpretations of how to prioritise
 						properties to increase the reusability of software. I had already suspected
 						that a priority list was doomed to what the language philosopher Wittgenstein (1953)
@@ -196,14 +236,14 @@
 						should take into account project specifications, and not everybody agreed that
 						all properties contributed to the reusability of software in a significant way.
 					</quote>
-					<quote>
+					<quote style="color:blanchedalmond">
 						During discussions I asked the following questions:
-						<b>Is it possible to of make each type of asset reusable across projects?</b>,
-						<b>What specific steps can be taken to make different assets more reusable?</b>,
-						<b>Which types of assets are easiest / most difficult to document?</b>, and
-						<b>Is it important to document the lesson's learnt from a project?</b>
+						<b style="color:blanchedalmond">Is it possible to of make each type of asset reusable across projects?</b>,
+						<b style="color:blanchedalmond">What specific steps can be taken to make different assets more reusable?</b>,
+						<b style="color:blanchedalmond">Which types of assets are easiest / most difficult to document?</b>, and
+						<b style="color:blanchedalmond">Is it important to document the lesson's learnt from a project?</b>
 					</quote>
-					<quote>
+					<quote style="color:blanchedalmond">
 						I asked questions because I wanted to gain some practical tips, and
 						challenge my own and others perspectives, to learn. I learned that some project
 						specifications may promote a position of disregard to the reusability of
@@ -212,8 +252,8 @@
 						some educational value, and I learned that formal documentation is a process that
 						exists as part of DevOps for some businesses.
 					</quote>
-					<quote>
-						In my own discussion thread, I asked "<b>How is the reusability of software a useful
+					<quote style="color:blanchedalmond">
+						In my own discussion thread, I asked "<b style="color:blanchedalmond">How is the reusability of software a useful
 							metric?</b>".
 						This question ended up being reflected back at me, but that allowed me to reflect on my own
 						position.
@@ -231,13 +271,14 @@
 						problems associated with a single focus on reusability, but my attempt was awfully vague,
 						and could do with more thought.
 					</quote>
-					<quote>
+					<quote style="color:blanchedalmond">
 						Overall, I appreciate the effort that went into discussions. Reusability is no doubt,
 						an important metric in many projects, and I managed to take away some things about
-						it from the discussion activity. I also enjoyed thinking about it myself."
+						it from the discussion activity. I also enjoyed thinking about it myself.
 					</quote>
-					<h4>References</h4>
-					<ul>
+					<p>
+					<h4 style="color:blanchedalmond">References</h4>
+					<ul style="color:blanchedalmond">
 						<li>
 							Padhy, N., Satapathy, S., & Singh, R.P. (2018) 'State-of-the-Art Object-Oriented Metrics and
 							Its Reusability: A Decade Review', in: Satapathy S., Bhateja V., Das S. (eds) <i>Smart
@@ -245,19 +286,23 @@
 								and Informatics. Smart Innovation, Systems and Technologies.</i> 77. Springer.
 						</li>
 						<li>
-							Wittgenstein, L. (1953). The philosophical investigations. ISBN: 0-631-23127-7
+							Wittgenstein, L. (1953). The philosophical investigations. ISBN: 0-631-23127-7"
 						</li>
 					</ul>
-					<h3>Reflection</h3>
+					<h3><u>Reflection</u></h3>
 					<p>
 						If I were to diffract from what i've learnt about reusability so far, I would explore
 						metrics of sociobiological origin. That's because sociobiology
 						doesn't necessarily reduce the concept of harm in the way
 						businesses do, but it encompasses the behaviour of businesses nonetheless. In sociobiology,
-						assessment generally isn't restricted to a financial assessment for the sake of a businesses success. 
-						Therefore it provides a wide framework to consider the long-term harm of maximising reusability that 
-						businesses (and governments) might overlook. That being said, I have no doubt that any sociobiological 
-						metric would ultimately be reduced to finanical phenomena by businesses. Nevertheless, new metrics 
+						assessment generally isn't restricted to a financial assessment for the sake of a businesses
+						success.
+						Therefore it provides a wide framework to consider the long-term harm of maximising reusability
+						that
+						businesses (and governments) might overlook. That being said, I have no doubt that any
+						sociobiological
+						metric would ultimately be reduced to finanical phenomena by businesses. Nevertheless, new
+						metrics
 						might inspire new types of businesses or laws. I'm especially sympathetic to addicts.
 					</p>
 				</div>
