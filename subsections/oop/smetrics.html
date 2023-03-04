@@ -63,8 +63,8 @@
 							requirements analysis to deployment.
 						</li>
 						<li>
-							<b style="color:gold">Project Throughput</b> - The amount of days taken to complete the
-							longest stage of a series of pipelined projects.
+							<b style="color:gold">Project Throughput</b> - The reciprocal of the amount of days to complete the
+							longest development stage in series of pipelined projects.
 						</li>
 						<li>
 							<b style="color:gold">Total Working Hours</b> - The amount of hours that
@@ -81,11 +81,9 @@
 							<b syle="color:white">Fenton, N & Bieman, J. (2015) <i>Software metrics: a rigorous and
 									practical approach</i>. 3rd ed.
 								Boca Raton: CRC Press. ISBN 9780367659028</b> - Fenton and Bieman provide a textbook
-							that
-							outlines a goal-based project framework for software development,
+							that outlines a goal-based project framework for software development,
 							which is a framework that relies on software metrics. The textbook includes theory on
-							measurment in general,
-							types of metrics such as process, product and resource metrics; data collection
+							measurment in general, types of metrics such as process, product and resource metrics; data collection
 							and investigation techniques, data analysis techniques, prediction models and validation
 							techniques.
 						</li>
@@ -112,39 +110,47 @@
 					<h3><u>References and Links</u></h3>
 					<ul style="color:blanchedalmond">
 						<li>
-							<b style="color:white">Åkerblom, B & Wrigstad, T. (2015)
-								'Measuring polymorphism in python programs'.
-								<i>Proceedings of the 11th Symposium on Dynamic Languages (DLS 2015)</i>.
-								Pittsburgh, USA, 2015. New York: Association for Computing Machinery. 114–128.
-								<a href="https://doi.org/10.1145/2816707.2816717">DOI.</a></b> - Åkerblom & Wrigstad
+							<b style="color:white">Åkerblom, B & Wrigstad, T. (2015) 'Measuring polymorphism in python programs'.
+							<i>Proceedings of the 11th Symposium on Dynamic Languages (DLS 2015)</i>.
+							Pittsburgh, USA, 2015. New York: Association for Computing Machinery. 114–128.
+							<a href="https://doi.org/10.1145/2816707.2816717">DOI.</a></b> - Åkerblom & Wrigstad
 							outline measures of polymorphism, such as observing and counting how many types of objects
 							call each method in a programme, classifying each method by whether it's callers share a
-							common superclass
-							definition, classifying whether clusters of methods that share
+							common superclass definition, classifying whether clusters of methods that share
 							the same caller have been defined in some superclass of the cluster's callers, and
-							classifying
-							if those callers share a common subclass too.
+							classifying if those callers share a common subclass too.
 						</li>
 					</ul>
 					<br>
 					<h2><u>Reliability</u></h2>
 					<p>
 						A software development lifecycle usually involves at least one stage specifically geared towards
-						achieving
-						quality and assurance, or reliability of software. Reliability contributes to a software's
-						reusability as a product,
-						and can decrease the software's future maintenence costs.
+						achieving quality and assurance, or reliability of software. Reliability contributes to a software's
+						reusability as a product, and can decrease the software's future maintenence costs.
 						Software testing is one way to increase software reliability. Types of testing include:
 						unit testing, integration testing, performance testing and black-box testing. Some testing may
-						be automatable too.
-						Code linters for example offer a level of automated testing while code is being written, and
-						software such
-						as <a href="https://docs.sonarqube.org/latest/" target="_blank">SonarQube</a> can perform
-						testing while code is
-						stored in a git repository.
+						be automatable too. Code linters for example offer a level of automated testing while code is being written, and
+						software such as <a href="https://docs.sonarqube.org/latest/" target="_blank">SonarQube</a> can perform
+						testing while code is stored in a git repository.
 					</p>
 					<h3><u>Metrics</u></h3>
 					<ul>
+						<li>
+							<b style="color:gold">Invariance Conformity</b> - The percentage of generated test cases 
+							that conform to transformational invariance.
+						</li>
+						<li>
+							<b style="color:gold">Rate of Issues</b> - The amount of recorded issues in a timespan.
+						</li>
+						<li>
+							<b style="color: goldenrod">Resuability Metrics</b> - Some metrics related to the resuability of 
+							software are directly related to a software's reliability, when software access is necessary for 
+							software peformance.
+						</li>
+						<li>
+							<b style="color: goldenrod">Security Metrics</b> - Some metrics related to the security of software
+							are directly related to a software's reliability, as security bugs are a subset of software bugs.
+						</li>
 						<li>
 							<b style="color:gold">Test Coverage</b> - The percentage of a programme that has been
 							tested.
@@ -165,17 +171,21 @@
 							goal-based project framework. It talks about reliability theory and software failure
 							prediction models.
 						</li>
+						<li>
+							<b style="color:white">Zhou, Z & Sun L. (2019) Metamorphic testing of driverless cars.
+							<i>Communication of the ACM</i>. 62(3): 61-67. <a href="https://doi.org/10.1145/3241979">DOI.</a></b>
+							- Zhou and Sun propose a method of testing unsupervised software, through the identification of 
+							invariance that should exist during test case transformations, and then testing that the software
+							confroms to that invariance, using generated data.
+						</li>
 					</ul>
 					<br>
 					<h2><u>Reusability</u></h2>
 					<p>
 						Software reusability can be conceptualised through the notions of assets, processess, products
-						and services.
-						Component-based software engineering is a discipline that explicitly makes use of resuable
-						assets.
-						However, all programming paradigms implicitly depend upon some reusability of entities, so
-						reusability
-						is inheritent to all software engineering too. Most businesses aim to produce reusable
+						and services. Component-based software engineering is a discipline that explicitly makes use of resuable
+						assets. However, all programming paradigms implicitly depend upon some reusability of entities, so
+						reusability is inheritent to all software engineering too. A lot of businesses aim to produce reusable
 						products or services.
 					</p>
 					<h3><u>Metrics</u></h3>
@@ -183,6 +193,10 @@
 						<li>
 							<b style="color:gold">Active User Count</b> - The number of concurrent users of a piece of
 							software.
+						</li>
+						<li>
+							<b style="color:gold">Availability</b> - The probability that software is available for use
+							at a specific time.
 						</li>
 						<li>
 							<b style="color:gold">Renewal Ratio</b> - The ratio of users who renew a software
@@ -205,13 +219,11 @@
 					<h3><u>Peer Discussion</u></h3>
 					<p>
 						As a collaborative activity with my peers, we discussed <b style="color:powderblue">'which of
-							the 11 assets
-							identified by Padhy et al (2017), should be prioritised to maximise the reusablility of
+							the 11 assets identified by Padhy et al (2017), should be prioritised to maximise the reusablility of
 							software?'</b>. Each of us made an initial post to answer that question, and then we
-						responded
-						to those with our own development questions. The full discussion can be found
+						responded to those with our own development questions. The full discussion can be found
 						<a href="../../assets/artefacts/oop/Reusability/Discussion.pdf" target="_blank"><b>here</b></a>.
-						The following is summary post that I wrote at the end of the discussion:
+						The following is a summary post that I wrote at the end of the discussion:
 					</p>
 					<quote style="color:blanchedalmond">
 						"In my initial post, I created a priority list for the 11 reusability properties of
@@ -256,16 +268,13 @@
 						In my own discussion thread, I asked "<b style="color:blanchedalmond">How is the reusability of software a useful
 							metric?</b>".
 						This question ended up being reflected back at me, but that allowed me to reflect on my own
-						position.
-						I considered reusability as software capability, and then as a motive behind software
-						development.
-						I considered scenarios where reusability is desirable, and scenarios where it is not,
+						position. I considered reusability as software capability, and then as a motive behind software
+						development. I considered scenarios where reusability is desirable, and scenarios where it is not,
 						centring my arguments on contexts of cooperation and contexts of competition. Eventually,
 						I recognised reusability as a metric, where it's equivalent to profit gained from pay-per-use
 						software. Despite implicitly covering different aspects to the question that I was asked,
 						such as strengths and weaknesses of reusability, I believe my answer was not structured very
-						well,
-						so my answer ended up being unsatisfactory. I should have finished my answer with a summary
+						well, so my answer ended up being unsatisfactory. I should have finished my answer with a summary
 						that explicitly returns to the question that I was asked at least, for clarity. I also
 						attempted to provide an alternative metric to evaluate software, to avoid some of the
 						problems associated with a single focus on reusability, but my attempt was awfully vague,
@@ -282,8 +291,7 @@
 						<li>
 							Padhy, N., Satapathy, S., & Singh, R.P. (2018) 'State-of-the-Art Object-Oriented Metrics and
 							Its Reusability: A Decade Review', in: Satapathy S., Bhateja V., Das S. (eds) <i>Smart
-								Computing
-								and Informatics. Smart Innovation, Systems and Technologies.</i> 77. Springer.
+							Computing and Informatics. Smart Innovation, Systems and Technologies.</i> 77. Springer.
 						</li>
 						<li>
 							Wittgenstein, L. (1953). The philosophical investigations. ISBN: 0-631-23127-7"
