@@ -2186,8 +2186,8 @@
     },
     {
       "type": "arrow",
-      "version": 1203,
-      "versionNonce": 458128622,
+      "version": 1221,
+      "versionNonce": 1945485038,
       "isDeleted": false,
       "id": "O6VAcN6u9I8gBVISsBh8E",
       "fillStyle": "cross-hatch",
@@ -2200,26 +2200,26 @@
       "y": 120.84784921770947,
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
-      "width": 2.7954580896662264,
-      "height": 78.12637950200887,
+      "width": 0.061684767476890556,
+      "height": 59.55495093058032,
       "seed": 226609902,
       "groupIds": [],
       "roundness": {
         "type": 2
       },
       "boundElements": null,
-      "updated": 1678397031458,
+      "updated": 1678398428462,
       "link": null,
       "locked": false,
       "startBinding": {
         "elementId": "1lq6Mtbmc_12Dp-3HINDT",
-        "focus": 0.11361935975415144,
-        "gap": 1.0000000000000178
+        "focus": 0.11983999929090387,
+        "gap": 1.0000000000000284
       },
       "endBinding": {
-        "elementId": "6leP6xM-on6ouq_ZZqzcc",
-        "focus": 0.2825437620741002,
-        "gap": 10.477025271256135
+        "elementId": "FLGOusCiYhbIvF5dYGcdB",
+        "focus": 1.1760256763534265,
+        "gap": 9.644197657424684
       },
       "lastCommittedPoint": null,
       "startArrowhead": null,
@@ -2230,8 +2230,8 @@
           0
         ],
         [
-          2.7954580896662264,
-          -78.12637950200887
+          -0.061684767476890556,
+          -59.55495093058032
         ]
       ]
     },
@@ -2325,8 +2325,8 @@
     },
     {
       "type": "text",
-      "version": 1297,
-      "versionNonce": 304084654,
+      "version": 1298,
+      "versionNonce": 2010981234,
       "isDeleted": false,
       "id": "FLGOusCiYhbIvF5dYGcdB",
       "fillStyle": "cross-hatch",
@@ -2344,8 +2344,13 @@
       "seed": 616008942,
       "groupIds": [],
       "roundness": null,
-      "boundElements": null,
-      "updated": 1678394159736,
+      "boundElements": [
+        {
+          "id": "O6VAcN6u9I8gBVISsBh8E",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1678398427931,
       "link": null,
       "locked": false,
       "fontSize": 11.440440247200224,
