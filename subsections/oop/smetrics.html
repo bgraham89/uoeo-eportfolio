@@ -98,6 +98,9 @@
 					<h3><u>Metrics</u></h3>
 					<ul>
 						<li>
+							<b style="color:gold">Coupling between Objects</b> - The total amount of edges in an object dependecy graph.
+						</li>
+						<li>
 							<b style="color:gold">Cyclomatic Complexity</b> - The number of linearly independent paths in the software.
 						</li>
 						<li>
@@ -109,14 +112,29 @@
 						<li>
 							<b style="color:gold">Halstead's Vocabulary</b> - The total amount of operators and operands used in the software.
 						</li>
+						<li>
+							<b style="color:gold">Lines of Code</b> - The total amount of lines of code in the software.
+						</li>
+						<li>
+							<b style="color:gold">Number of Children</b> - The amount of immediate sub-classes of a class.
+						</li>
+
 					</ul>
 					<h3><u>References and Links</u></h3>
 					<ul style="color:blanchedalmond">
 						<li>
 							<b style="color:white">Chidamber, S. and Kemerer, C. (1992) 'A metrics suite for object oriented design'.
 							Massachusetts: Center for Information Systems Research.</b> - Chidamber and Kemerer build upon the concept of
-							a relational system, which is a tuple of elements, relations and binary operations; and construct six prescribed 
-							software metrics that describe software structure.
+							a relational system, which is a tuple of elements, relations and binary operations; and construct six 
+							software metrics that describe object oriented software structure.
+						</li>
+						<li>
+							<b style="color:white">Ebert, C., Cain, J., Counsell, S. & Laplante, P. (2016) 
+								'Cyclotomic Complexity'.
+								<i>IEEE Software</i>.
+								33(6): 27-29. <a href="https://doi.org/10.1109/MS.2016.147">DOI.</a></b> 
+								- Ebert et al. take note of the divide between academic and industrial motives,
+								to explain the disparity in opinion on cyclotomic complexity..
 						</li>
 						<li>
 							<b style="color:white">Fenton, N & Bieman, J. (2015) 'Measuring Internal Product Attributes: Size' 
@@ -125,6 +143,17 @@
 								Press. 371-428. ISBN 9780367659028</b>
 							- Fenton and Biemann include two chapters devoted to the internal attributes of software relevant to 
 							a goal-based project management framework. They specifically examine size and structure metrics.
+						</li>
+						<li>
+							<b style="color:white">Hourani, H., Wasmi, H. & Alrawashdeh, T. (2019)
+							'A Code Complexity Model of Object Oriented Programming (OOP)'.
+							<i>2019 IEEE Jordan International Joint Conference on Electrical
+							Engineering and Information Technology (JEEIT)</i>. Ammam, Jordan, 
+							2019. New York: IEEE. 560-564.
+							<a href="https://doi.org/10.1109/JEEIT.2019.8717448">DOI.</a></b>
+							- Hourani et al propose a metric suite called Object Oriented Code 
+							Complexity (2O2C) that introduces a detailed class complexity metric,
+							built upon submetrics. 
 						</li>
 						<li>
 							<b style="color:white">Martin, R. (1994) 'OO Design Quality Metrics'.
@@ -184,6 +213,15 @@
 							- Fenton and Biemann include a chapter which is specifically about software reliability in a
 							goal-based project framework. It talks about reliability theory and software failure
 							prediction models.
+						</li>
+						<li>
+							<b style="color:white">Smith, M. & Robson, D. (1990) 'Object-oriented programming-the problems
+								of validation', <i>Proceedings. Conference on Software Maintenance 1990</i>. 
+								San Diego, USA, 1990. New York: IEEE Computer Society Press. 272-281.
+								<a href="https://doi.org/10.1109/ICSM.1990.131372">DOI.</a></b>
+							- Smith et al. idenitify aspects of object-oriented software that affect potential 
+							software validation techniques. Notable aspects include: inter-class organisation, 
+							inter-object control flow and concurrency, cases of inheritence and polymorphism.
 						</li>
 						<li>
 							<b style="color:white">Zhou, Z & Sun L. (2019) Metamorphic testing of driverless cars.
@@ -335,10 +373,11 @@
 						Software quality is a concept that is typically modelled as a composition of desirable characteristics,
 						which are external qualities of the software.
 					</p>
-					<h3><u>Characteristics of Quality</u></h3>
+					<h3><u>Characteristics of Product Quality</u></h3>
 					<ul>
 						<li>
 							<b style="color: lightskyblue">Compatibility</b> - Functionality in regards to clients' technology.
+						</li>
 						<li>
 							<b style="color: lightskyblue">Maintainability</b> - Extensibility in regards to structure.
 						</li>
@@ -376,7 +415,10 @@
 					<h3><u>Organizational Standards</u></h3>
 					<ul style="color:aliceblue">
 						<li>
-							<b style="color:coral">ISO/IEC 5055</b> - Standards on the measure of software quality.
+							<b style="color:coral">ISO/IEC 25010</b> - Standards for system and software quality.
+						</li>
+						<li>
+							<b style="color:coral">ISO/IEC 5055</b> - Standards for the measure of software quality.
 						</li>
 					</ul>
 					<br>

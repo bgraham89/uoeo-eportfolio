@@ -7,7 +7,7 @@
 <html>
 
 <head>
-	<title>Metamodelling - BGraham89 UoEO ePortfolio</title>
+	<title>Model-Based Reasoning - BGraham89 UoEO ePortfolio</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="../../assets/css/main.css" />
@@ -45,31 +45,68 @@
 			<section id="one">
 				<div class="inner">
 					<header class="major">
-						<h1>Model-based Reasoning</h1>
+						<h1>Model-Based Reasoning</h1>
 					</header>
 					<!-- <span class="image main"><img src="#" alt="" /></span> -->
 					<h2><u>Models</u></h2>
-					<p></p>
-					<h3><u>References</u></h3>
+					<p>
+						A model is a representation of some interconnections between things. They help people
+						understand, communicate, analyse, predict, and design systems. That can include 
+						the processes that compose them, or the domain that contextualises them. They are a 
+						highly interdisciplinary concept, bounded by intrasubjectivity. The interdisciplinary 
+						nature of them stems from the application of them to science, engineering, and 
+						competition; while the intrasubjective constraint bounds them to formal and critical 
+						discourse.
+					</p>
+					<p>
+						In the domain of software engineering specifically: modelling languages are used to
+						model software, and software itself might have application to modelling. 
+					</p> 
+					<h3><u>Modelling Tools (<em>Examples</em>)</u></h3>
+					<ul style="color:blanchedalmond">
+						<li>
+							<b style="color:white">Knox, S., Meier, P., Harou, J. & Yoon, J. (2018) 
+								A python framework for multi-agent simulation of networked resource systems.
+								 <i>Environmental Modelling & Software</i>.
+								103(1): 16-28. <a href="https://doi.org/10.1016/j.envsoft.2018.01.019">DOI.</a></b>
+							- Knox et al. introduce a python library for building simulation models of networked systems. It provides
+							an environmental modelling interface for component based models.
+						</li>
+					</ul>
+					<br>
+					<h2><u>Metamodels</u></h2>
+					<p>
+						A metamodel is a representation of a system that can be used to 
+						create modelling languages themselves. The additional layer of abstraction 
+						that metamodels provide is intended to provide a more rigiorous foundation
+						to the model driven engineering approach. 
+					</p>
+					<h3><u>Model-Driven Engineering (<em>Theory</em>)</u></h3>
 					<ul>
 						<li style="color:blanchedalmond">
 							<b style="color:white">Kent, S. (2002)
-								'Model Driven Engineering'.
-								<i>Integrated Formal Methods</i>. Berlin, 2002. Heidelberg: Springer. 286-298.
-								<a href="https://doi.org/10.1109/ICM2CS.2009.5397941">DOI.</a></b>
-							- Kent sets out a framework for model driven engineering (MDE), organising
-							the space of software models and the different kinds of mappings that exist between models. He
-							argues there's a need of connectivity between process, analysis and architecture.
+								'Model Driven Engineering', in: Butler, M., Petre, L., Sere, K. (2002).
+								<i>Integrated Formal Methods</i>. Heidelberg: Springer. 286-298.
+								<a href="https://doi.org/10.1007/3-540-47884-1_16">DOI.</a></b>
+							- Kent sets out a framework for model driven engineering (MDE). He organises
+							the space of software models, including the different kinds of mappings that exist 
+							between types of models, and describes the use of metamodelling languages to define
+							modelling languages.
 						</li>
 					</ul>
-
-					<h2><u>Metamodels</u></h2>
-					<p>
-						A metamodel is a description of concepts, and relationships between
-					them, to serve as a model from which domain-specific engineering applications can me modelled
-					and developed.
-					</p>
-					<h3><u>References</u></h3>
+					<h3><u>Organisational Standards</u></h3>
+					<ul style="color:aliceblue">
+						<li>
+							<b style="color:coral">ISO/IEC 19502</b> - Standards for a meta-metamodel underpinning
+							model-driven engineering, and the creation of Model Object Facility (MOF) metamodels.
+						</li>
+						<li>
+							<b style="color:coral">OMG UML/2.5.1</b> - Standards for UML version 2.5.1 based upon 
+							a MOF metamodel. The metamodel is essentially a subset of UML, from each all constructs in UML can 
+							be described with.
+						</li>
+					</ul>
+					<h3><u>Modelling Domains (<em>Examples</em>)</u></h3>
 					<ul>
 						<li style="color:blanchedalmond">
 							<b style="color:white">Fortino, G., Guerrieri, A., Russo, W. & Savaglio, C. (2015)
@@ -77,26 +114,12 @@
 								approach'. <i>IEEE International Conference on Systems, Man and Cybernetics</i>. Hong Kong, 
 								2015. New York: IEEE. 1297-1302.
 								<a href="https://doi.org/10.1109/SMC.2015.231">DOI.</a></b>
-							- Fortino et al. devolop a metamodel for the internet of things (IoT), building
-							upon a concept of Smart Objects.
-						</li>
-						<li style="color:blanchedalmond">
-							<b style="color:white">Knox, S., Meier, P., Harou, J. & Yoon, J. (2018) 
-								A python framework for multi-agent simulation of networked resource systems.
-								 <i>Environmental Modelling & Software</i>.
-								103(1): 16-28. <a href="https://doi.org/10.1016/j.envsoft.2018.01.019">DOI.</a></b>
-							- Knox et al. introduce a python library for building simulation models of networked systems, which provides
-							an environmental modelling interface for component based models. The design of the library
-							is based on a metamodel which outlines the available components and the relationships between them.
-						</li>
-						<li style="color:blanchedalmond">
-							<b style="color:white">Rumbaugh, J., Jacobson, I. & Booch, G. (1999) <i>The Unified Modelling Language reference Manual</i>.
-								Addison-Wesley. ISBN: 978-0-321-24562-5</b>
-							- Rumbaugh et al. prescribe rules and terminology for the unified modelling language; a metamodel for 
-							general software engineering.
+							- Fortino et al. devolop a metamodel for the internet of things (IoT), that builds
+							upon a Smart Object (SO) metaclass.
 						</li>
 					</ul>
 					<br>
+					<h2><u>Ontologies</u></h2>
 			</section>
 		</div>
 
