@@ -50,19 +50,20 @@
 					<!-- <span class="image main"><img src="#" alt="" /></span> -->
 					<h2><u>Models</u></h2>
 					<p>
-						A model is a representation of some interconnections between things. They help people
-						understand, communicate, analyse, predict, and design systems. That can include 
-						the processes that compose them, or the domain that contextualises them. They are a 
-						highly interdisciplinary concept, bounded by intrasubjectivity. The interdisciplinary 
-						nature of them stems from the application of them to science, engineering, and 
-						competition; while the intrasubjective constraint bounds them to formal and critical 
-						discourse.
+						A model is a representation of a system. They help people
+						understand, communicate, analyse, and design systems, as a simplification of
+						them. Models have application to science, engineering, game-like domains,
+						and various other domains concerned with specific systems. The architecture of
+						a model is governed by formal and critical discourse, particularly in Darwinian 
+						domains. In the domain of software engineering: modelling languages are used to
+						model software systems. And, software itself can have application to modelling too.
+						For example; software might provide an interface for modelling, or it might
+						procedurally generate models. Beyond software engineering and into the domain of computer 
+						science; notable types of models include data models, machine-learning models, 
+						socio-techno-behavioural models, and scientific models.
 					</p>
-					<p>
-						In the domain of software engineering specifically: modelling languages are used to
-						model software, and software itself might have application to modelling. 
-					</p> 
-					<h3><u>Modelling Tools (<em>Examples</em>)</u></h3>
+					<h3><u>Application Software for Modelling</u></h3>
+					<p>References to papers which advocate application software for modelling:</p>
 					<ul style="color:blanchedalmond">
 						<li>
 							<b style="color:white">Knox, S., Meier, P., Harou, J. & Yoon, J. (2018) 
@@ -70,19 +71,57 @@
 								 <i>Environmental Modelling & Software</i>.
 								103(1): 16-28. <a href="https://doi.org/10.1016/j.envsoft.2018.01.019">DOI.</a></b>
 							- Knox et al. introduce a python library for building simulation models of networked systems. It provides
-							an environmental modelling interface for component based models.
+							an environmental-modelling interface for component-based models.
 						</li>
 					</ul>
+					<h4><u>Examples</u></h4>
+					<p>
+						This section presents an implementation of an application programme for modelling.
+					</p>
+						<h5 style="color: palegoldenrod">Deterministic Finite State Machines (DFSMs)</h5>
+					<p>
+						A deterministic finite state machine is a model of any system that has a finite amount of
+						states, and allows transitions between some of those states in a predictable way.
+						The notion of an intitial and final states are normally specified too. DFSMs are able to describe many systems.
+						For example; consider a system describing dice rolls.  A dice starts with one of it's faces up; that's one of it's six states.
+						While the dice rolls, it transitions from state to state. The way it rolls is governed by it's geometry. 
+						From each face, it rotates to either of the 4 faces that join with it. Eventually it ends up in a final state.
+					</p>
+					<p>
+						There are five pieces of information
+						needed to model a DFSM:
+					</p>
+					<ol>
+						<li>A set of states</li>
+						<li>A set of options used to evoke transitions</li>
+						<li>A function that takes a state and option, and peforms the corresponding transition</li>
+						<li>An initial state</li>
+						<li>A set of states which may be the final states</li>
+					</ol>
 					<br>
 					<h2><u>Metamodels</u></h2>
 					<p>
-						A metamodel is a representation of a system that can be used to 
-						create modelling languages themselves. The additional layer of abstraction 
-						that metamodels provide is intended to provide a more rigiorous foundation
-						to the model driven engineering approach. 
+						A metamodel is a representation of a system used to 
+						create modelling languages, and essentially fromalises the entities 
+						and relations that can be used to create modelling languages. 
+						Modelling languages use the entities and relations from the metamodel,
+						to provide a tool to model software with. The additional layer of abstraction 
+						that metamodels provide, is intended to produce a more rigorous foundation
+						to the model-driven engineering approach of software development;
+						by facilitating model validation for example. 
 					</p>
-					<h3><u>Model-Driven Engineering (<em>Theory</em>)</u></h3>
+					<h3><u>Model-Driven Engineering</u></h3>
+					<p>References to papers whci advocate model-driven engineering:</p>
 					<ul>
+						<li style="color:blanchedalmond">
+							<b style="color:white">Fortino, G., Guerrieri, A., Russo, W. & Savaglio, C. (2015)
+								'Towards a Development Methodology for Smart Object-Oriented IoT Systems: A Metamodel
+								approach'. <i>IEEE International Conference on Systems, Man and Cybernetics</i>. Hong Kong, 
+								2015. New York: IEEE. 1297-1302.
+								<a href="https://doi.org/10.1109/SMC.2015.231">DOI.</a></b>
+							- Fortino et al. develop a metamodel for the internet of things (IoT), that builds
+							upon a Smart Object (SO) metaclass.
+						</li>
 						<li style="color:blanchedalmond">
 							<b style="color:white">Kent, S. (2002)
 								'Model Driven Engineering', in: Butler, M., Petre, L., Sere, K. (2002).
@@ -104,18 +143,6 @@
 							<b style="color:coral">OMG UML/2.5.1</b> - Standards for UML version 2.5.1 based upon 
 							a MOF metamodel. The metamodel is essentially a subset of UML, from each all constructs in UML can 
 							be described with.
-						</li>
-					</ul>
-					<h3><u>Modelling Domains (<em>Examples</em>)</u></h3>
-					<ul>
-						<li style="color:blanchedalmond">
-							<b style="color:white">Fortino, G., Guerrieri, A., Russo, W. & Savaglio, C. (2015)
-								'Towards a Development Methodology for Smart Object-Oriented IoT Systems: A Metamodel
-								approach'. <i>IEEE International Conference on Systems, Man and Cybernetics</i>. Hong Kong, 
-								2015. New York: IEEE. 1297-1302.
-								<a href="https://doi.org/10.1109/SMC.2015.231">DOI.</a></b>
-							- Fortino et al. devolop a metamodel for the internet of things (IoT), that builds
-							upon a Smart Object (SO) metaclass.
 						</li>
 					</ul>
 					<br>
