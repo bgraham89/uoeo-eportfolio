@@ -17,4 +17,3 @@ My submissions:
 | Tasks  | Score (%) | Task Details |
 | ------ | --------- | ------------ |
 | Task 1 | 66% | **Capabilities**: Hardware networking, Localisation, Motion planning |
-
