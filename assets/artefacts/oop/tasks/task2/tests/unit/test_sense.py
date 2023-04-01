@@ -1,5 +1,7 @@
-import unittest
+'''Unit tests for Sensor objects'''
+
 from context import components as avc
+import unittest
 
 class TestGPS(unittest.TestCase):
     '''Unit tests for the GPS class.'''
@@ -14,15 +16,11 @@ class TestGPS(unittest.TestCase):
         '''
         try:
             self.gps = avc.GPS()
-        except TypeError as exc:
-            reason = ("The GPS class doesn't implement it's abstract base class.")
-            print("\n--------------------Test Skipped---------------------------")
+        except TypeError as e:
+            reason = ("The GPS class doesn't implement it's abstract base class properly.")
             print(reason)
-            self.skipTest(str(exc))
+            self.skipTest(str(e))
 
-    def test_abc_inheritence(self):
-        '''Tests that GPS implements Sensor.'''
-        self.assertIsInstance()
 
 if __name__ == '__main__':
     unittest.main()

@@ -9,9 +9,9 @@ class Sensor(ABC):
     '''
 
     @abstractmethod
-    def write_memory(raw_data:bytearray):
+    def write_memory():
         '''Puts raw_data into memory'''
 
     @abstractmethod
-    def read_memory() -> bytearray:
+    def read_memory():
         '''Gets raw_data from memory'''

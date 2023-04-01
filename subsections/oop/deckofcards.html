@@ -54,31 +54,14 @@
 						provide a snapshot of my familiarity with OOP and Python at the beginning of this module.
 					</p>
 					<h2><u>Card Class</u></h2>
-					<pre><code>
-									class Card(object):
-									  	def __init__(self, suit, value):
-											self.__SUITS = (
-												"♠","♡","♢","♣"
-											)
-											self.__VALUES = (
-												"2","3","4","5","6","7","8",
-												"9","10","J","Q","K","A"
-											)
-											self.suit = self.__SUITS[suit]
-											self.value = self.__VALUES[value]
-					</code></pre>
+					<img src="../assets/artefacts/oop/snippets/card.png" alt="code example of card class" data-position="center center" />
 					<p>
 						The<code>Card</code>class above has two private attributes and two public attributes.
 						<b>Private attributes</b> are attributes not intended for access from outside an instance.
 						<b>Public attributes</b> are attributes that are free to be accessed from ouside an instance.
 					</p>
 					<h2><u>Deck Class</u></h2>
-					<pre><code>
-									class Deck(list):
-									  	def __init__(self):
-											super.__init__(self)  
-											self.extend([Card(s, v) for s in range(4) for v in range(13)])
-					</code></pre>
+					<img src="../assets/artefacts/oop/snippets/deck.png" alt="code example of deck class" data-position="center center" />
 					<p>
 						The<code>Deck</code>class above inherits from the list class.
 						<b>Inheritence</b> is a feature of OOP, which allows the adoption of attributes and
@@ -87,24 +70,7 @@
 						or followed by the <code>.sort()</code> list method; for example.
 					</p>
 					<h2><u>IntegerCard Class</u></h2>
-					<pre><code>
-									class IntegerCard(Card):
-									  	def __init__(self, suit, value):
-											super.__init__(self, suit, value)  
-											self.__PRIMES = (
-												2, 3, 5, 7, 11, 13, 17,
-												19, 23, 29, 31, 37, 41
-											)
-											self.__integer = (
-												self.__PRIMES[value]
-												+ (value << 8)
-												+ ((2 ** suit) << 12)
-												+ ((2 ** value) << 16)
-											)
-										
-										def __int__(self):
-											return self.__integer
-					</code></pre>
+					<img src="../assets/artefacts/oop/snippets/integercard.png" alt="code example of integercard class" data-position="center center" />
 					<p>
 						The<code>IntegerCard</code>class above inherits from the <code>Card</code> class
 						and further abstracts the features of a physical card.
@@ -118,30 +84,7 @@
 						quick hand-ranking algorithm.
 					</p>
 					<h2><u>PokerHand Class</u></h2>
-					<pre><code>
-									from functools import reduce
-									from random import randint
-
-									class PokerHand(list):
-									  	def __init__(self):
-											super.__init__(self, amount_cards)  
-											self._CreateCards(amount_cards)
-										
-										def _CreateCards(self, amount_cards=5):
-											while True:
-												cards = [IntegerCard(randint(0,3), randint(0,12)) for _ in range(amount_cards)]
-												if len(set(cards)) == amount_cards:
-													self.extend(cards)
-													break
-										
-										def HasFlush(self):
-											return reduce(lambda x, y: int(x) & int(y), self) & (15 << 12) > 0
-										
-										def HasPair(self):
-											return bin(reduce(lambda x, y: int(x) & int(y), self) & (4096 << 16)).count("1") < len(self)
-
-
-					</code></pre>
+					<img src="../assets/artefacts/oop/snippets/pokerhand.png" alt="code example of pokerhand class" data-position="center center" />
 					<p>
 						The<code>PokerHand</code>class above encapsulates details connected to a physical poker hand,
 						although it is not yet complete.
@@ -177,7 +120,7 @@
 					</p>
 					<p>
 						Now that I'm at the end of this module, I wish 
-						I could go back to my old poker project and upgrade it's overall design. During this modulie, I've learnt some 
+						I could go back to my old poker project and upgrade it's overall design. During this module, I've learnt some 
 						design patterns and python tricks that would be actually useful in that project. For example, In my old implementation, 
 						I never thought to encapsulate player actions; but if I had used the command design pattern, it would have simplified the 
 						action tracking algorithm that I frankensteined together.
@@ -187,10 +130,6 @@
 						to constrain or diversify object initialisations. I've definitely gained an appreciation of modelling languages, 
 						and I'm thankful to have learnt terminology and good practices of object-oriented programming. It's vital for
 						for professionals in software engineering, who are working as part of a team.
-					</p>
-					<p>
-						I would also like to say that in the future, I would never embed code into raw html again, as
-						relying on pre html-tags is a pain. Future python code samples will be in either py or ipynb files!
 					</p>
 				</div>
 			</section>
