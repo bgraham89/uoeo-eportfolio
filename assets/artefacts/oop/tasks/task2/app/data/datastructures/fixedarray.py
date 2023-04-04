@@ -1,4 +1,10 @@
-'''TODO: use numpy arrays instead'''
+'''
+Protoype class for holding data.
+
+This class is an alternative to other more optimised datastructures such as 
+numpy arrays, or bytearrays. The purpose of the class is mimic fixed sized data
+from I/O.
+'''
 
 from app.helperfunctions import guards
 
@@ -6,6 +12,7 @@ class FixedArray(object):
     '''An array that has a fixed size.'''
 
     def __init__(self, size):
+        guards.arg_cond((size,), self._size_constraints())
         self._list = [None] * size
         self._size = size
 
@@ -22,19 +29,19 @@ class FixedArray(object):
         if isinstance(key, slice):
             return [self[i] for i in range(*key.indices(self._size))]
         else:
-            guards.arg_cond((key,), self._index_constraint)
+            guards.arg_cond((key,), self._index_constraints())
             return self._list[key]
     
     def update(self, data):
         '''Replace all data'''
-        guards.arg_cond((data,), self._data_constraint)
+        guards.arg_cond((data,), self._data_constraints())
         self._list = list(data)
 
-    def _data_constraint(self):
+    def _data_constraints(self):
         '''Assertion conditions for inputting new data'''
         def length(x):
             '''Checks num indices of data matches FixedArray'''
-            return self.size == len(x)
+            return self._size == len(x)
         def iterable(x):
             '''Checks data is iterable for conversion to array'''
             has_iter = hasattr(x, '__iter__')  #__iter__ then iterable
@@ -51,4 +58,11 @@ class FixedArray(object):
             '''Checks that index isn't too small'''
             return  x >= 0
         return lambda x : upper_bound(x) and lower_bound(x)
+    
+    def _size_constraints(self):
+        '''Assertion conditions for size of FixedArray'''
+        def lower_bound(x):
+            '''Checks that index isn't too small'''
+            return  x >= 0
+        return lambda x : lower_bound(x)
         

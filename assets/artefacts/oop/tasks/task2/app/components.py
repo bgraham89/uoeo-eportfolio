@@ -7,3 +7,4 @@ for accessiblilty from context.py.
 
 # sense components
 from app.sense.gps import GPS
+from app.network.sense import SensorServer

@@ -1,6 +1,7 @@
 '''Unit tests for guard helper functions'''
 
-from context import guards
+from collections import Counter
+from context import guards, encoders
 import unittest
 
 class TestArgCondGuard(unittest.TestCase):
@@ -55,6 +56,48 @@ class TestArgCondGuard(unittest.TestCase):
             return (x, y)
         with self.assertRaises(TypeError):
             dummy_function(self.x, self.y)
+
+class TestIntToArrayEncoder(unittest.TestCase):
+    '''Unit tests for the int_to_array encoder function.'''
+    
+    def setUp(self):
+        self.size = 8
+        self.powers = (2 ** i for i in range(10))
+
+    def test_powers_encoded_correctly(self):
+        '''Expect mathematical pattern to unfold.'''
+        for i, power in enumerate(self.powers):
+            overflow = i >= 8  # expected pattern breaks for large powers
+            zeros = 8 if overflow else 7
+            ones = 0 if overflow else 1
+            index = None if overflow else zeros - i
+            enc = encoders.int_to_array(power, self.size)
+            counter = Counter(enc)
+            self.assertEqual(counter["0"], zeros)
+            self.assertEqual(counter["1"], ones)
+            if overflow:
+                with self.assertRaises(ValueError):
+                    enc.index("1")
+            else:
+                self.assertEqual(enc.index("1"), index)
+    
+class TestArrayToIntEncoder(unittest.TestCase):
+    '''Unit tests for the array_to_int encoder function.'''
+
+    def setUp(self):
+        self.size = 8
+        self.powers = (2 ** i for i in range(8))
+
+    def test_powers_encoded_correctly(self):
+        '''Expect consistency for inverse.'''
+        for power in self.powers:
+            array = encoders.int_to_array(power, self.size)
+            num = encoders.array_to_int(array)
+            self.assertEqual(num, power)
+
+
+
+
 
 if __name__ == '__main__':
     unittest.main()
