@@ -16,4 +16,5 @@ import app.components as components
 import app.datastructures as datastructures
 import app.helperfunctions.encoders as encoders
 import app.helperfunctions.guards as guards
+import app.models as models
 import app.network.config.protocols as protocols

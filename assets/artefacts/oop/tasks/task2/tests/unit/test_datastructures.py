@@ -123,6 +123,11 @@ class TestPackage(unittest.TestCase):
         package = avds.Package.Basic(self.data[:32], self.meta_data)
         self.assertTrue(package.read_data(), self.data[:32])
 
+    def test_basic_package_packs_data(self):
+        '''Expect data attributes to be updated correctly.'''
+        package = avds.Package.Basic(self.data[:31], self.meta_data)
+        self.assertTrue(package.read_data(), self.data[:31]+["0"])
+
     def test_basic_package_stores_meta_data(self):
         '''Expect attributes to be updated correctly.'''
         package = avds.Package.Basic(self.data[:32], self.meta_data)
@@ -140,6 +145,73 @@ class TestPackage(unittest.TestCase):
         package.update_address(new_address)
         postupdate = list(package.read_meta_data())
         self.assertNotEqual(preupdate, postupdate)
+
+class TestGraph(unittest.TestCase):
+    '''Unit tests for the Graph class.'''
+
+    def setUp(self):
+        self.nodes = [n for n in range(20)]
+        self.badnodes = [[n] for n in range(20)]
+        self.edges = [(n, n+1) for n in range(19)]
+        self.badedges = [(n, n+1) for n in range(20)]
+
+    def test_nodes_assigned(self):
+        '''Expect nodes attribute to match input.'''
+        graph = avds.Graph()
+        graph.add_nodes(self.nodes)
+        self.assertEqual(graph._nodes, set(self.nodes))
+
+    def test_good_nodes_assigned(self):
+        '''Expect nodes attribute to match input.'''
+        graph = avds.Graph()
+        graph.add_nodes(self.nodes)
+        self.assertEqual(graph._nodes, set(self.nodes))
+
+    def test_bad_nodes_not_assigned(self):
+        '''Expect bad nodes to raise AssertionError'''
+        graph = avds.Graph()
+        with self.assertRaises(AssertionError):
+            graph.add_nodes(self.badnodes)
+
+    def test_good_edges_assigned(self):
+        '''Expect good edges attribute to match input.'''
+        graph = avds.Graph()
+        graph.add_nodes(self.nodes)
+        for a, b in self.edges:
+            graph.add_directed_edge(a, b)
+            self.assertTrue(b in graph._edges[a])
+
+    def test_bad_edges_not_assigned(self):
+        '''Expect bad edges to raise AssertionError'''
+        graph = avds.Graph()
+        graph.add_nodes(self.nodes)
+        with self.assertRaises(AssertionError):
+            graph.add_directed_edge(*self.badedges[-1])
+
+    def test_directed_edge_is_one_way(self):
+        '''Expect oppoiste edge not in graph'''
+        graph = avds.Graph()
+        graph.add_nodes(self.nodes)
+        graph.add_directed_edge(*self.edges[0])
+        self.assertTrue(self.edges[0][1] not in graph._edges)
+
+    def test_edge_is_undirected(self):
+        '''Expect opposite edge in graph'''
+        graph = avds.Graph()
+        graph.add_nodes(self.nodes)
+        node_i, node_ii = self.edges[0]
+        graph.add_undirected_edge(node_i, node_ii)
+        self.assertTrue(node_i in graph._edges[node_ii])
+
+    def test_null_graph_has_nodes(self):
+        '''Expect nodes in graph'''
+        graph = avds.Graph.Null(self.nodes)
+        self.assertTrue(graph._nodes, set(self.nodes))
+
+    def test_null_graph_has_no_edges(self):
+        '''Expect no edges in graph'''
+        graph = avds.Graph.Null(self.nodes)
+        self.assertTrue(len(graph._edges) == 0)
 
 
 if __name__ == '__main__':

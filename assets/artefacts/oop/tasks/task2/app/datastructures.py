@@ -7,4 +7,5 @@ for accessiblilty from context.py.
 
 # datastructure components
 from app.data.datastructures.fixedarray import FixedArray
+from app.data.datastructures.graph import Graph
 from app.data.datastructures.package import Package

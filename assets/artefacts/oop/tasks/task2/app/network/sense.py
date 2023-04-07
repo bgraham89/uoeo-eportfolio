@@ -20,7 +20,7 @@ class SensorServer(Server):
     def make_packages(self, data, op, address):
         '''Creates package for network transportation.'''
         body_size = Basic.BODY_SIZE
-        num_packages = data // body_size
+        num_packages = len(data) // body_size
         for i in range(num_packages):
             meta_data = {
                 "this" : i+1, 

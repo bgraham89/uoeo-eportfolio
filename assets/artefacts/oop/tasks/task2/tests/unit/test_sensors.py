@@ -1,6 +1,7 @@
 '''Unit tests for Sensor objects'''
 
 from context import components as avc
+from context import encoders
 import unittest
 
 class TestGPS(unittest.TestCase):
@@ -8,7 +9,7 @@ class TestGPS(unittest.TestCase):
 
     def setUp(self):
         self.size = 10
-        self.data = ["d", "u", "m", "m", "y", "", "d", "a", "t", "a"]
+        self.data = ["d", "u", "m", "m", "y", " ", "d", "a", "t", "a"]
     
     def test_data_assigned(self):
         '''Expect memory to be updated.'''
@@ -29,6 +30,13 @@ class TestGPS(unittest.TestCase):
         gps.memory = self.data
         for i in range(self.size):
             self.assertEqual(gps.memory[i], self.data[i])
+    
+    def test_randomiser(self):
+        '''Expect GPS to get random data.'''
+        gps = avc.GPS(self.size)
+        gps.fake_memory()
+        self.assertTrue(gps.read_memory())
+
 
 if __name__ == '__main__':
     unittest.main()

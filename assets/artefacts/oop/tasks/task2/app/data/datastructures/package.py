@@ -3,7 +3,7 @@ Protoype class for holding data.
 
 This class is an alternative to standard network datagram structures such as 
 UDP or TPS datagrams. The purpose of the class is to provide a datastructure
-to send data between components, mimicing network systems.
+to send data between components, mimicing network systems, for prototyping.
 '''
 
 from app.data.datastructures.fixedarray import FixedArray

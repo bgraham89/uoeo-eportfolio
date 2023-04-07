@@ -1,5 +1,6 @@
 import app.datastructures as avds
 from app.sense.abstract.sensor import Sensor
+from app.helperfunctions import encoders
 from random import randint
 
 class GPS(Sensor):
@@ -18,6 +19,12 @@ class GPS(Sensor):
         return list(self._memory)
     
     def fake_memory(self):
-        x = randint
+        '''generates random coordinates'''
+        half = self._memory_size // 2 - 1
+        x = randint(0, half)
+        y = randint(0, half)
+        value = (x << half) + y
+        data = encoders.int_to_array(value, self._memory_size)
+        self.write_memory(data)
     
     memory = property(read_memory, write_memory)

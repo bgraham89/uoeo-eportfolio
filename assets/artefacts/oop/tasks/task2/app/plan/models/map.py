@@ -1,7 +1,10 @@
+import app.datastructures as avds
+import logging
 from random import shuffle
+import traceback
 
 class Map(object):
-    '''A class to represent roads'''
+    '''A class to represent a road map.'''
     def __init__(self, width, height):
         self._width = width
         self._height = height
@@ -9,33 +12,43 @@ class Map(object):
         self._graph = None
 
     def int_to_coord(self, n):
-        '''converts an int to a point on the grid'''
+        '''Converts an int to Cartesian Coordinates.'''
         x = n % self._width
         y = n // self._height
         return (x, y)
+    
+    def coord_to_int(self, coord):
+        '''Converts Cartesian Coordinates to an int.'''
+        x, y = coord
+        n = (y * self._height) + x
+        return n
 
     @classmethod
-    def generate__random(cls, width, height):
-        '''generates a spanning tree for a grid'''
+    def RandomSpanningTree(cls, width, height):
+        '''Generates a spanning tree to overlay a grid of points'''
         map = cls(width, height)
-        points = [n for n in range(width * height)]
-        map._graph.add_points(points)
-        # potential edges enumerated per orientation
-        horiz_cond = lambda x : x % height == (x+1) % height
+        nodes = [map.coord_to_int(coord) for coord in map._grid]
+        map._graph = avds.Graph.Null(nodes)
+        # potential edges enumerated per orientation, arithemtically
+        horiz_cond = lambda x : x // height == (x+1) // height
         vert_cond = lambda x : x + height < width * height
-        horiz_edges = [(point, point + 1) for point in points if horiz_cond(point)]
-        vert_edges = [(point, point + height) for point in points if vert_cond(point)]
+        horiz_edges = [(node, node + 1) for node in nodes if horiz_cond(node)]
+        vert_edges = [(node, node + height) for node in nodes if vert_cond(node)]
         pot_edges = horiz_edges + vert_edges
         # Kruskal's algorithm for maze / spanning tree generation
-        islands = {point : set(point) for point in points}
+        islands = {node : set((node,)) for node in nodes}
         shuffle(pot_edges)
         for a, b in pot_edges:
             if b not in islands[a]:
-                connection = islands[a].union(islands[b])
-                for point in connection:
-                    islands[point] = connection
-            map.add_edge((a,b))
-            if len(connection) == len(points):
-                break
+                island = islands[a].union(islands[b])
+                for node in island:
+                    islands[node] = island
+            map._graph.add_undirected_edge(a,b)
+            if len(island) == len(nodes):
+                return map
+        else:
+            logging.error(traceback.format_exc())  #educational
+            err_message = "Edges were not enumerated properly."
+            raise Exception(err_message)
             
 

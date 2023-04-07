@@ -3,7 +3,7 @@ Protoype class for holding data.
 
 This class is an alternative to other more optimised datastructures such as 
 numpy arrays, or bytearrays. The purpose of the class is mimic fixed sized data
-from I/O.
+from I/O, for prototyping.
 '''
 
 from app.helperfunctions import guards
@@ -36,6 +36,7 @@ class FixedArray(object):
         '''Replace all data'''
         guards.arg_cond((data,), self._data_constraints())
         self._list = list(data)
+        return self
 
     def _data_constraints(self):
         '''Assertion conditions for inputting new data'''

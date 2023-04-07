@@ -11,11 +11,4 @@ import sys
 path = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(path))
 
-from app.context import (
-    components, 
-    datastructures, 
-    encoders, 
-    guards,
-    models, 
-    protocols
-)
+from app.context import components, datastructures, encoders, guards, protocols
