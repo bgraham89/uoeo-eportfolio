@@ -3,13 +3,13 @@ from app.sense.abstract.sensor import Sensor
 from app.helperfunctions import converters
 from random import randint
 
-class GPS(Sensor):
-    '''A general positioning system for localisation.'''
+class Destination(Sensor):
+    '''An I/O device that obtains a destination.'''
 
     def __init__(self, memory_size):
         self._memory = avds.FixedArray(memory_size)
         self._memory_size = memory_size
-        self._key = "GPS"
+        self._key = "Destination"
 
     def write_data(self, data):
         '''Puts data into memory'''

@@ -1,7 +1,7 @@
 '''Unit tests for guard helper functions'''
 
 from context import datastructures as avds
-from context import encoders as enc
+from context import converters as conv
 from context import protocols
 import unittest
 
@@ -141,7 +141,7 @@ class TestPackage(unittest.TestCase):
         '''Expect header gets updates'''
         package = avds.Package.Basic(self.data[:32], self.meta_data)
         preupdate = list(package.read_meta_data())
-        new_address = enc.int_to_array(self.senders_address, self.md_size)
+        new_address = conv.int_to_array(self.senders_address, self.md_size)
         package.update_address(new_address)
         postupdate = list(package.read_meta_data())
         self.assertNotEqual(preupdate, postupdate)

@@ -12,9 +12,10 @@ path = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(path))
 
 from app.context import (
+    addresses,
     components, 
     datastructures, 
-    encoders, 
+    converters, 
     guards,
     models, 
     protocols

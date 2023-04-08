@@ -7,7 +7,7 @@ to send data between components, mimicing network systems, for prototyping.
 '''
 
 from app.data.datastructures.fixedarray import FixedArray
-from app.helperfunctions import encoders, guards
+from app.helperfunctions import converters, guards
 from app.network.config.protocols import Basic
 
 class Package(object):
@@ -49,7 +49,7 @@ class Package(object):
         '''
         def _slice(meta_data, tag, itemlimit):
             '''Converts meta_data value into array.'''
-            return encoders.int_to_array(meta_data[tag], itemlimit)
+            return converters.int_to_array(meta_data[tag], itemlimit)
         def _fits(meta_data, tag, itemlimit):
             '''Asserts meta_data value will fit into slice.'''
             params = (meta_data[tag],)

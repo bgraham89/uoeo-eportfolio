@@ -5,10 +5,10 @@ class Basic(object):
     A container for information about the Basic protocol.
 
     Headers should include:
+        'op' : operation id (for request-responding)
+        'address' : the senders id
         'this' : the package sequence number (for package streams)
         'last' : the final package sequence number
-        'address' : the senders id
-        'op' : operation id (for request-responding)
     Each value must be an int from 0 to 255.
     '''
     HEAD_SIZE = 32

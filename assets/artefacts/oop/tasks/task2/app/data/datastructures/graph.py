@@ -36,33 +36,37 @@ class Graph(object):
 
     def shortest_path(self, node_start, node_end):
         ''' Calculates the shortest path between two nodes'''
-        def _djikstra(self, current_node):
+        if node_start == node_end:
+            return [node_start]
+        def _djikstra(current_node):
             '''Recursive search by bredth check from closest node'''
             for next_node in self._edges[current_node]:
-                if node_end in self._edges[current_node]:
+                if next_node == node_end:
                     breadcrumbs[next_node] = current_node
                     return True  #path found
                 else:
                     current_distance = distances[current_node] + 1
                     if current_distance < distances[next_node]:
                         distances[next_node] = current_distance
+                        breadcrumbs[next_node] = current_node
             unvisited_nodes.remove(current_node)
-            closest_unvisited = sorted(list(unvisited_nodes), sort_closest)
-            if distances[closest_unvisited] == inf:
+            closest_unvisited = sorted(list(unvisited_nodes), key=sort_closest)
+            if distances[closest_unvisited[0]] == inf:
                 return False  #path impossible
             else:
-                breadcrumbs[closest_unvisited[0]]
                 return _djikstra(closest_unvisited[0])  #keep looking 
         distances = {node : inf for node in self._nodes}
-        sort_closest = lambda x, y : distances[x] <= distances[y]
+        sort_closest = lambda x: distances[x]
         breadcrumbs = {node : None for node in self._nodes}
         unvisited_nodes = set(distances.keys())
         distances[node_start] = 0
         if _djikstra(node_start):
             path = [node_end]
-            while node_prev := breadcrumbs[node_end]:
+            while node_prev := breadcrumbs[node_end]:  #requires python 3.8
                 path.append(node_prev)
                 node_end = node_prev
+            path.append(node_start)
+            path.reverse()
             return path
         else:
             return []

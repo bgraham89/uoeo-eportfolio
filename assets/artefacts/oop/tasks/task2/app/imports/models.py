@@ -5,5 +5,5 @@ Each model is imported to this module
 for accessiblilty from context.py.
 '''
 
-# models
+# conceptual model classes
 from app.plan.models.map import Map
