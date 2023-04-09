@@ -1,0 +1,135 @@
+'''A dictionary of random road names'''
+from random import choice
+
+prefixes = [
+    "ancient",
+    "arctic",
+    "artificial",
+    "big",
+    "blue",
+    "broken",
+    "cheap",
+    "clay",
+    "coal"
+    "copper",
+    "dusty",
+    "elder",
+    "evil",
+    "far",
+    "feathered",
+    "fractal",
+    "furry",
+    "green",
+    "grey",
+    "holy",
+    "honey",
+    "hyper",
+    "little",
+    "old",
+    "orange",
+    "purple",
+    "rainy",
+    "red",
+    "rock",
+    "round",
+    "rubber",
+    "rusty",
+    "silver",
+    "sleeping",
+    "slow",
+    "snowy",
+    "square",
+    "steel",
+    "stone",
+    "sunny",
+    "star",
+    "tall",
+    "tin",
+    "tiny",
+    "windy",
+    "yellow"
+]
+
+roots = [
+    "apple",
+    "badger",
+    "bear",
+    "bottom",
+    "brick",
+    "berry",
+    "birch",
+    "chair",
+    "church",
+    "daisy",
+    "duck",
+    "factory",
+    "field",
+    "goose",
+    "grass",
+    "hill",
+    "house",
+    "lobster",
+    "maple",
+    "market",
+    "meadow",
+    "monkey",
+    "mountain",
+    "oak",
+    "pond",
+    "pub",
+    "quarry",
+    "rabbit",
+    "school",
+    "shell",
+    "shore",
+    "teapot",
+    "templar",
+    "tree",
+    "warrior",
+    "willow",
+    "wolf",
+    "wood",
+    "worm"
+]
+
+suffixes = [
+    "amusements",
+    "arcade",
+    "avenue",
+    "bridge",
+    "camp",
+    "canyon",
+    "centre",
+    "city",
+    "court",
+    "ditch",
+    "drive",
+    "estate",
+    "gardens",
+    "hospital",
+    "hotel",
+    "lane",
+    "mews",
+    "passage",
+    "park",
+    "place",
+    "pond",
+    "road",
+    "stadium",
+    "street",
+    "terrace",
+    "walk",
+    "way",
+    "yard"
+]
+
+def make_road_names(num_streets):
+    "Creates a tuple of road names."
+    names = []
+    uniques = set()
+    while len(names) < num_streets:
+        name = choice(prefixes) + "-" + choice(roots) + " " + choice(suffixes)
+        uniques.add(name)
+        if len(names) != len(uniques):
+            names.append(name) 
+    return tuple(names)

@@ -1,13 +1,19 @@
-import app.imports.datastructures as avds
+#  class imports
 from app.sense.abstract.sensor import Sensor
-from app.helperfunctions import converters
+from app.data.datastructures.fixedarray import FixedArray
+
+#  function imports
 from random import randint
+
+#  module imports
+from app.helperfunctions import converters as conv
+
 
 class Destination(Sensor):
     '''An I/O device that obtains a destination.'''
 
     def __init__(self, memory_size):
-        self._memory = avds.FixedArray(memory_size)
+        self._memory = FixedArray(memory_size)
         self._memory_size = memory_size
         self._key = "Destination"
 
@@ -25,7 +31,7 @@ class Destination(Sensor):
         x = randint(0, 2 ** half - 1)
         y = randint(0, 2 ** half - 1)
         value = (y << half) + x
-        data = converters.int_to_array(value, self._memory_size)
+        data = conv.int_to_array(value, self._memory_size)
         self.write_data(data)
     
     memory = property(read_data, write_data)

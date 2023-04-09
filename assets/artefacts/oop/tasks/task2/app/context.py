@@ -12,10 +12,7 @@ import sys
 path = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(path))
 
-import app.imports.components as components
-import app.imports.datastructures as datastructures
-import app.helperfunctions.converters as converters
-import app.helperfunctions.guards as guards
-import app.imports.models as models
-import app.network.config.addresses as addresses
-import app.network.config.protocols as protocols
+from app.helperfunctions import converters, guards
+from app.imports import components, datastructures, models
+from app.network.config import addresses, protocols
+from app.ui import tui

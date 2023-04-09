@@ -1,37 +1,91 @@
 # File structure
 
-## ./data/datastructures
+The file structure has been designed to allow as much exstensibility as possible. Constants are generally contained in seperate files too.
 
-The place to define datastructures. Custom data structures of this version include:
+## app/act
 
-* **Fixed Array** - an array with a fixed length that cannot be easily changed. The main purpose of this datastructure is to serve as a I/O container for sensor components. It serves more as an educational tool, or proof of concept than as optimal structure. A more efficent data structure would be a bytearray or numpy array.
-* **Graph** - an unweighted graph, with integers as nodes. Djikstra's shortet path algorithm is used to provide shortest path capabilities. The main purpose of the graph is describe routes available, by mapping nodes to coordinates on a grid.
-* **Package** - essentially an array split into two: one part for metadata, the other part for data. A package is a protoype of packets used in low-level internet communication. The main purpose of a package is to provide a universal container for data sent between different components of an autonomous car. Each component is connected to a server that shapes data into packages to send to other servers, which in turn, shapes the packages to the benefit of dependent components. The specific structure of a package is a variant of the User Datagram Protocol (UDP) of the internet protocol suite. The checksum metadata of UDP is instead replaced by opcode metadata, as is most convenient in this prototype.
+The place to define components that help the autonomous vehicle act. All components should obey the **Actuator** abstract base class. Current components include:
 
-## ./helperfunctions
+* **Accelerator** - a class representing an accelerate pedal.
+* **Steering** - a class representing a steering reel.
 
-The place to define functions useful in different files. Custom helper functions of this version are:
+## app/data/datastructures
+
+The place to define datastructures used by components. Current datastructures include:
+
+* **Fixed Array** - an array with a fixed length that cannot be easily changed. The main purpose of this datastructure is to hold I/O input data for a sensor components, replicating the physical memory. This datastructure is an educational tool, and could be replaced by moree efficent data structures such as a bytearray or numpy array.
+* **Graph** - an unweighted graph, with integers as nodes. The main purpose of the graph is describe routes. Coordinates on a grid can be mapped to nodes, with edges of the graph representing roads between coordinates. Currently, Djikstra's shortet path algorithm is used to provide shortest path capabilities.
+* **Package** -  an array split into two parts: one part for metadata, and the other part for data. The main purpose of a packet to to be a shared medium for data transfer between different components. Packages replicate internet communication packets. Furthermore, this data structure is handled by server compnents in the autonomous car.
+
+## app/helperfunctions
+
+The place to define functions useful in different files. Current helper functions include:
 
 * **Type Converters** - for converting data between types. This is mainly used for converting binary data from sensor components into cartesian coordinates for planner components.
-* **Guards** - for making explicit any paramater constraints on methods in low level classes.
+* **Guards** - for making explicit any paramater constraints on methods in classes.
 
-## ./imports
+## app/imports
 
-The place to add any imports required by the main and testing scripts. Special files named ***context.py*** are used to add the appropiate paths required to import functions and classes into the main script, and the testing scripts, that points to this folder. Special files named ***__init__.py*** files are required to turn folders into packages to import from.
+The place to add any imports required by the main and testing scripts.
 
-## ./network
+Special files named ***context.py*** are found throughout the folders, which are used to add the appropiate paths required to the system, for importing functions and classes into the main and testing scripts, irrespective of the folder structure. Those files point towards the import folder for convenience, so it would be wise to make sure all other modules for imports are included in the import folder. Current import files include: *
 
-The place to define network components and network config files. Each component of the autonomous vehicle is classified as either a sensor, planner or actuator. Each component is assigned to a special **Server** that handles communication of the component with others, facilitating data flow. Each server implements the same abstract base class, but has subtle differences to each other. Further inheritence has been avoided so as not be too restrictive. The network makes use of synchronous network behaviour, but asynchronous behaviour would be better suited, and should be a goal of the next version. ***protocols.py*** provides configuration for the **Basic** protocol useed in this prototype network. ***addresses.py*** provides a global directory for network addresses, which would be better handled by network switches and routers in future versions. Most network communication currently follows a request-response pattern.
+* ***components.py*** - module for all components
+* ***datastructures*** - module all datastructures
+* ***models.py*** - module for conceptual model classes
 
-## ./plan
+Special files named ***__init__.py*** files are also found within every folder, which are required to turn folders into packages to import from.
+Therefore the import folder doesn't strictly need to be used, but it helps with code organisation. 
 
-The place to define components that help the autonomous vehicle plan. They should obey the planner abstract base class. Components include:
+## app/network
 
-* **Mapper** - for localisation and route planning. The mapper class depends upon a **Map** model. For the purpose of the prototype, a map is essentially a spanning tree upon a grid. The spanning tree is created using Kruskal's algorithm. This is not the most efficient algorithm, but is good enough for a prototype.
+The place to define network components of the autonomous vehicle, along with network config files.
 
-## ./sense
+Every vehicle component is classified as either a sensor, planner or actuator component, and cach class of component comes with a special **Server** that handles communication for that component with other components. These do the following:
 
-The place to define components that help the autonomous vehicle sense. They should obey the sensor abstract base class. Components include:
+* They convert data into packets and vice versa, facilitating data flow
+* They send packets in a request-response manner
+* The three types of server are : **SensorServer**, **PlannerServer**, **ActuatorServer**
 
-* **GPS** - a mock up of a global positioning systems
-* **Destination** - a mock up of a UI Post containing a target destination.
+Currently, the configuration involves:
+
+* BASIC protocol - a format for packages, that derives from the User Datagram Protocol (UDP) of the internet protocol suite. The main difference is that UDP packets include a checksum, while a BASIC package includes an opcode instead. This protocol is a matter of convenience for early protyping,
+and should be replaced by globally recognised protocols in the future to provide IoT capabilities.
+* Address limitiations - a range of possible addresses is assigned to each component class. Assigned addresses can be updated using the globally accesible file, ***addresses.py***. In future versions, network switches and routers could provide distributed access, instead of the centralised approach currently used. The current implmentation is a matter of convenience for protyping.
+* Synchronous network communication.
+
+## app/plan
+
+The place to define components that help the autonomous vehicle plan. All components should obey the **Planner** abstract base class. Current components include:
+
+* **Mapper** - A component for localisation and route planning. A mapper object creates a **Map** object, which holds information about the road network.
+
+A map is essentially a spanning tree and a n array, with geometrical correspondence between the two. The spanning tree is created using Kruskal's algorithm which is simple to implement and good enough for testing the software set up conceptually. This is not the most efficient algorithm though.
+
+* **Navigator** - A component for managing car orientation. It's able to get the current orientation from a compass, compute a target orienation from information provided by a ampper, and instruct the steering wheel to steer. Future versions will take track acceleation too.
+
+## app/sense
+
+The place to define components that help the autonomous vehicle sense. All components should obey the **Sensorr** abstract base class. Current components include:
+
+* **Compass** - a class encapsulating a compass.
+* **Destination** - a class encapsulating a target destination request through UI.
+* **GPS** - a class representing a global positioning system.
+
+## app/ui
+
+The place to put ui helper functions or classes.
+
+Currently, the only file included is the **tui.py** file providing text-based ui convenience functions. Later versions could encapsulate the tui in it's own class, to facilitate the storage of user information.
+
+## docs
+
+The place to put documentation about the software
+
+## tests/integration
+
+The place to put tests of subsystems of components that are interacting.
+
+## test/unit
+
+The palce to put tests for individual classes.

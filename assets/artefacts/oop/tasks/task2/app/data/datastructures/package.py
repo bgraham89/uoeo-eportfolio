@@ -73,7 +73,7 @@ class Package(object):
     def pad_data(self, data):
         '''Makes sure data is a suitable length'''
         while len(data) < Basic.BODY_SIZE:
-            data.append("0")
+            data.insert(0, "0")  # try to avoid padding if data will be fractioned.
         return data
 
     def _size_constraints(self):

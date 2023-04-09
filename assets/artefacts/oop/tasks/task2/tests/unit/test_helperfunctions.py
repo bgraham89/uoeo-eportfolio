@@ -1,7 +1,7 @@
 '''Unit tests for guard helper functions'''
 
 from collections import Counter
-from context import guards, converters
+from context import converters as conv, guards
 import unittest
 
 class TestArgCondGuard(unittest.TestCase):
@@ -71,7 +71,7 @@ class TestIntToArrayConverter(unittest.TestCase):
             zeros = 8 if overflow else 7
             ones = 0 if overflow else 1
             index = None if overflow else zeros - i
-            enc = converters.int_to_array(power, self.size)
+            enc = conv.int_to_array(power, self.size)
             counter = Counter(enc)
             self.assertEqual(counter["0"], zeros)
             self.assertEqual(counter["1"], ones)
@@ -91,8 +91,8 @@ class TestArrayToIntConverter(unittest.TestCase):
     def test_powers_encoded_correctly(self):
         '''Expect consistency for inverse.'''
         for power in self.powers:
-            array = converters.int_to_array(power, self.size)
-            num = converters.array_to_int(array)
+            array = conv.int_to_array(power, self.size)
+            num = conv.array_to_int(array)
             self.assertEqual(num, power)
 
 class TestIntToCoordConverter(unittest.TestCase):
@@ -104,7 +104,7 @@ class TestIntToCoordConverter(unittest.TestCase):
     def test_int_to_coord_converter(self):
         '''Expect coords to increase with int.'''
         for n in range(self.width * self.height):
-            coord = converters.int_to_coord(n, self.width, self.height)
+            coord = conv.int_to_coord(n, self.width, self.height)
             if n:
                 x_inc = coord[0] > prev_coord[0]
                 y_inc = coord[1] > prev_coord[1]
@@ -120,8 +120,8 @@ class TestCoordToIntConverter(unittest.TestCase):
     def test_coord_to_int_converter(self):
         '''Expect ints unaffected by transformation.'''
         for n in range(self.width * self.height):
-            coord = converters.int_to_coord(n, self.width, self.height)
-            n_return = converters.coord_to_int(coord, self.height)
+            coord = conv.int_to_coord(n, self.width, self.height)
+            n_return = conv.coord_to_int(coord, self.height)
             self.assertEqual(n, n_return) 
 
 if __name__ == '__main__':

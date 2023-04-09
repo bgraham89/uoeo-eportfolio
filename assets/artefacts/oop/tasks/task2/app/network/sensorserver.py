@@ -1,14 +1,16 @@
-import app.imports.datastructures as avds
-import app.helperfunctions.guards as guards
-import app.helperfunctions.converters as enc
-import app.network.config.addresses as netid
+#  class imports
+from app.data.datastructures.package import Package
 from app.network.abstract.server import Server
 from app.network.config.protocols import Basic
 from collections import deque
 
+#  module imports
+from app.helperfunctions import converters as conv, guards
+from app.network.config import addresses as netid
+
 class SensorServer(Server):
     '''A server for a Sensor component.'''
-    id = 1
+    id = netid.SENSE_MIN
 
     def __init__(self, sensor):
         self._sensor = sensor
@@ -33,7 +35,7 @@ class SensorServer(Server):
             data_i = i * body_size
             data_j = data_i + body_size
             data_slice = data[data_i:data_j]
-            package = avds.Package.Basic(data_slice, meta_data)
+            package = Package.Basic(data_slice, meta_data)
             self._outgoing_packages.appendleft(package)
 
     def send_packages(self):
@@ -71,19 +73,19 @@ class SensorServer(Server):
     def read_op(self, package):
         '''Get op from package (to determine next action).'''
         head = package.read_meta_data()
-        op = enc.array_to_int(head[:Basic.HEAD_SEGMENT_SIZE])
+        op = conv.array_to_int(head[:Basic.HEAD_SEGMENT_SIZE])
         return op
 
     def read_address(self, package):
         '''Get senders address from package (to determine where to reply).'''
         head = package.read_meta_data()
         seg = Basic.HEAD_SEGMENT_SIZE
-        address = enc.array_to_int(head[seg:2*seg])
+        address = conv.array_to_int(head[seg:2*seg])
         return address
     
     def swap_address(self, package):
         '''Swap the address stored in a package with the sensors address'''
-        sender_address = enc.int_to_array(self._id, Basic.HEAD_SEGMENT_SIZE)
+        sender_address = conv.int_to_array(self._id, Basic.HEAD_SEGMENT_SIZE)
         package.update_address(sender_address)
         return package
         

@@ -1,8 +1,11 @@
 '''Unit tests for server components'''
 
-from context import components as avc
-from context import datastructures as avds
-from context import addresses, protocols
+from context import (
+    addresses,
+    components as avc,
+    datastructures as avds,
+    protocols
+)
 import unittest
 
 class TestSensorServer(unittest.TestCase):

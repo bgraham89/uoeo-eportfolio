@@ -1,7 +1,12 @@
-import app.imports.datastructures as avds
+#  class imports
+from app.data.datastructures.graph import Graph
+
+#  function imports
+from random import shuffle
+
+#  module imports
 from app.helperfunctions import converters as conv
 import logging
-from random import shuffle
 import traceback
 
 class Map(object):
@@ -28,7 +33,7 @@ class Map(object):
         map = cls(width, height)
         nodes = [conv.coord_to_int(coord, height) for coord in map._grid]
         # graph starts with no edges
-        map._graph = avds.Graph.Null(nodes)
+        map._graph = Graph.Null(nodes)
         # potential edges enumerated per orientation, arithemtically
         horiz_cond = lambda x : x // height == (x+1) // height
         vert_cond = lambda x : x + height < width * height

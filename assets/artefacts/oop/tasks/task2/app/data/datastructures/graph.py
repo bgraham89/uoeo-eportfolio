@@ -65,7 +65,8 @@ class Graph(object):
             while node_prev := breadcrumbs[node_end]:  #requires python 3.8
                 path.append(node_prev)
                 node_end = node_prev
-            path.append(node_start)
+            if node_prev == 0:
+                path.append(node_prev)
             path.reverse()
             return path
         else:

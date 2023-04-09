@@ -1,8 +1,10 @@
 '''Unit tests for guard helper functions'''
 
-from context import datastructures as avds
-from context import converters as conv
-from context import protocols
+from context import (
+    converters as conv,
+    datastructures as avds,
+    protocols
+)
 import unittest
 
 class TestFixedArray(unittest.TestCase):
@@ -212,7 +214,6 @@ class TestGraph(unittest.TestCase):
         '''Expect no edges in graph'''
         graph = avds.Graph.Null(self.nodes)
         self.assertTrue(len(graph._edges) == 0)
-
 
 if __name__ == '__main__':
     unittest.main()

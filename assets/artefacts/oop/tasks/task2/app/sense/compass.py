@@ -8,13 +8,14 @@ from random import randint
 #  module imports
 from app.helperfunctions import converters as conv
 
-class GPS(Sensor):
-    '''A general positioning system for localisation.'''
+
+class Compass(Sensor):
+    '''A component that gets orientation.'''
 
     def __init__(self, memory_size):
         self._memory = FixedArray(memory_size)
         self._memory_size = memory_size
-        self._key = "GPS"
+        self._key = "Compass"
 
     def write_data(self, data):
         '''Puts data into memory'''
@@ -25,12 +26,9 @@ class GPS(Sensor):
         return list(self._memory)
     
     def fake_data(self):
-        '''generates random coordinates'''
-        half = self._memory_size // 2
-        x = randint(0, 2 ** half - 1)
-        y = randint(0, 2 ** half - 1)
-        value = (y << half) + x
-        data = conv.int_to_array(value, self._memory_size)
+        '''generates random direction'''
+        orientation = randint(0, 3)
+        data = conv.int_to_array(orientation, self._memory_size)
         self.write_data(data)
     
     memory = property(read_data, write_data)

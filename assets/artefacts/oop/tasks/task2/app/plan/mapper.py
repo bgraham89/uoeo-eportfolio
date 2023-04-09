@@ -1,6 +1,10 @@
-from app.helperfunctions import converters
+#  class imports
+from app.network.config.protocols import Basic
 from app.plan.abstract.planner import Planner
 from app.plan.models.map import Map
+
+#  module imports
+from app.helperfunctions import converters as conv
 
 class Mapper(Planner):
     '''A component that maps the location of the car.'''
@@ -24,7 +28,7 @@ class Mapper(Planner):
         self.make_instruction(operator)
 
     def request_target_location(self):
-        '''create a request instruction for a GPS'''
+        '''create a request instruction for a destination'''
         operator = "Destination"
         self.make_instruction(operator)
 
@@ -44,22 +48,32 @@ class Mapper(Planner):
         elif op == "Destination":
             self.update_target_location(data)
 
+    def reply_with_information(self, id):
+        '''Get information to reply with.'''
+        if id == "Navigator":
+            data_size = Basic.BODY_SIZE // 2
+            current_loc = conv.int_to_array(self._plan[0], data_size)
+            next_loc = conv.int_to_array(self._plan[1], data_size)
+            data = current_loc + next_loc
+            return data
+
     def update_current_location(self, data):
         '''Get current location from data'''
-        num = converters.array_to_int(data)
-        coords = converters.int_to_coord(num, self._map._width, self._map._height)
+        num = conv.array_to_int(data)
+        coords = conv.int_to_coord(num, self._map._width, self._map._height)
         self._current_location = coords
 
     def update_target_location(self, data):
         '''Get target location from data'''
-        num = converters.array_to_int(data)
-        coords = converters.int_to_coord(num, self._map._width, self._map._height)
+        num = conv.array_to_int(data)
+        coords = conv.int_to_coord(num, self._map._width, self._map._height)
         self._target_location = coords
 
     def plan(self):
+        '''Calculate path relative to a map grid'''
         if self._current_location and self._target_location and self._map:
-            start = converters.coord_to_int(self._current_location, self._map._height)
-            destination = converters.coord_to_int(self._target_location, self._map._height)
+            start = conv.coord_to_int(self._current_location, self._map._height)
+            destination = conv.coord_to_int(self._target_location, self._map._height)
             self._plan = self._map.shortest_path(start, destination)
             return True
         else:
