@@ -48,36 +48,56 @@
 						<h1>Model-Based Reasoning</h1>
 					</header>
 					<!-- <span class="image main"><img src="#" alt="" /></span> -->
-					<h2><u>Models</u></h2>
+					<p>This is a collection of notes on model-based reasoning:</p>
+					<h2 style="color: palegreen"><u>Glossary</u></h2>
+					<h3><u>Model</u></h3>
 					<p>
 						A model is a representation of a system. They help people
 						understand, communicate, analyse, and design systems, as a simplification of
 						them. Models have application to science, engineering, strategising,
-						and various other domains concerned with specific systems. In the domain of software engineering: modelling languages are used to
-						model software systems. And, software itself can have application to modelling too.
+						and various other domains concerned with specific systems. 
+					</p>
+					<p>
+						In the domain of software engineering: modelling languages are used to
+						model software systems, such as UML. And, software itself can have application to modelling too.
 						For example; software might provide an interface for modelling, or it might
-						procedurally generate models. Beyond software engineering and into the domain of computer 
+						procedurally generate models
+					</p>
+					<p>
+						Beyond software engineering and into the domain of computer 
 						science; notable types of models include data models, machine-learning models, 
 						socio-techno-behavioural models, and scientific models.
 					</p>
-					<h3><u>Application Software for Modelling</u></h3>
-					<h4><u>References</u></h4>
-					<p>References to papers which advocate application software for modelling:</p>
-					<ul style="color:blanchedalmond">
-						<li>
-							<b style="color:white">Knox, S., Meier, P., Harou, J. & Yoon, J. (2018) 
-								A python framework for multi-agent simulation of networked resource systems.
-								 <i>Environmental Modelling & Software</i>.
-								103(1): 16-28. <a href="https://doi.org/10.1016/j.envsoft.2018.01.019">DOI.</a></b>
-							- Knox et al. introduce a python library for building simulation models of networked systems. It provides
-							an environmental-modelling interface for component-based models.
-						</li>
-					</ul>
-					<h4><u>Implementations</u></h4>
+					<h3><u>Metamodels</u></h2>
 					<p>
-						This section presents an implementation of an application programme for modelling.
+						A metamodel is the specification of a system used to 
+						create modelling languages, and essentially formalises the entities 
+						and relations that can be used to create modelling languages. 
+						Modelling languages use the entities and relations from the metamodel,
+						to provide a tool to model software with. 
 					</p>
-						<h5 style="color: palegoldenrod">Deterministic Finite State Machines (DFSMs)</h5>
+					<p>
+						The additional layer of abstraction 
+						that metamodels provide, is intended to produce a more rigorous foundation
+						to the model-driven engineering approach of software development;
+						by facilitating model validation for example. 
+					</p>
+					<h3><u>Ontology</u></h3>
+					<p>
+						An ontology is the specification of the entities and relations 
+						that exist within some domain. Generally they attempt to store
+						information.
+					</p>
+					<p>
+						An ontology can be considered a type of model, but typically 
+						modelling is the attempt to make explicit the details of a system,
+						to further understand it and the relation to other models,
+						whilst the intent of making an ontology is for cataloguing a domain.
+						An example of an ontological language is OWL.
+					</p>
+					<h2 style="color: paleturquoise"><u>Application Software for Modelling</u></h3>
+					<h3><u>Simulations</u></h3>
+					<h4 style="color: palegoldenrod">Deterministic Finite State Machines (DFSMs)</h5>
 					<p>
 						A deterministic finite state machine is a model of any system that has a finite amount of
 						states, and allows transitions between some of those states in a predictable way.
@@ -101,20 +121,37 @@
 						For my implementation of a deterministic finite state machine in python click 
 						<a href="https://github.com/bgraham89/uoeo-eportfolio/tree/main/assets/artefacts/oop/notebooks/" target="_blank"><b style="color: palegoldenrod">here</b></a>.
 					</p>
+					<h3><u>References</u></h3>
+					<p>References to papers which advocate application software for modelling:</p>
+					<ul style="color:blanchedalmond">
+						<li>
+							<b style="color:white">Knox, S., Meier, P., Harou, J. & Yoon, J. (2018) 
+								A python framework for multi-agent simulation of networked resource systems.
+								 <i>Environmental Modelling & Software</i>.
+								103(1): 16-28. <a href="https://doi.org/10.1016/j.envsoft.2018.01.019">DOI.</a></b>
+							- Knox et al. introduce a python library for building simulation models of networked systems. It provides
+							an environmental-modelling interface for component-based models.
+						</li>
+					</ul>
 					<br>
-					<h2><u>Metamodels</u></h2>
-					<p>
-						A metamodel is a representation of a system used to 
-						create modelling languages, and essentially fromalises the entities 
-						and relations that can be used to create modelling languages. 
-						Modelling languages use the entities and relations from the metamodel,
-						to provide a tool to model software with. The additional layer of abstraction 
-						that metamodels provide, is intended to produce a more rigorous foundation
-						to the model-driven engineering approach of software development;
-						by facilitating model validation for example. 
-					</p>
-					<h3><u>Model-Driven Engineering</u></h3>
-					<h4><u>References</u></h4>
+					<h2 style="color: paleturquoise"><u>Model-Driven Engineering</u></h2>
+					<h3><u>Organisational Standards</u></h3>
+					<ul style="color:aliceblue">
+						<li>
+							<b style="color:coral">ISO/IEC 19502</b> - Standards for a meta-metamodel underpinning
+							model-driven engineering, and the creation of Model Object Facility (MOF) metamodels.
+						</li>
+						<li>
+							<b style="color:coral">NATO NAFv4</b> - Standards for NAF version 4, which is the metamodel
+							used by the Ministry of Defence.
+						</li>
+						<li>
+							<b style="color:coral">OMG UML/2.5.1</b> - Standards for UML version 2.5.1 based upon 
+							a MOF metamodel. The metamodel is essentially a subset of UML, from each all constructs in UML can 
+							be described with.
+						</li>
+					</ul>
+					<h3><u>References</u></h3>
 					<p>References to papers which advocate model-driven engineering:</p>
 					<ul>
 						<li style="color:blanchedalmond">
@@ -137,24 +174,8 @@
 							modelling languages.
 						</li>
 					</ul>
-					<h3><u>Organisational Standards</u></h3>
-					<ul style="color:aliceblue">
-						<li>
-							<b style="color:coral">ISO/IEC 19502</b> - Standards for a meta-metamodel underpinning
-							model-driven engineering, and the creation of Model Object Facility (MOF) metamodels.
-						</li>
-						<li>
-							<b style="color:coral">NATO NAFv4</b> - Standards for NAF version 4, which is the metamodel
-							used by the Ministry of Defence.
-						</li>
-						<li>
-							<b style="color:coral">OMG UML/2.5.1</b> - Standards for UML version 2.5.1 based upon 
-							a MOF metamodel. The metamodel is essentially a subset of UML, from each all constructs in UML can 
-							be described with.
-						</li>
-					</ul>
+					<h3><u>Discussion</u></h3>
 					<br>
-					<h2><u>Ontologies</u></h2>
 			</section>
 		</div>
 
