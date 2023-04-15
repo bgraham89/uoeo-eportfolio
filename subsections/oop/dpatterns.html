@@ -100,27 +100,77 @@
 					</ul>
 					<br>
 					<h2><u>Design Pattern Recommendation Systems</u></h3>
-						<h3 style="color: palegoldenrod"><u>Classifiers</u></h3>
-						<p>
-							A classifier is a model that can be trained to make a prediction as to
-							what category some specific data belongs to. For example, a classifier can try
-							to match natual language inputs, to a design pattern. 
-						</p>
-						<p>
-							Classifiers are supervised machine learning models, that need to be
-							trained on a set of input-output pairs. The algorithms that classifiers use vary
-							but some of the most common examples include: 
-						<ul>
-							<li><b>Naive Bayesian Classifier</b> which is based on Bayesian probability theory. </li>
-							<li><b>Support Vector Classifier</b> which is based on using hyperplanes to seperate input space.</li>
-							<li><b>Decision Tree Classifier</b> which is based on using comparisons to seperate input space.</li>
-							<li><b>K Nearest Neighbours Classifier</b> which is based on similarity between inputs.</li>
-						</ul>
-						<p>
-							For my implementation of a classifer in Python see  
-							<a href="https://github.com/bgraham89/uoeo-eportfolio/tree/main/assets/artefacts/oop/notebooks/" target="_blank"><b style="color: palegoldenrod">here</b></a>.
-						</p>
-						<br>
+					<h3 style="color: palegoldenrod"><u>Classifiers</u></h3>
+					<p>
+						A classifier is a model that can be trained to make a prediction as to
+						what category some specific data belongs to. For example, a classifier can try
+						to match natual language inputs, to a design pattern. 
+					</p>
+					<p>
+						Classifiers are supervised machine learning models, that need to be
+						trained on a set of input-output pairs. The algorithms that classifiers use vary
+						but some of the most common examples include: 
+					<ul>
+						<li><b>Naive Bayesian Classifier</b> which is based on Bayesian probability theory. </li>
+						<li><b>Support Vector Classifier</b> which is based on using hyperplanes to seperate input space.</li>
+						<li><b>Decision Tree Classifier</b> which is based on using comparisons to seperate input space.</li>
+						<li><b>K Nearest Neighbours Classifier</b> which is based on similarity between inputs.</li>
+					</ul>
+					<p>
+						For my implementation of a classifer in Python see  
+						<a href="https://github.com/bgraham89/uoeo-eportfolio/tree/main/assets/artefacts/oop/notebooks/" target="_blank"><b style="color: palegoldenrod">here</b></a>.
+					</p>
+					<p>
+						To use classifiers with natural language, one technique is to convert text expressions
+						into a long vectors matching the length of an entire lexicon. Then each expression 
+						can be one hot encoded into the same shape, for consistency. This is called a bag of words model.
+						For a design pattern recommendation system, a classifier can be trained to map vectors
+						to integers which represent design patterns. This would require a lot of preprocessed training
+						data, and processing power, but Software as a Service (SaaS) providers offer tools that make
+						building classifiers more feasible.   
+					</p>
+					<br>
+
+					<h3 style="color: paleturquoise"><u>Large Language Models</u></h3>
+					<p>
+						A Large Language Model (LLM) is an Artificial Intelligence (AI) model that has been trained 
+						on large amounts of text, to be able to perform an array of langauge tasks. Out of interest,
+						I asked <a href= "https://openai.com/product/gpt-4" target="_blank"><b>Chat GPT-4</b></a>, a trending LLM,
+						to recommend design patterns for some of the scenarios that Gamma et al (1995) use to present 
+						the applicability of design patterns. The results are
+						<a href="https://github.com/bgraham89/uoeo-eportfolio/tree/main/assets/artefacts/oop/notebooks/" target="_blank"><b style="color: paleturquoise">here</b></a>.
+					</p>
+					<p>
+						Despite the results, LLM's are not generally reliable sources of information, as they tend to hallucinate
+						information, and they don't always have access to external sources (Peng et al., 2023). Efforts
+						to increase their reliablility include:
+					</p>
+					<ul>
+						<li>Giving LLM's the capability to search the internet. 
+							(<a href="https://www.microsoft.com/en-gb/bing?form=MA13FJ" target="_blank"><b>Microsoft Bing, 2023</b></a>).
+						</li>
+						<li>Giving LLM's the capability to use computational knowledge engines.
+							(<a href="https://writings.stephenwolfram.com/2023/03/chatgpt-gets-its-wolfram-superpowers/" target="_blank"><b>Wolfram Alpha's Plugin, 2023</b></a>).
+						</li>
+						<li>Giving LLM's the capability to generate executable code. 
+							(<a href="https://github.com/features/preview/copilot-x" target="_blank"><b>Github Copilot X, 2023</b></a>).
+						</li>
+					</ul>
+					<h4><u>References</u></h4>
+					<ul style="color:blanchedalmond">
+						<li style="color:blanchedalmond">
+							<b style="color:white">Peng, B., Galley, M., He, P., Cheng, H., Xie, Y.,
+								Hu, Y., Huang, Q., Liden, L, Yu, Z., Chen, W. & Gao, Jianfeng. (2023)
+								<i>Check Your Facts and Try Again: Improving Large Language Models with
+								External Knowledge and Automated Feedback.</i>
+								Columbia University, USA: Microsoft Research. 
+								<a href="https://doi.org/10.48550/arXiv.2302.12813">DOI.</a></b>
+							- Peng et al. present a LLM augmentation system to ground a LLM's
+							responses in an external knowledge system. The system uses automated
+							feedback to refine the prompts used on the LLM.
+						</li>
+					</ul>
+					<br>
 
 					<h2 style="color: lightcoral"><u>End of Module Reflection</u></h2>
 					<p>
@@ -134,8 +184,8 @@
 						ones, and the theory behind them usually has additional educational benefits. So I
 						definately advocate learning about them, to speed up the acquisition of good 
 						decision making. The existence of design patterns is a really good reason to have senior
-						engineers working on a project, as they are more likely to have the foresight required
-						to grasp the value of them.  
+						engineers working on a project, as they are more likely to have the foresight to
+						recommend them.  
 					</p>  
 					<p>
 						Unfortunately, the problems that design pattens solve are not always problems 
@@ -143,14 +193,25 @@
 						difficult to plan for early one. Design patterns are also ontologically elusive, so are not 
 						always easy to incorporate later on either. For those reasons, I think value could be 
 						gained by refactoring design patterns into parts of larger contextual models, simply
-						to help with the conceptual acquistion of them. Context models are more tangible.
+						to help with the conceptual acquistion of them. I find context models more tangible.
 					</p>
 					<p>
 						A goal of mine for the future is to learn other ways that the
-						space of design patterns can be organised, and test if other organisations improve
-						aquistion. I also think studying how good language language models like chat GPT 4 are
-						at recommending design patterns is something worth doing, if anybody wants to collaborate on that.
+						space of design patterns can be organised, and test whether different models of
+						design pattern space improve the aquistion of the wisdom inherent to them. 
 					</p>
+					<p>
+						Lastly, I would like to say that I have previous experience building machine learning 
+						models, so I took the opportunity to showcase some of that experience in the context of
+						design pattern recommendation systems. I feel that's the best way for me to contribute
+						to the topic of design patterns, and challenge the value of experience in their
+						justification. Large language models for instance can read larger amounts of discourse
+						than humans can. I'm keen to learn about post-AI epistemological models,
+						along with alternative design pattern models. From that philosophy, my practise would 
+						be critically reflective, as opposed to just being reflective. As far as I understand,
+						that attitude is fundamental to being in computer science research.
+					</p>
+				</div>
 			</section>
 		</div>
 
