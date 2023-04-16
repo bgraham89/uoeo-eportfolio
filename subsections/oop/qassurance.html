@@ -49,8 +49,8 @@
 					</header>
 					<p>This is a collection of material connected to quality assurance, and good practises in general.</p>
 					<!-- <span class="image main"><img src="#" alt="" /></span> -->
-					<h2>Glossary</h2>
-					<p>Examples of tools that help with quality control.</p>
+					<h2><u>Software Quality Application Software</u></h2>
+					<h3>Glossary</h3>
 					<ul>
 						<li>
 							<b style="color: palegreen">Debuggers</b> - Software that allows breakpointing, 
@@ -72,8 +72,63 @@
 							on a programme during execution and monitors compliance to those conditions.
 						</li>
 					</ul>
-					<h3></h3>
-					<h2>Papers</h2>
+					<h3>Useful Links</h3>
+					<h4>Python Libraries</h4>
+					<ul style="color:blanchedalmond">
+						<li>
+							<a href="https://docs.python.org/3/library/ast.html"><b>ast</b></a> - The ast library is a builtin
+							library for converting python code into an abstract syntax tree. The ast can be passed to a linter programme
+							to check for custom violations.
+						</li>
+						<li>
+							<a href="https://docs.python.org/3/library/logging.html"><b>logging</b></a> - The logging library is a builtin
+							library that provides a suite of tools for creating a logging system.
+						</li>
+						<li>
+							<a href="https://github.com/cool-RR/PySnooper"><b>PySnooper</b></a> - PySnooper is library for logging practically
+							everything during a programme's execution.
+						</li>
+						<li>
+							<a href="https://docs.python.org/3/library/unittest.html"><b>unittest</b></a> - The unittest library is a builtin
+							library that provides a way to write a testing suite.
+						</li>
+					</ul>
+					<h4>DevOp's tools</h4>
+					<ul style="color:blanchedalmond">
+						<li>
+							<a href="https://www.atlassian.com/software/jira"><b>Jira Issue Tracker</b></a> - Jira was developed
+							by <a href="https://www.atlassian.com/">Atlassian</a>
+							so it has compatibility-driven elements
+							to work with other Atlassian products.
+						</li>
+						<li>
+							<a href="https://www.sonarsource.com/products/sonarqube/"><b>SonarQube Code Inspector</b></a> - Sonarqube is a
+							continuous inspection tool that can be used to check code quality. It features 
+							<a href="https://bitbucket.org/producta">Bitbucket</a> and 
+							<a href="https://www.jenkins.io/">Jenkins</a> integration; used by the company I work for.
+						</li>
+					</ul>
+					<h2><u>Python Utilities</u></h2>
+					<h3>Guard Functions</h3>
+					<p>
+						During my implementation of an autonomous car system, part of this modules' coursework, I made use of a helper function
+						for explicitly asserting guard conditions on function paramaters. This was done to make the code more readable.
+					</p>
+					<img src="../../assets/artefacts/oop/snippets/screenshots/arg_guard.png" alt="arg function"/>
+					<p>
+						If a guard condition is not met, the function raises an <code>AssertionError</code>. If the shape of the params doesn't
+						match the guard condition, then the function raises a <code>TypeError</code>.
+					</p>
+					<p>
+						The guard conditions were defined in the relevant classes themselves, mainly for accessiblity reasons. 
+						They consisted of nested functions for readability, and took the form of lambda functions.
+					</p>
+					<img src="../../assets/artefacts/oop/snippets/screenshots/arg_constraint.png" alt="arg constraint"/>
+					<p>
+						The constraints could then be added to any method as needed.
+					</p>
+					<img src="../../assets/artefacts/oop/snippets/screenshots/arg_check.png" alt="arg assertion"/>
+					<h2><u>Research Papers</u></h2>
 					<p>Archive of papers related to software quality, and responsibility</p>
 					<ul style="color:blanchedalmond">
 						<li style="color:blanchedalmond">
@@ -124,6 +179,28 @@
 						</li>
 					</ul>
 					<br>
+					<h2 style="color: lightcoral"><u>End of Module Reflection</u></h2>
+					<p>
+						I believe I've built a decent overview of the principles of quality assurance,
+						and I'm looking forward to employing them, and building upon them in the future.
+					</p>
+					<p>
+						During this module, I've tried to utilise ideas that I've picked up to try and improve
+						my workplace. I've begun to build a script for converting a typescript framework into
+						Class diagrams. The motivation behind this is purely educational, to improve documentation
+						of the framework we use at work. So far, I've managed to write a script that converts a typescript file
+						into an AST. But I've hit a small roadblock, in that I don't understand the javascript/typescript
+						packaging system as well as I understand Pythons, but I'll keep persevering. Once I've put the time
+						in and I'm able to seperate parts of the programme into seperate files, to make use of imports and exports, 
+						I'll begin looking into dynamically creating class diagrams with mermaid. While class diagrams are primarily for
+						modelling, I think they are good visualisations too. From that groundwork, I'll be able to look into generating 
+						other visualisation for the framework.
+					</p>
+					<p>
+						I believe the biggest takeaway for me from this section of the course, is learning about object mixins,
+						which allows for the seperation of quality concerns from core functionality, without relying on dependency
+						injections, composition or inheritence.  
+					</p>
 				</div>
 			</section>
 		</div>
