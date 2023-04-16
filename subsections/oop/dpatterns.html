@@ -105,10 +105,43 @@
 					<h3 style="color: palegreen"><u>The Strategy Pattern</u></h3>
 					<p>
 						The strategy pattern is a behavioural design pattern that encapsulates the
-						selection of an algorithm for a task. For my implementation of a strategy class for sorting, see
+						selection of an algorithm for a task during a programme. For my implementation of a strategy class for sorting, see
 						<a href="https://github.com/bgraham89/uoeo-eportfolio/tree/main/assets/artefacts/oop/notebooks/" target="_blank"><b style="color: palegreen">here</b></a>.
 					</p>
-					<img src="../../assets/artefacts/oop/notebooks/screenshots/strategy.png" alt="dfsm"/>
+					<img src="../../assets/artefacts/oop/notebooks/screenshots/strategy.png" alt="sort strategy"/>
+					<br>
+					<h3 style="color: palegreen"><u>The Decorator Pattern</u></h3>
+					<p>
+						The decorator pattern is a structural design pattern that allows the
+						dynamic addition of behaviour to an object. Python features a decorator syntax which can be used to wrap functions aswell as objects.
+						For that reason, Python decorators might be disregarded as implementations of the decorator pattern. 
+						However, in Python, functions themselves are objects, so it's debatable whether all Python decorators are implementations
+						of the decorator pattern. On some level, a Python decorator on a function, is a callable decorator object wrapping
+						a callable object. In the spirit of both Python, and OOP, you can see my implementation of a decorator class for repeating a function
+						<a href="https://github.com/bgraham89/uoeo-eportfolio/tree/main/assets/artefacts/oop/notebooks/" target="_blank"><b style="color: palegreen">here</b></a>.
+						If this was truly Pythonic, the decorator would be defined using function syntax. Similarly, if this was truly OOP, the decorator would
+						be wrapping a class defintion. I think this code snippet illustrates a disparity between design and implementation principles, in this case
+						OOD and Python syntax. A software engineer needs to aware of the virtues and costs of competing principles, and choose between them,
+						while an academic should aim to make a reasonable choice possible. 
+					</p>
+					<img src="../../assets/artefacts/oop/notebooks/screenshots/decorator.png" alt="decorator"/>
+					<br>
+					<h3 style="color: palegreen"><u>The Factory Pattern</u></h3>
+					<p>
+						The factory pattern is a creational design pattern that allows the
+						creation of objects without exposing the instantiation logic to the client. This could be to handle
+						temporary components that replace each other for example. In python specifically, factories gain the additional
+						use case of enabling paramaters to passed to decorators. For my implementation of that idea, see 
+						<a href="https://github.com/bgraham89/uoeo-eportfolio/tree/main/assets/artefacts/oop/notebooks/" target="_blank"><b style="color: palegreen">here</b></a>.
+						To me, this example illustrates how design patterns are more than just implementations. The decision to use paramaterised
+						decorators needs to be made in relation to tangible virtues and costs. I found during my implementation of an autonomous car system,
+						part of this modules' coursework, that using mixin functions within methods instead of paramaterised decorators wrappiing them was a better choice.
+						This was becuase I could pass an instantiated objects' state to a mixin, as the state is available from within a method, but I couldn't pass 
+						the objects' state to a paramaterised decorator wrapping a method, as the decorator is called before the method is. Language experience is 
+						needed to verify the applicability of design patterns to language specific use cases.
+					</p>
+					<img src="../../assets/artefacts/oop/notebooks/screenshots/factory.png" alt="decorator"/>
+					<br>
 					<h2><u>Design Pattern Recommendation Systems</u></h3>
 					<p>This section showcases some methods for generating design pattern recommendation systems.</p>
 					<h3 style="color: palegoldenrod"><u>Classifiers</u></h3>
