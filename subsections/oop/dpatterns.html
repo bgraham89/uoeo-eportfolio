@@ -131,11 +131,11 @@
 						The factory pattern is a creational design pattern that allows the
 						creation of objects without exposing the instantiation logic to the client. This could be to handle
 						temporary components that replace each other for example. In python specifically, factories gain the additional
-						use case of enabling paramaters to passed to decorators. For my implementation of that idea, see 
+						use case of enabling paramaters to be passed to decorators. For my implementation of that idea, see 
 						<a href="https://github.com/bgraham89/uoeo-eportfolio/tree/main/assets/artefacts/oop/notebooks/" target="_blank"><b style="color: palegreen">here</b></a>.
 						To me, this example illustrates how design patterns are more than just implementations. The decision to use paramaterised
 						decorators needs to be made in relation to tangible virtues and costs. I found during my implementation of an autonomous car system,
-						part of this modules' coursework, that using mixin functions within methods instead of paramaterised decorators wrappiing them was a better choice.
+						part of this modules' coursework, that using mixin functions within methods was better than using paramaterised decorators to wrap the methods.
 						This was becuase I could pass an instantiated objects' state to a mixin, as the state is available from within a method, but I couldn't pass 
 						the objects' state to a paramaterised decorator wrapping a method, as the decorator is called before the method is. Language experience is 
 						needed to verify the applicability of design patterns to language specific use cases.
