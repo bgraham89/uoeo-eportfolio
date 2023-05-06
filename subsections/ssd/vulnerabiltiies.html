@@ -7,7 +7,7 @@
 <html>
 
 <head>
-	<title>Software Vulnerabilities - BGraham89 UoEO ePortfolio</title>
+	<title>Security Vulnerabilities - BGraham89 UoEO ePortfolio</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="../../assets/css/main.css" />
@@ -71,6 +71,67 @@
 							</b>
 							- CWE is a community-developed database of security vulnerabilities, trusted by
                             security foundations such as <a href="https://owasp.org/" target="_blank">OWASP</a>.
+						</li>
+					</ul>
+					<br>
+                    <h2><u>Security Metrics</u></h2>
+					<h3><u>Examples</u></h3>
+
+					<h4 style="color: gold">Common Vulnerability Scoring System (CVSS)</h4>
+					<p>
+                        "CVSS is composed of three metric groups: Base, Temporal, and Environmental, each consisting of a set
+						of metrics." (
+						<a href="https://www.nist.gov/publications/complete-guide-common-vulnerability-scoring-system-version-20" target="_blank">
+							Mell et al., 2007
+						</a>)
+                    </p>
+					<img src="../../assets/artefacts/ssd/diagrams/CVSS.png" alt="CVSS Metrics" 
+						style="width: 100%; height: auto; border-style: solid; border-width: 2px; border-color: dimgrey;"/>
+					<br>
+					<p>
+                        "CVSS is well suited as a standard measurement system for industries, organizations, and governments that need accurate and consistent vulnerability severity scores." (
+						<a href="https://nvd.nist.gov/vuln-metrics/cvss" target="_blank" style="color:coral">
+							NIST
+						</a>)
+                    </p>
+					<p style="color:blanchedalmond">
+						I've left out the specific details constituting each individual metric, as they are well documented in
+						the <a href="https://www.first.org/cvss/" target="_blank">CVSS specification</a>. Nevertheless, this example serves
+						to illustrate the existence of standardised security metrics.
+					</p>
+					<h3><u>Readings</u></h3>
+                    <p>A collection of readings related to security metrics:</p>
+                    <ul style="color:blanchedalmond">
+						<li>
+							<b style="color:white">
+								Butler, S. (2002) 'Security Attribute Evaluation Method:
+								A Cost-Benefit Approach'. <i>Proceedings of the 24th International Conference 
+									on Software Engineering</i>. Orlando Florida, USA, 2002. IEEE. 2002.
+							</b>
+							Butler compares a selection of security designs, by using the Security Attribute Evaluation Model
+							(SAEM), consisiting of benefit assessment, threat index evaluation, coverage assessment and cost analysis.
+							Benefits can include protection, detection or recovery mechanisms, and threat indexes are calculated using
+							threat frequencies and outcomes (via multiattribute risk analysis).
+						</li>
+						<li>
+							<b style="color:white">Fenton, N & Bieman, J. (2015) '10.5 Security Measures', 
+								in: Fenton, N & Bieman, J. (2015)
+								<i>Software metrics: a rigorous and practical approach</i>. 3rd ed. Boca Raton: CRC
+								Press. 475-523. ISBN 9780367659028</b>
+							- Fenton and Biemann include a section specifically about security metrics that are useful
+							in a goal-based project framework.
+						</li>
+						<li>
+							<b style="color:white">
+								Mell, P., Scarfone, K. & Romanosky, S. (2007) A Complete Guide to the Common 
+								Vulnerability Scoring System Version 2.0. Available from:
+								<a href="https://www.nist.gov/publications/complete-guide-common-vulnerability-scoring-system-version-20" 
+									target="_blank">
+									here.
+								</a>
+							</b>
+							Mell et al. present an outline for a security metric built from a suite of metrics,
+							called the common vulnerability scoring system (CVSS).  
 						</li>
 					</ul>
 				</div>
