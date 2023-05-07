@@ -49,15 +49,37 @@
 						<h1>Software Development Lifecycles</h1>
                     </header>
                     <p>
-                        This section is dedicated to software development lifecycles,
-						and the integration of security practises into them, for the development
+                        This section is dedicated to software development lifecycles, development
+						operations and the integration of security practises into them, for the development
 						of secure practises. 
                     </p>
                     <br>
-                    <h2><u>Readings</u></h2>
+                    <h2><u>Development Operations</u></h2>
+					<h3><u>Glossary</u></h3>
+					<h4 style="color: lightskyblue">Development Operations (DevOps)</h4>
+                    <p>
+                        "A set of practices for automating the processes between software development 
+						and information technology operations teams so that they can build, test, 
+						and release software faster and more reliably. The goal is to shorten 
+						the systems development life cycle and improve reliability while 
+						delivering features, fixes, and updates frequently in close alignment
+						 with business objectives." (
+                            <a href="https://csrc.nist.gov/glossary/term/development_operations" target="_blank">
+                                NIST
+                            </a>)
+                    </p>
+					<h4 style="color: lightskyblue">Software Development Life Cycle (SDLR)</h4>
+                    <p>
+                        "A formal or informal methodology for designing, creating, 
+						and maintaining software (including code built into hardware)." (
+                            <a href="https://csrc.nist.gov/glossary/term/software_development_life_cycle" target="_blank">
+                                NIST
+                            </a>)
+                    </p>
+					<br>
+					<h3>Readings</h3>
 					<p>
-						A collection of readings related to SDLC's in general, and the integration of
-						security measures into them:
+						A collection of readings related to SDLRs and DevOps:
 					</p>
                     <ul style="color:blanchedalmond">
 						<li>
@@ -65,36 +87,20 @@
 								Cunnigham, W., Fowler, M., Grenning, J., Highsmith, J., Hunt, A., Jeffries, R.,
 								Kern, J., Marick, B., Martin, R., Mellor, S., Schwaber, K., Sutherland, J.
 								& Thomas, D. (2001) 
-								Manifesto for Agile Software Develolment. Available from: 
+								Manifesto for Agile Software Development. Available from: 
 								<a href="http://agilemanifesto.org/" target="_blank">here</a>.
 							</b>
 							- Beck et al. introduce the Agile Manifesto, which outlines the core values of the
 							Agile software development lifecycle.
 						</li>
 						<li>
-							<b style="color:white">Mougouei, D., Sani, N. & Almasi, M. (2013) 
-								S-Scrum: a Secure Methodology for Agile Development of Web Services.
-								<i>World of Computer Science and Information Technology Journal (WCSIT).</i>
-								3(1): 15-19.
+							<b style="color:white">Casteren, W. (2017) 
+								The Waterfall Model and Agile Methodology : A comparison
+								by project characteristics.
 							</b>
-							- Mougouei et al. describe a variation of the Scrum technique of the Agile 
-							software development lifecycle, they call 'S-Scrum' (Secure Scrum).
-							It involves the insertion of additional planning spikes into the 
-							Scrum process. They go further and formalise the process using 
-							a non-deterministic finite automaton, and 
-							a context free grammar is proposed for describing process steps.
-						</li>
-						<li>
-							<b style="color:white">Pohl, C. & Hof H. (2015) 
-								'Secure Scrum: Development of Secure Software with Scrum'.
-								<i>The Ninth International Conference on Emerging Security Information,
-									Systems and Technologies (SECURWARE2015).</i>
-								Venice, Italy, 2015.
-							</b>
-							- Pohl and Hof describe a variation of the Scrum technique of Agile software
-							development lifecycle, they call 'Secure Scrum' (too). It 
-							introduces the use of 's-tags' to mark user stories with security concerns. 
-							They then evaluate it's effectiveness.
+							- Casteren compares the characteristics of the Waterfall and Agile software
+							development lifecycles, finding Watrerfall to be better for larger projects, 
+							while Agile is better for smaller ones.
 						</li>
                         <li>
 							<b style="color:white">Royce, W. (1970) 
@@ -105,7 +111,64 @@
 							- Royce builds upon his experience and expresses his advice for managing large software
 							systems. He introduces the waterfall model, and emphasises the importance of documentation.
 						</li>
+						<li>
+							<b style="color:white">Sutherland, J. & Schwaber, K. (2020) 
+								The 2020 Scrum Guide^TM. Available from 
+								<a href="https://scrumguides.org/scrum-guide.html" target="_blank">here</a>.
+							</b>
+							- Sutherland and Schwaber, who wrote the original Scrum Guide in 2010, outline
+							the Scrum framework. The framework consists of a 'scrum master' fostering a 
+							particular environment that facilitates incremental value 
+							production during 'sprints', that consititute an iterative, 
+							adaptive approach to completing complex tasks.
+						</li>
 					</ul>
+					<br>
+					<h2><u>DevSecOps</u></h2>
+					<h3><u>Glossary</u></h3>
+					<h4 style="color: lightskyblue">Development, Security and Operations (DevSecOps)</h4>
+                    <p>
+                        "DevSecOps is the term that denotes a culture and set of
+						practices with automation tools to drive increased collaboration, trust, shared responsibility,
+						transparency, autonomy, agility, and automation across the key stakeholders responsible for
+						delivering software, including development, operations, and security organizations." (
+                            <a href="https://csrc.nist.gov/glossary/term/development_operations" target="_blank">
+                                NIST, 2022
+                            </a>)
+                    </p>
+					<br>
+					<h3>Readings</h3>
+					<p>
+						A collection of readings related to the integration of
+						security processes into SDLC's, and the automation of security practises:
+					</p>
+                    <ul style="color:blanchedalmond">
+						<li>
+							<b style="color:white">Mougouei, D., Sani, N. & Almasi, M. (2013) 
+								S-Scrum: a Secure Methodology for Agile Development of Web Services.
+								<i>World of Computer Science and Information Technology Journal (WCSIT).</i>
+								3(1): 15-19.
+							</b>
+							- Mougouei et al. describe a variation of Scrum that they call 
+							'S-Scrum' (Secure Scrum).
+							It involves the insertion of additional planning spikes into the 
+							Scrum process. They go further and formalise the process using 
+							a non-deterministic finite automaton; and 
+							a context free grammar is proposed for describing process steps.
+						</li>
+						<li>
+							<b style="color:white">Pohl, C. & Hof H. (2015) 
+								'Secure Scrum: Development of Secure Software with Scrum'.
+								<i>The Ninth International Conference on Emerging Security Information,
+									Systems and Technologies (SECURWARE2015).</i>
+								Venice, Italy, 2015.
+							</b>
+							- Pohl and Hof describe a variation of the Scrum that they call 
+							'Secure Scrum' (too). It 
+							introduces the use of 's-tags' to mark user stories with security concerns. 
+						</li>
+					</ul>
+					<br>
 				</div>
 			</section>
 		</div>
