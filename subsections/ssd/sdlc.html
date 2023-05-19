@@ -48,13 +48,12 @@
 					<header class="major">
 						<h1>Software Development Lifecycles</h1>
                     </header>
-                    <p>
+                    <p style="color:blanchedalmond">
                         This section is dedicated to software development lifecycles and the integration of security practises into them, for the development
 						of secure practises. 
                     </p>
                     <br>
-                    <h2><u>Foundations</u></h2>
-					<h3><u>Glossary</u></h3>
+					<h2><u>Glossary</u></h2>
 					<h4 style="color: lightskyblue">Development Operations (DevOps)</h4>
                     <p>
                         "A set of practices for automating the processes between software development 
@@ -63,20 +62,32 @@
 						the systems development life cycle and improve reliability while 
 						delivering features, fixes, and updates frequently in close alignment
 						 with business objectives." (
-                            <a href="https://csrc.nist.gov/glossary/term/development_operations" target="_blank">
+                            <a href="https://csrc.nist.gov/glossary/term/development_operations" target="_blank" style="color:coral">
                                 NIST
+                            </a>)
+                    </p>
+					<h4 style="color: lightskyblue">Development, Security and Operations (DevSecOps)</h4>
+					<p>
+                        "DevSecOps is the term that denotes a culture and set of
+						practices with automation tools to drive increased collaboration, trust, shared responsibility,
+						transparency, autonomy, agility, and automation across the key stakeholders responsible for
+						delivering software, including development, operations, and security organizations." (
+                            <a href="https://csrc.nist.gov/glossary/term/development_operations" target="_blank" style="color:coral">
+                                NIST, 2022
                             </a>)
                     </p>
 					<h4 style="color: lightskyblue">Software Development Life Cycle (SDLR)</h4>
                     <p>
                         "A formal or informal methodology for designing, creating, 
 						and maintaining software (including code built into hardware)." (
-                            <a href="https://csrc.nist.gov/glossary/term/software_development_life_cycle" target="_blank">
+                            <a href="https://csrc.nist.gov/glossary/term/software_development_life_cycle" target="_blank" style="color:coral">
                                 NIST
                             </a>)
                     </p>
 					<br>
-					<h3 style="color: palegreen"><u>The Waterfall Lifecycle</u></h3>
+					<h2><u>Examples</u></h3>
+					<h3 style="color: goldenrod"><u>The Waterfall Lifecycle</u></h3>
+					<h4><u>Foundational Readings</u></h4>
                     <ul style="color:blanchedalmond">
                         <li>
 							<b style="color:white">Royce, W. (1970) 
@@ -89,7 +100,8 @@
 						</li>
 					</ul>
 					<br>
-					<h3 style="color: palegreen"><u>The Agile Lifecycle</u></h3>
+					<h3 style="color: goldenrod"><u>The Agile Lifecycle</u></h3>
+					<h4><u>Foundational Readings</u></h4>
                     <ul style="color:blanchedalmond">
 						<li>
 							<b style="color:white">Beck, K., Beedle, M., Bennekum, A., Cockburn A,
@@ -124,53 +136,7 @@
 							adaptive approach to completing complex tasks.
 						</li>
 					</ul>
-					<br>
-					<h2><u>Secure Software Development Lifecycles</u></h2>
-					<h3><u>Glossary</u></h3>
-					<h4 style="color: lightskyblue">Development, Security and Operations (DevSecOps)</h4>
-                    <p>
-                        "DevSecOps is the term that denotes a culture and set of
-						practices with automation tools to drive increased collaboration, trust, shared responsibility,
-						transparency, autonomy, agility, and automation across the key stakeholders responsible for
-						delivering software, including development, operations, and security organizations." (
-                            <a href="https://csrc.nist.gov/glossary/term/development_operations" target="_blank">
-                                NIST, 2022
-                            </a>)
-                    </p>
-					<br>
-					<h3 style="color: orange"><u>CLASP</u></h3>
-					<ul style="color:blanchedalmond">
-						<li>
-							<b style="color:white">MITRE. (2005) 
-								The CLASP Application Security Process. Available from:
-								<a href="https://cwe.mitre.org/documents/sources/TheCLASPApplicationSecurityProcess.pdf" target="_blank">
-								here</a>.
-							</b>
-							- The Comprehensive, Lightweight Application Security Process (CLASP) is a an activity based
-							guide to integrating security into the software development lifecycle.
-						</li>
-					</ul>
-					<h4 style="text-align: center;">
-						Example of CLASP activities suitable for different 
-						software development lifecycle phases.
-					</h4>
-					<img src="../../assets/artefacts/ssd/diagrams/security_activity_integration.png" alt="Secure Lifecycle" style="
-						display: block; 
-						margin-left: auto; 
-						margin-right: auto;
-						border-width: 5px;
-						border-style: solid;
-						padding: 20px;
-						width: 50vw;
-						min-width: 450px;
-					" />
-					<br>
-					<h3><u>Agile Security</u></h3>
-					<h4><u>Readings</u></h4>
-					<p>
-						A collection of readings related to the integration of
-						security processes into an Agile lifecycle:
-					</p>
+					<h4><u>Security-Centered Readings</u></h4>
                     <ul style="color:blanchedalmond">
 						<li>
 							<b style="color:white">Mougouei, D., Sani, N. & Almasi, M. (2013) 
@@ -203,12 +169,38 @@
 								<i>International Journal of Information Technology</i> 14(2): 1117-1130.
 							</b>
 							- Sharma and Bawa compare four security engineering processes: CLASP, 
-							Common Criteria, Cigital Touchpoints and Micorsoft's SDL, identify
-							security actvities using a systematic literature review, and propose an
-							dynamic integration algorithm for integrating the security activities into
+							Common Criteria, Cigital Touchpoints and Microsoft's SDL, identify
+							security actvities using a systematic literature review, and propose a
+							dynamic integration algorithm for integrating security activities into
 							an agile process.  
 						</li>
 					</ul>
+					<br>
+					<h2><u>Security Engineering Frameworks</u></h2>
+					<h3 style="color: orange"><u>CLASP</u></h3>
+					<h4><u>Guidelines</u></h4>
+					<ul style="color:blanchedalmond">
+						<li>
+							<b style="color:white">MITRE. (2005) 
+								The CLASP Application Security Process. Available from:
+								<a href="https://cwe.mitre.org/documents/sources/TheCLASPApplicationSecurityProcess.pdf" target="_blank">
+								here</a>.
+							</b>
+							- The Comprehensive, Lightweight Application Security Process (CLASP) is a an activity based
+							guide to integrating security into the software development lifecycle.
+						</li>
+					</ul>
+					<h4><u>Example of Security Activity Plan for Agile Lifecycle</u></h4>
+					<img src="../../assets/artefacts/ssd/diagrams/security_activity_integration.png" alt="Secure Lifecycle" style="
+						display: block; 
+						margin-left: auto; 
+						margin-right: auto;
+						border-width: 5px;
+						border-style: solid;
+						padding: 20px;
+						width: 50vw;
+						min-width: 450px;
+					" />
 					<br>
 				</div>
 			</section>
