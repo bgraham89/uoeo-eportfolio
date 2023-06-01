@@ -118,7 +118,7 @@
 						</li>
 					</ul>
 					<h3><u>Python</u></h3>
-					<p style="color: blanchedalmond">This was my submission to a question and answer activity, in which we were tasked to answer three questions:
+					<p style="color: blanchedalmond">This was my submission to a question and answer activity, in which we were tasked to answer three questions about Python:
 					</p>
 					<p style="color: lavender">
 						<b style="color: blanchedalmond">What factors determine whether a programming language is secure or not?</b>: 
@@ -126,28 +126,52 @@
 						CIA triad which provides a suitable, explicit teleogy to situate the question; which is around the concepts of confidentiality, integrity and availability
 						assurance.
 						With this, we can consider how a programming language relates to those assurances. We can note that a programming language might 
-						host software that guarantees those assurances through the use of well-crafted protocols. We can also note that if those 
-						protocols can be modelled using finite state machines,
-						then a turing complete programming language can implement those protocols, and be secure. To create a degree of security, we 
-						could consider how easy it is for a developer to implement those secure protocols in the language, using a metric such as number of lines 
-						of code it takes to implement them.  
+						host software that guarantees those assurances through the use of well-crafted protocols. If a programming language can implement 
+						those protocols, then it's justifiably secure by virtue of secure software being implementable. We can also reason that 
+						there are degrees of security, by considering how easy 
+						it is for a developer to implement those secure protocols in the language, using a metric such as number of lines 
+						of code that it takes to implement them.  
 					</p>
 					<p style="color: lavender">
 						<b style="color: blanchedalmond">Could Python be classed as a secure language?</b>: 
-						Python is turing complete so it is as secure as any other turing complete
-						language, at some granularity of detail. The simplicity of the language makes it generally
-						easy to programme with, but the assurance of confidentiality, integrity and availability is
-						not inherit to the language. For example; private variables can be accessed, immutable data
+						If a turing complete language can implement some protocol to assure security, then Python is secure. 
+						However the assurances of confidentiality, integrity and availability are
+						not inherit to the language. For example; private variables can be accessed in Python, immutable data
 						can become unaccessible through reassignment, and variables can be altered too through 
-						reassignment.
+						reassignment. Therefore python software requires more lines of code than languages such as javascript;,
+						a language which can prevent resassignment using the const keyword for example.
 					</p>
 					<p style="color: lavender">
 						<b style="color: blanchedalmond">Would python be a better language to create operating languages than C?</b>: 
-						As memory management is abstracted away in Python, it would be more inefficient to create the kernel
-						of an operating system, which requires direct access to memory for low level tasks such as 
+						As memory management is abstracted away in Python, it would be inefficient to create the kernel
+						of an operating system with Python, as the kernel requires direct access to memory for low level tasks such as 
 						resource allocation. 
 					</p>
 					<br>
+					<h3><u>Regex</u></h3>
+					<p style="color: blanchedalmond">This was my submission to a question and answer activity, in which we were tasked to answer three questions about Regex:
+					</p>
+					<p style="color: lavender">
+						<b style="color: blanchedalmond">What is ReDOS and what part do 'Evil Regex' play?</b>: 
+						Regex Denial of Service (ReDOS) is a type of Denial of Service (DoS) attack that exploits the
+						exponential time complexity of certain regular expressions. The attacker crafts a string, known as an
+						'evil regex', that takes a long time to process, and exploits it to cause DoS.
+					</p>
+					<p style="color: lavender">
+						<b style="color: blanchedalmond">What are the common problems associated with the use of regex?
+						How can these be mitigated?</b>: 
+						Drawing on the work of Larson and Kirk, common problems associated with the use of regex include regex
+						being too restrictive, or not restrictive enough. Tools such as EGRET, can automatically create a range of strings
+						to test different parts of a regex expression. The results help the developer to determine whether the regex is too
+						restrictive or not restrictive enough. 
+					</p>
+					<p style="color: lavender">
+						<b style="color: blanchedalmond">How and why could regex be used as part of a security solution?</b>: 
+						Regex makes it possible to filter strings, by character patterns. From a security perspective,
+						this is useful for filtering out malicious strings that are used as input, 
+						such as the strings used by attackers attempting SQL injections.
+					</p>
+ 					<br>
 					<h2><u>Insider Risks</u></h2>
 					<h3><u>Glossary</u></h3>
 					<h4 style="color: lightskyblue">Insider Risk</h4>
