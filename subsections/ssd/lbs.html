@@ -1,0 +1,216 @@
+<!DOCTYPE HTML>
+<!--
+	Template by Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Language-Based Security - BGraham89 UoEO ePortfolio</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="../../assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="../../assets/css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<a href="../../index.html" class="logo">Bradley Graham</a>
+			<nav>
+				<a href="#menu">Menu</a>
+			</nav>
+		</header>
+
+		<!-- Menu -->
+		<nav id="menu">
+			<ul class="links">
+				<li><a href="../../index.html">Home</a></li>
+				<li><a href="../../sections/lics.html">Launching into Computer Science</a></li>
+				<li><a href="../../sections/oop.html">Object-Oriented Programming</a></li>
+				<li><a href="../../sections/ssd.html">Secure Software Development</a></li>
+			</ul>
+		</nav>
+
+		<!-- Main -->
+		<div id="main" class="alt">
+
+			<!-- Links -->
+			<section id="one">
+				<div class="inner">
+					<header class="major">
+						<h1>Language-Based Security</h1>
+                    </header>
+                    <p style="color:blanchedalmond">
+                        This is a collection of notes on language-based security, to gain a broad overview
+						of the domain: 
+                    </p>
+					<h2><u>Programming Languages</u></h2>
+					<h3 style="color: blanchedalmond"><u>Security Concerns</u></h3>
+					<p style="color: lavender">
+						<b style="color: blanchedalmond">What factors determine whether a programming language is secure or not?</b>: 
+						My own thoughts on what makes a programming language secure is different to what other researchers such as 
+						Cifuentes & Bierman, 2019 describe. I think that a programming language is secure if it can implement an
+						application that assures security. My focus is on the existence of secure application protocols that can be 
+						implemented on any Turing complete programming language, and the differences in the implementation of those protocols
+						between Turing complete languages. Researchers such as Cifuentes and Bierman instead focus on language mechanisms that
+						provide protection against common security vulnerabilities.
+					</p>
+					<p style="color: lavender">
+						<b style="color: blanchedalmond">Could Python be classed as a secure language?</b>: 
+						Building upon my previous answer, Python could be classed as a secure language if secure application protocols
+						exist and are implementable using Turing complete languages. Researchers such as Pillai (2017) have different views,
+						and instead look at how easy it is to attack python applications without a security layer.
+					</p>
+					<h3><u>Readings</u></h3>
+                    <ul style="color:blanchedalmond">
+						<li>
+							<b style="color:white">
+								Cifuentes, C. & Bierman, G (2019) What is a Secure Programming Language?. Available from:
+								<a href="https://drops.dagstuhl.de/opus/volltexte/2019/10546/" 
+									target="_blank">
+									here.
+								</a>
+							</b>
+							- Cifuentes and Bierman identify three categories of common vulnerabilities
+							that they argue could be prevented through programming language design. Those vulnerabilities
+							are: buffer errors, injection errors and information leak errors.  
+						</li>
+						<li>
+							<b style="color:white">
+								Pillai, A. (2017) <i>Software Architecture with Python: Architect and Design Highly
+								Scalable, Robust, Clean and Highly Peformant Applications in Python</i>.
+								Birmingham, UK: Packt Publishing, 2017. ISBN 9781786468529
+							</b>
+							- Pillai presents a textbook on how to build secure applications in Python, including chapters on:
+							security, testing, design patterns, and concurrency in Python.
+						</li>
+					</ul>
+					<br>
+					<h2><u>Language Features</u></h2>
+					<h3 style="color: orange">Regular Expression Engines</h3>
+					<p>
+                        "A regular expression engine is a program that takes a set of constraints specified in a mini-language, and then applies those constraints to a target string, 
+						and determines whether or not the string satisfies the constraints. " (
+                            <a href="https://perldoc.perl.org/perlreguts#What-is-a-regular-expression-engine?" target="_blank" style="color:powderblue">
+                                Perl
+                            </a>)
+                    </p>
+					<h4 style="color: blanchedalmond"><u>Security Concerns</u></h4>
+					<p style="color: lavender">
+						<b style="color: blanchedalmond">What is ReDOS and what part do 'Evil Regex' play?</b>: 
+						"The Regular expression Denial of Service (ReDoS) is a Denial of Service attack, that 
+						exploits the fact that most Regular Expression implementations may reach extreme situations that 
+						cause them to work very slowly (exponentially related to input size)" (
+                            <a href="https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS" target="_blank" style="color: coral">
+                                OWASP
+                            </a>).
+						"A Regex pattern is called Evil Regex if it can get stuck on crafted input" 
+						(<a href="https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS" target="_blank" style="color: coral">
+							OWASP
+						</a>).
+					</p>
+					<p style="color: lavender">
+						<b style="color: blanchedalmond">What are the common problems associated with the use of regex?
+						How can these be mitigated?</b>: 
+						Drawing on the work of Larson and Kirk (2016), common problems associated with the use of regex include the formation
+						of regex that is too restrictive, or not restrictive enough. To mitigatate the formation of problematic regex, tools 
+						such as EGRET can be used. EGRET can automatically create a range of strings
+						to test different parts of a regex expression. The results of the test can help the developer to 
+						determine whether the regex is too restrictive or not restrictive enough.
+					</p>
+					<p style="color: lavender">
+						<b style="color: blanchedalmond">How and why could regex be used as part of a security solution?</b>: 
+						"When an application accepts user input, it opens its doors to a wide range of potential vulnerabilities, like XSS, 
+						open redirect, and SQL injection. Regex is used to filter and sanitize user input as a defense mechanism against these attacks." (
+                            <a href="https://sec.okta.com/articles/2020/07/dangerous-regular-expressions" target="_blank">
+                                OKTA, 2020
+                            </a>).
+					</p>
+					<h3><u>Readings</u></h3>
+                    <ul style="color:blanchedalmond">
+						<li>
+							<b style="color:white">
+								Larson, E. & Kirk, A. (2016) 'Generating Evil Test Strings for Regular Expressions'.
+								<i>IEEE International Conference on Software Testing, Verification and Validation (ICST)</i>. 
+								Chicago, USA, 2016. New York: IEEE. 309-319.
+							</b>
+							- Larson and Kirk present EGRET, a nondeterministic finite automata that they use for generating a moderate
+							amount of test cases that checks the suitability of a regular expression pattern as a filter.
+						</li>
+						<li>
+							<b style="color:white">
+								Larson, E. (2018) 'Automatic Checking of Regular Expressions'.
+								<i>
+									2018 IEEE 18th International Working Conference on Source Code Analysis
+									and Manipulation (SCAM)
+								</i>. 
+								Madrid, Spain 2018. New York: IEEE. 225-234.
+							</b>
+							- Larson present ACRE, a tool for checking regular expression patterns for common mistakes.
+						</li>
+					</ul>
+				</div>
+			</section>
+		</div>
+
+		<!-- Contact -->
+		<section id="contact">
+			<div class="inner">
+				<section class="split">
+					<section>
+						<div class="contact-method">
+							<span class="icon solid alt fa-envelope"></span>
+							<h3>Email</h3>
+							<p>bg22514@essex.ac.uk</p>
+						</div>
+					</section>
+					<section>
+						<div class="contact-method">
+							<span class="icon solid alt fa-home"></span>
+							<h3>Address</h3>
+							<span>Bath, United Kingdom</span>
+						</div>
+					</section>
+				</section>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<ul class="icons">
+					<li><a href="https://github.com/bgraham89" class="icon brands alt fa-github"><span class="label"
+								target="_blank">GitHub</span></a></li>
+					<li><a href="https://www.linkedin.com/in/bradley-graham-a7bb4a136/"
+							class="icon brands alt fa-linkedin-in" target="_blank"><span
+								class="label">LinkedIn</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>Bradley Graham</li>
+					<li>Design: <a href="https://html5up.net" target="_blank">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</footer>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/jquery.scrolly.min.js"></script>
+	<script src="../../assets/js/jquery.scrollex.min.js"></script>
+	<script src="../../assets/js/browser.min.js"></script>
+	<script src="../../assets/js/breakpoints.min.js"></script>
+	<script src="../../assets/js/util.js"></script>
+	<script src="../../assets/js/main.js"></script>
+
+</body>
+
+</html>
