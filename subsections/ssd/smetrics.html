@@ -146,6 +146,25 @@
 					</ul>
 					<br>
 					<h2 style="color: paleturquoise"><u>Measuring Software Testability</u></h2>
+					<h3 style="color: gold">Cyclomatic Complexity</h3>
+					<p>
+                        "The amount of decision logic in a source code function" (
+						<a href="http://www.mccabe.com/pdf/mccabe-nist235r.pdf" target="_blank" style="color:coral">
+							NIST
+						</a>)
+                    </p>
+					<p style="color: lavender">
+						<b style="color: blanchedalmond">Is Cyclomatic Complexity relevant in security research today?</b>: 
+						Unquestionably, cyclomatic complexity provides a lower bound to the amount of tests that would be required 
+						to classify a programme as reliable, by virtue of branch coverage. Cyclomatic complexity might not give 
+						the exact amount of tests that would be required,
+						but a lower bound is still extremely useful for estimation purposes. If there are less tests 
+						written for a programme than the
+						cyclomatic complexity of a programme, than it is definitely not fully tested. Therefore there might be
+						a security vulnerability. The simplicty of calculating cyclomatic complexity, and comparing it to the number
+						of written tests, provides a cheap way to identify if there is an obvious lack of reliability in the 
+						programme, and a potential security vulnerability. I don't think there's any reason to not do that check.
+					</p>
 					<h3><u>Readings</u></h3>
                     <ul style="color:blanchedalmond">
 						<li>
@@ -159,6 +178,17 @@
 							compare it
 							to other complexity metrics such as Lines of Code, and Cyclomatic Complexity, as well as
 							the reliability metric; Branch Coverage. 
+						</li>
+						<li>
+							<b style="color:white">
+								NIST. (1996) Structured Testing: A Testing Methodology Using the Cyclomatic
+								Complexity Metric.
+								Available from <a href="http://www.mccabe.com/pdf/mccabe-nist235r.pdf" target="_blank">
+									here.
+								</a>
+							</b>
+							NIST outline a structured testing methodology called Basis Path Testing 
+							based on the Cyclomatic Complexity.
 						</li>
 						<li>
 							<b style="color:white">
