@@ -52,8 +52,38 @@
                         This section is dedicated to material related to security
                         metrics, for the relevance they have to a goal-oriented enterprise. 
                     </p>
-					<h2><u>Examples</u></h2>
-
+					<h2><u>Reflection</u></h2>
+					<p style="color: blanchedalmond">
+						In the previous module on object-oriented programming, I discovered a 
+						textbook by Fenton and Biemann 
+						on software metrics, that was pivotal by shifting my perspective 
+						of software metrics from a complete skepticism of them, to an appreciation of
+						the value they provide to a project manager. I still am very critical against
+						metrics that require human opinion or are treated as contextually immune, but
+						making software metrics explicit, as instruments of decision making, provides
+						more traction for coordination amongst a team. Therefore I made sure to research
+						security metrics in this module.      
+					</p>
+					<h3><u>Recommended Reading</u></h3>
+                    <ul style="color:blanchedalmond">
+						<li>
+							<b style="color:white">Fenton, N & Bieman, J. (2015) '10.5 Security Measures', 
+								in: Fenton, N & Bieman, J. (2015)
+								<i>Software metrics: a rigorous and practical approach</i>. 3rd ed. Boca Raton: CRC
+								Press. 475-523. ISBN 9780367659028</b>
+							- Fenton and Biemann include a section specifically about security metrics that are useful
+							in a goal-based project framework.
+						</li>
+					</ul>
+					<h2 style="color: paleturquoise"><u>Measuring Software Vulnerability</u></h2>
+					<h3 style="color: gold">Attack Surface</h3>
+					<p>
+                        "The set of points on the boundary of a system, a system element, or 
+						an environment where an attacker can try to enter, cause an effect on, or extract data from." (
+						<a href="https://csrc.nist.gov/glossary/term/attack_surface" target="_blank" style="color:coral">
+							NIST
+						</a>)
+                    </p>
 					<h3 style="color: gold">Common Vulnerability Scoring System (CVSS)</h3>
 					<p>
                         "The Common Vulnerability Scoring System (CVSS) provides a way to capture the principal characteristics of a vulnerability and produce a numerical score reflecting its severity." (
@@ -71,31 +101,12 @@
 						</a>)
                     </p>
 					<p style="color:blanchedalmond">
-						I've left out the specific details constituting each individual metric, as they are well documented in
+						I've left out the specific details constituting each individual submetric of the CVSS, as they are well documented in
 						the <a href="https://www.first.org/cvss/" target="_blank">CVSS specification</a>. CVSS requires alot of
 						information to be gathered about a vulnerability, which is both it's weakness and strength.
 					</p>
-					<h2><u>Readings</u></h2>
+					<h3><u>Readings</u></h3>
                     <ul style="color:blanchedalmond">
-						<li>
-							<b style="color:white">
-								Butler, S. (2002) 'Security Attribute Evaluation Method:
-								A Cost-Benefit Approach'. <i>Proceedings of the 24th International Conference 
-									on Software Engineering</i>. Orlando Florida, USA, 2002. IEEE. 2002.
-							</b>
-							Butler compares a selection of security designs, by using the Security Attribute Evaluation Model
-							(SAEM), consisiting of benefit assessment, threat index evaluation, coverage assessment and cost analysis.
-							Benefits can include protection, detection or recovery mechanisms, and threat indexes are calculated using
-							threat frequencies and outcomes (via multiattribute risk analysis).
-						</li>
-						<li>
-							<b style="color:white">Fenton, N & Bieman, J. (2015) '10.5 Security Measures', 
-								in: Fenton, N & Bieman, J. (2015)
-								<i>Software metrics: a rigorous and practical approach</i>. 3rd ed. Boca Raton: CRC
-								Press. 475-523. ISBN 9780367659028</b>
-							- Fenton and Biemann include a section specifically about security metrics that are useful
-							in a goal-based project framework.
-						</li>
 						<li>
 							<b style="color:white">
 								Manadhata, P. & Wing, J. (2011) An Attack Surface Metric.
@@ -115,6 +126,51 @@
 							</b>
 							Mell et al. present an outline for a security metric built from a suite of metrics,
 							called the common vulnerability scoring system (CVSS).  
+						</li>
+					</ul>
+					<br>
+					<h2 style="color: paleturquoise"><u>Evaluating Security Products</u></h2>
+					<h3><u>Readings</u></h3>
+                    <ul style="color:blanchedalmond">
+						<li>
+							<b style="color:white">
+								Butler, S. (2002) 'Security Attribute Evaluation Method:
+								A Cost-Benefit Approach'. <i>Proceedings of the 24th International Conference 
+									on Software Engineering</i>. Orlando Florida, USA, 2002. IEEE. 2002.
+							</b>
+							Butler compares a selection of security designs, by using the Security Attribute Evaluation Model
+							(SAEM), consisiting of benefit assessment, threat index evaluation, coverage assessment and cost analysis.
+							Benefits can include protection, detection or recovery mechanisms, and threat indexes are calculated using
+							threat frequencies and outcomes (via multiattribute risk analysis).
+						</li>
+					</ul>
+					<br>
+					<h2 style="color: paleturquoise"><u>Measuring Software Testability</u></h2>
+					<h3><u>Readings</u></h3>
+                    <ul style="color:blanchedalmond">
+						<li>
+							<b style="color:white">
+								Ferrer, J., Chicano, F. & Alba, E. (2013) Estimating software testing 
+								complexity.
+								<i>Information and Software Technology</i>. 55(12): 2125-2139.
+							</b>
+							Ferrer et al present the Branch Coverage Expectation metric as a measure of how
+							difficult it is for a computer to automatically generate test cases for code. They 
+							compare it
+							to other complexity metrics such as Lines of Code, and Cyclomatic Complexity, as well as
+							the reliability metric; Branch Coverage. 
+						</li>
+						<li>
+							<b style="color:white">
+								Shepperd, M. (1988) A Critque of Cyclomatic Complexity as
+								a Software Metric.
+								<i>Software Engineering Journal</i>. 3(2): 30-36.
+							</b>
+							Shepperd argues that Cyclomatic Complexity is based on the decomposition of a
+							system into suitable testable components, which it fails at, because the ease of
+							testing each component is not taken into account. Shepperd also argues that
+							more attention should be given to validating metrics, and that Lines of Code
+							is a better metric.
 						</li>
 					</ul>
 				</div>
