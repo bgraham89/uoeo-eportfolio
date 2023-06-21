@@ -179,6 +179,35 @@
 						of written tests, provides a cheap way to identify if there is an obvious lack of reliability in the 
 						programme, and a potential security vulnerability. I don't think there's any reason to not do that check.
 					</p>
+					<h3><u>Measurement in Python</u></h3>
+					<p style="color: lavender">
+						While there are multiple ways to measure the cyclomatic complexity of a python
+						file, I've chosen to demonstrate the measurement of cyclomatic complexity using 
+						an external python library <a href="https://radon.readthedocs.io/en/latest/" target="_blank">Radon</a>
+						that allows the measurement of cylomatic complexity from within a python script itself.
+						For presentation purposes that aspect is ideal. One downside of the radon implmentation
+						is that code to be measured, must provided as string:
+					</p>
+					<img src="../../assets/artefacts/ssd/screenshots/primes.png" alt="code with branches" 
+					style="
+						width: 30vw;
+						min-width: 350px;
+						height: auto; 
+						border-style: solid; 
+						border-width: 2px; 
+						border-color: dimgrey;"/>
+					<img src="../../assets/artefacts/ssd/screenshots/radon.png" alt="code with branches" 
+					style="
+						width: 70vw;
+						min-width: 450px;
+						height: auto; 
+						border-style: solid; 
+						border-width: 2px; 
+						border-color: dimgrey;"/>
+					<p style="color: lavender">
+						My interactive notebook for exploration purposes
+						can be found <a href="../../assets/artefacts/ssd/notebooks/mccabe.ipynb" target="_blank">here</a>.
+					</p>
 					<h3><u>Readings</u></h3>
                     <ul style="color:blanchedalmond">
 						<li>
@@ -217,7 +246,7 @@
 							is a better metric.
 						</li>
 					</ul>
-					<h4><u>Respone to Shepperd (1988)</u></h4>
+					<h4><u>Response to Shepperd (1988)</u></h4>
 					<p style="color: lavender">
 						I found the criticism of cyclotomic complexity by Sheppard (1988) respectable, because 
 						he makes a good point about how
