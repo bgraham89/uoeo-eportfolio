@@ -181,12 +181,11 @@
 					</p>
 					<h3><u>Measurement in Python</u></h3>
 					<p style="color: lavender">
-						While there are multiple ways to measure the cyclomatic complexity of a python
-						file, I've chosen to demonstrate the measurement of cyclomatic complexity using 
-						an external python library <a href="https://radon.readthedocs.io/en/latest/" target="_blank">Radon</a>
-						that allows the measurement of cylomatic complexity from within a python script itself.
-						For presentation purposes that aspect is ideal. One downside of the radon implmentation
-						is that code to be measured, must provided as string:
+						There are multiple tools for getting the cyclomatic complexity of some python
+						code. I've chosen to demonstrate the measurement of cyclomatic complexity using 
+						an external python library called <a href="https://radon.readthedocs.io/en/latest/" target="_blank">Radon</a>.
+						For that the code to be measured must be provided as a string. Then the cyclomatic complexity can be found by 
+						calling a specific function on the string:
 					</p>
 					<img src="../../assets/artefacts/ssd/screenshots/primes.png" alt="code with branches" 
 					style="
@@ -198,7 +197,7 @@
 						border-color: dimgrey;"/>
 					<img src="../../assets/artefacts/ssd/screenshots/radon.png" alt="code with branches" 
 					style="
-						width: 70vw;
+						width: 50vw;
 						min-width: 450px;
 						height: auto; 
 						border-style: solid; 
