@@ -96,14 +96,14 @@
 						</p>
 						<p style="color: blanchedalmond">
 							While this page is mainly dedicated to SDLC's, I want to point out that
-							well-designed automation prevents human error, so in the future I would
+							well-designed automation minimises human error, so in the future I would
 							like to explore DevSecOps more in-depth. That being said, it's important
 							to be familiar with how to integrate security practices into an SDLC 
-							whether those practises are automatable or not, as security efforts are 
+							anyway whether those practises are automatable or not, as security efforts are 
 							often a legal requirement in software development. 
 						</p>
 					<br>
-					<h2><u>Examples</u></h3>
+					<h2><u>Examples of SDLCs</u></h3>
 					<h3 style="color: goldenrod"><u>The Waterfall Lifecycle</u></h3>
 					<h4><u>Foundational Readings</u></h4>
                     <ul style="color:blanchedalmond">
@@ -117,6 +117,11 @@
 							systems. He introduces the waterfall model, and emphasises the importance of documentation.
 						</li>
 					</ul>
+					<h4><u>Review</u></h4>
+					<p style="color: lavender"> 
+						The non-iterative approach of the waterfall model severly limits security-centred adjustments that
+						are found to be needed later in development, therefore I wouldn't recommend it nowadays. 
+					</p>
 					<br>
 					<h3 style="color: goldenrod"><u>The Spiral Lifecycle</u></h3>
 					<h4><u>Foundational Readings</u></h4>
@@ -131,11 +136,11 @@
 							waterfall model to be iterative and risk driven.
 						</li>
 					</ul>
-					<h4><u>Response to Boehm (1988)</u></h4>
-					<p style="color: lavender">
-						I like the spiral model of software development because it is thorough, iterative and risk-focused. 
-						The repetition of risk analysis during development gives every opportunity to develop as 
-						secure of software as possible, complemented by the incentive of thoroughness. 
+					<h4><u>Review</u></h4>
+					<p style="color: lavender"> 
+						The repetition of risk analysis stages in the spiral model gives every opportunity to develop as 
+						secure of software as possible. For that reason,
+						I would recommend the spiral model for secure software development. 
 					</p>
 					<br>
 					<h3 style="color: goldenrod"><u>The Agile Lifecycle</u></h3>
@@ -174,6 +179,19 @@
 							adaptive approach to completing complex tasks.
 						</li>
 					</ul>
+					<h4><u>Review</u></h4>
+					<p style="color: lavender">
+						Agile is fantastic on a corporate level as it promotes good customer 
+						relations, working 
+						products and teambuilding. There are 
+						many tools and frameworks associated with it too which are great
+						such as the SCRUM framework, and kanban boards. However, Agile is
+						fine-tuned to producing the minimum viable product for an organisation,
+						including minimal security features. For that reason, Agile only works
+						well for secure software development, when legal policies or customer
+						demands enforce it. In those cases, I would recommend Agile over the Spiral
+						model.
+					</p>
 					<h4><u>Security-Centered Readings</u></h4>
                     <ul style="color:blanchedalmond">
 						<li>
@@ -184,7 +202,7 @@
 								Malaysia, 2013.
 							</b>
 							- Firdaus et al. identify a negligence of security in common agile methods, such 
-							as Scrum, Exterme Programming and Feature Driven Development. Firdaus et al describe
+							as Scrum, Extreme Programming and Feature Driven Development. Firdaus et al describe
 							key principles of secure software development, and propose a conceptual model
 							of secure FDD.
 						</li>
@@ -225,6 +243,15 @@
 							an agile process.  
 						</li>
 					</ul>
+					<h4><u>Reflection</u></h4>
+					<p style="color: blanchedalmond">
+						Of the different security-centred readings, I found the paper by Sharma and Bawa (2020) to be the most useful, simply
+						for introducing me to CLASP, Common Critieria, and Microsoft's SDL. When developing secure software, irrespective of the
+						software development lifecycle, it's important to be aware of actual security activities and security standards. A good
+						SDLC should be able to accomodate those activities and standards, and Agile is able to do so. In the future I would like
+						to explore tools for the elicitation of security requirements from customers, to assist agile developers in fufilling
+						international security standards.
+					</p>
 				</div>
 			</section>
 		</div>
