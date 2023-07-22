@@ -104,7 +104,55 @@
                             </a>)
                     </p>
  					<br>
-					<h2><u>Tips for Resilience</u></h2>
+					<h2><u>Example</u></h2>
+					<p style="color:blanchedalmond">
+						Below is an example of a software vulnerability that I found during a group project, in which
+						we were tasked with creating secure CRUD software.
+					</p>
+					<img src="../../assets/artefacts/ssd/screenshots/project/cli.png" alt="action loop" 
+					style="
+						width: 65vw;
+						min-width: 350px;
+						margin-left: auto; 
+						margin-right: auto;
+						margin-bottom: 20px;
+						height: auto;
+						border-style: solid; 
+						border-width: 2px; 
+						border-color: dimgrey;"
+						/>
+					<p style="color:blanchedalmond">
+						The programme involved the loop above, which parses a request, 
+						and depending on the details of the request; it gets input from 
+						a user and then validates that the input is an acceptible format. 
+						The vulnerability comes from optional information being missing 
+						in the request as below:   
+					</p>
+					<img src="../../assets/artefacts/ssd/screenshots/project/params.png" alt="action loop" 
+					style="
+						width: 65vw;
+						min-width: 350px;
+						margin-left: auto; 
+						margin-right: auto;
+						margin-bottom: 20px;
+						height: auto;
+						border-style: solid; 
+						border-width: 2px; 
+						border-color: dimgrey;"
+						/>
+					<p style="color:blanchedalmond">
+						Some of the params in the request, such as 'name', include an empty string
+						as the third element. This means that any input the user provides for a name
+						will not be validated in the loop. This is a vulnerability because any
+						input the user provides is later inserted into a database, and therefore
+						might be exploited by an attacker, through an SQL injection for example.  
+					</p>
+					<p style="color:blanchedalmond">
+						To view the rest of the project codebase, click
+						<a href="https://github.com/michaelsammueller/secure-software-development" target="_blank">here</a>.
+					</p>
+					<br>
+					<h2><u>Tips for Resilience to Attacks</u></h2>
 					<p style="color: blanchedalmond">This was my submission to a blogging activity, in which we were tasked to talk about
 						<b style="color: blanchedalmond">How to overcome insider cyber security threats</b>:
 					</p>
