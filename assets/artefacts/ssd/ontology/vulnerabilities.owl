@@ -1,0 +1,41 @@
+:Vulnerability a owl:Class .
+:SeverityScore a owl:Class .
+:Exploitation a owl:Class .
+
+:hasDescription a owl:DataTypeProperty ;
+    rdfs:domain owl:UnionOf ( :Vulnerability
+                              :Exploitation ) ;
+    rdfs:range xsd:string .
+
+:hasSeverity a owl:ObjectProperty ;
+    rdfs:domain :Vulnerability ;
+    rdfs:range :SeverityScore .
+
+:isMoreSevereThan a owl:ObjectProperty ;
+    a owl:TransitiveProperty ;
+    a owl:AsymmetricProperty ;
+    a owl:IrreflexiveProperty ;
+    rdfs:domain :SeverityScore ;
+    rdfs:range :SeverityScore .
+
+:isLessSevereThan a owl:ObjectProperty ;
+    owl:inverseOf :isMoreSevereThan .
+
+:exploits a owl:ObjectProperty ;
+    rdfs:domain :Exploitation ;
+    rdfs:range :Vulnerability .
+
+:isExploitedBy a owl:ObjectProperty ;
+    owl:inverseOf :exploits .
+
+:canBreakDataConfidentialityAssurance a owl:DataTypeProperty ;
+    rdfs:domain :Exploitation ;
+    rdfs:range xsd:boolean .
+
+:canBreakDataIntegrityAssurance a owl:DataTypeProperty ;
+    rdfs:domain :Exploitation ;
+    rdfs:range xsd:boolean .
+
+:canBreakDataAvailabilityAssurance a owl:DataTypeProperty ;
+    rdfs:domain :Exploitation ;
+    rdfs:range xsd:boolean .
