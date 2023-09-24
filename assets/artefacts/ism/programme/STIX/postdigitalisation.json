@@ -1,0 +1,989 @@
+[
+  {
+      "type": "grouping",
+      "spec_version": "2.1",
+      "created": "2023-12-09T20:45:00.000Z",
+      "modified": "2023-12-09T20:45:00.000Z",
+      "id" : "grouping--32af0666-bdb0-4a10-b1e8-65d2ddb9e2b9",
+      "name": "Spoofing",
+      "description": "",
+      "context" : "stride-spoofing",
+      "object_refs" : 
+      [
+          "attack-pattern--5293f931-9c86-4ed6-8b98-397fa6e28689",
+          "attack-pattern--79f64ee3-4fa2-49a2-9ae7-f4228dd2db30",
+          "attack-pattern--eee5e98a-8278-4ac4-80d3-aed0cdbb93f6",
+          "attack-pattern--822c4260-a305-43f0-bd4c-2d1a7944abbd",
+          "attack-pattern--576af753-16e3-4eb2-8de1-295b87928aa1"
+      ]
+  },
+  {
+      "type": "grouping",
+      "spec_version": "2.1",
+      "created": "2023-12-09T20:45:00.000Z",
+      "modified": "2023-12-09T20:45:00.000Z",
+      "id" : "grouping--877593db-541a-4174-ac99-a279a10ad71f",
+      "name": "Tampering",
+      "description": "",
+      "context" : "stride-tampering",
+      "object_refs" : 
+      [
+          "attack-pattern--d155459f-07c5-47a0-ad05-56a2ad0a598b",
+          "attack-pattern--923619ec-28f5-409e-b975-496edf31375a",
+          "attack-pattern--8354495d-bbc6-43ae-a9c7-83e4a85edcf7",
+          "attack-pattern--1a8da473-a6cc-4d6c-a126-1ed8cd8ee99b",
+          "attack-pattern--a2948eae-10b6-448c-8664-98cef7531105"
+      ]
+  },
+  {
+      "type": "grouping",
+      "spec_version": "2.1",
+      "created": "2023-12-09T20:45:00.000Z",
+      "modified": "2023-12-09T20:45:00.000Z",
+      "id" : "grouping--6f6a7535-f670-4030-9418-5fdfe7193d97",
+      "name": "Repudiation",
+      "description": "",
+      "context" : "stride-repudiation",
+      "object_refs" : 
+      [
+          "attack-pattern--e9703619-dd9f-45a8-8ec3-e08661772405",
+          "attack-pattern--b7c8bb18-4e11-4c83-96bb-2f32f6e49cad",
+          "attack-pattern--4817451c-c924-4bd5-8260-41910c9c23f8"
+      ]
+  },
+  {
+      "type": "grouping",
+      "spec_version": "2.1",
+      "created": "2023-12-09T20:45:00.000Z",
+      "modified": "2023-12-09T20:45:00.000Z",
+      "id" : "grouping--5fa64234-19f6-4c16-ac25-c3e5fd51520e",
+      "name": "Information Disclosure",
+      "description": "",
+      "context" : "stride-information-disclosure",
+      "object_refs" : 
+      [
+          "attack-pattern--89b0eda2-be6e-4259-91b9-4b0dcf3cd2b1",
+          "attack-pattern--fe088adb-f74b-4d5e-b2c9-13437599b643",
+          "attack-pattern--f90c9c83-4ad0-455c-a642-1efa0f152684"
+      ]
+  },
+  {
+      "type": "grouping",
+      "spec_version": "2.1",
+      "created": "2023-12-09T20:45:00.000Z",
+      "modified": "2023-12-09T20:45:00.000Z",
+      "id" : "grouping--61f88b12-42d9-46ce-8b4a-6c479ff0ba6b",
+      "name": "Denial of Service",
+      "description": "",
+      "context" : "stride-denial-of-service",
+      "object_refs" : 
+      [
+          "attack-pattern--88d2f517-6353-434c-bb97-051c5b3bd64e",
+          "attack-pattern--ee4cf5ed-3b67-41d5-bccc-f90459ec953f",
+          "attack-pattern--608d37ef-3299-465f-9896-a772eac76479",
+          "attack-pattern--c535722a-59f7-41a2-9629-fce06a2f29da",
+          "attack-pattern--7663bbf8-ba21-41c3-9c37-e8a84130a250",
+          "attack-pattern--cb6940ec-d8c6-4e15-bc3e-387fc7a8acf3"
+      ]
+  },
+  {
+      "type": "grouping",
+      "spec_version": "2.1",
+      "created": "2023-12-09T20:45:00.000Z",
+      "modified": "2023-12-09T20:45:00.000Z",
+      "id" : "grouping--ba4e3474-971f-45a0-967e-4c4a93546571",
+      "name": "Escalation of Privilege",
+      "description": "",
+      "context" : "stride-elevation-of-privilege",
+      "object_refs" : 
+      [
+          "attack-pattern--65c9602d-3597-4878-a37a-2f10987a8051",
+          "attack-pattern--8a141a7a-6f63-46b5-a2cf-196862497c18",
+          "attack-pattern--70faf2b9-ae58-49b2-bb6a-4c6c17ff45da"
+      ]
+  },
+  {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "created": "2023-12-09T20:45:00.000Z",
+      "modified": "2023-12-09T20:45:00.000Z",
+      "id" : "attack-pattern--5293f931-9c86-4ed6-8b98-397fa6e28689",
+      "name": "Fake Orders",
+      "description": "Somebody places a order for pet food online with an associated cost; such as the cost of purchasing additional stock in anticipation of a legit transaction, that turns out to be fake.",
+      "external_references": 
+      [
+          {
+      
+            "source_name": "capec",
+            "external_id": "CAPEC-151"
+      
+          }
+      ]
+  },
+  {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "created": "2023-12-09T20:45:00.000Z",
+      "modified": "2023-12-09T20:45:00.000Z",
+      "id" : "attack-pattern--79f64ee3-4fa2-49a2-9ae7-f4228dd2db30",
+      "name": "Fake Services",
+      "description": "A service that would be helpful for the business is arranged and paid for, but the paid third party does not fufill the service agreed.",
+      "external_references": 
+      [
+          {
+      
+            "source_name": "capec",
+            "external_id": "CAPEC-151"
+      
+          }
+      ]
+  },
+  {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "created": "2023-12-09T20:45:00.000Z",
+      "modified": "2023-12-09T20:45:00.000Z",
+      "id" : "attack-pattern--eee5e98a-8278-4ac4-80d3-aed0cdbb93f6",
+      "name": "Trademark Infringement",
+      "description": "Somebody imitates the business, breaking trademark laws.",
+      "external_references": 
+      [
+          {
+      
+            "source_name": "capec",
+            "external_id": "CAPEC-195"
+      
+          }
+      ]
+  },
+  {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "created": "2023-12-09T20:45:00.000Z",
+      "modified": "2023-12-09T20:45:00.000Z",
+      "id" : "attack-pattern--822c4260-a305-43f0-bd4c-2d1a7944abbd",
+      "name": "Hotspot Evil Twin",
+      "description": "Somebody creates a wifi network imitating the business wifi.",
+      "external_references": 
+      [
+          {
+      
+            "source_name": "capec",
+            "external_id": "CAPEC-615"
+      
+          }
+      ]
+  },
+  {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "created": "2023-12-09T20:45:00.000Z",
+      "modified": "2023-12-09T20:45:00.000Z",
+      "id" : "attack-pattern--d155459f-07c5-47a0-ad05-56a2ad0a598b",
+      "name": "Physical Damage",
+      "description": "Somebody causes physical damage to business assets.",
+      "external_references": 
+      [
+          {
+      
+            "source_name": "capec",
+            "external_id": "CAPEC-547"
+      
+          }
+      ]
+  },
+  {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "created": "2023-12-09T20:45:00.000Z",
+      "modified": "2023-12-09T20:45:00.000Z",
+      "id" : "attack-pattern--923619ec-28f5-409e-b975-496edf31375a",
+      "name": "Merchandise Modification",
+      "description": "Somebody modifies the business merchandise in an undesirable way."
+  },
+  {
+    "type": "attack-pattern",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id" : "attack-pattern--f90c9c83-4ad0-455c-a642-1efa0f152684",
+    "name": "Unauthorised Access to User Information",
+    "description": "Somebody is able to obtain user information."
+  },
+  {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "created": "2023-12-09T20:45:00.000Z",
+      "modified": "2023-12-09T20:45:00.000Z",
+      "id" : "attack-pattern--8354495d-bbc6-43ae-a9c7-83e4a85edcf7",
+      "name": "Information Modification",
+      "description": "Somebody modifies business information."
+  },
+  {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "created": "2023-12-09T20:45:00.000Z",
+      "modified": "2023-12-09T20:45:00.000Z",
+      "id" : "attack-pattern--1a8da473-a6cc-4d6c-a126-1ed8cd8ee99b",
+      "name": "Information Deletion",
+      "description": "Somebody deletes valuable business information."
+  },
+  {
+    "type": "attack-pattern",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id" : "attack-pattern--cb6940ec-d8c6-4e15-bc3e-387fc7a8acf3",
+    "name": "DDOS Business VPN",
+    "description": "Somebody peforms a DDOS attack on the private network."
+  },
+  {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "created": "2023-12-09T20:45:00.000Z",
+      "modified": "2023-12-09T20:45:00.000Z",
+      "id" : "attack-pattern--e9703619-dd9f-45a8-8ec3-e08661772405",
+      "name": "Email Anonymity",
+      "description": "Somebody exploits anonymity of email adresses.",
+      "external_references": 
+      [
+          {
+      
+            "source_name": "cwe",
+            "external_id": "CWE-345"
+      
+          }
+      ]
+  },
+  {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "created": "2023-12-09T20:45:00.000Z",
+      "modified": "2023-12-09T20:45:00.000Z",
+      "id" : "attack-pattern--b7c8bb18-4e11-4c83-96bb-2f32f6e49cad",
+      "name": "Missing Backup System",
+      "description": "Malicious actions cause permenant loss of business information."
+  },
+  {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "created": "2023-12-09T20:45:00.000Z",
+      "modified": "2023-12-09T20:45:00.000Z",
+      "id" : "attack-pattern--4817451c-c924-4bd5-8260-41910c9c23f8",
+      "name": "Missing Logging System",
+      "description": "Malicious actions are not logged.",
+      "external_references": 
+      [
+          {
+      
+            "source_name": "cwe",
+            "external_id": "CWE-778"
+      
+          }
+      ]
+  },
+  {
+    "type": "attack-pattern",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id" : "attack-pattern--89b0eda2-be6e-4259-91b9-4b0dcf3cd2b1",
+    "name": "Unauthorised Access to Computers",
+    "description": "Somebody gains unauthorised access to staff computer."
+  },
+  {
+    "type": "attack-pattern",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id" : "attack-pattern--fe088adb-f74b-4d5e-b2c9-13437599b643",
+    "name": "Unauthorised Access to Phones",
+    "description": "Somebody gains unauthorised access to staff phone."
+  },
+  {
+    "type": "attack-pattern",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id" : "attack-pattern--88d2f517-6353-434c-bb97-051c5b3bd64e",
+    "name": "Loss of Supply",
+    "description": "A third party supply service stops supplying stock."
+  },
+  {
+    "type": "attack-pattern",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id" : "attack-pattern--ee4cf5ed-3b67-41d5-bccc-f90459ec953f",
+    "name": "Loss of Electricity",
+    "description": "There's a power outage."
+  },
+  {
+    "type": "attack-pattern",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id" : "attack-pattern--608d37ef-3299-465f-9896-a772eac76479",
+    "name": "Loss of Internet",
+    "description": "Internet connection is lost."
+  },
+  {
+    "type": "attack-pattern",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id" : "attack-pattern--c535722a-59f7-41a2-9629-fce06a2f29da",
+    "name": "Staff Disruption",
+    "description": "Somebody disrupts the staff ability to work."
+  },
+  {
+    "type": "attack-pattern",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id" : "attack-pattern--7663bbf8-ba21-41c3-9c37-e8a84130a250",
+    "name": "Regulation Failure",
+    "description": "The business fails a regulation check."
+  },
+  {
+    "type": "attack-pattern",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id" : "attack-pattern--65c9602d-3597-4878-a37a-2f10987a8051",
+    "name": "Misguided Trust",
+    "description": "Somebody gains unwarranted trust."
+  },
+  {
+    "type": "attack-pattern",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id" : "attack-pattern--8a141a7a-6f63-46b5-a2cf-196862497c18",
+    "name": "Unauthorised Information Access",
+    "description": "Somebody gains unauthorised access to private information."
+  },
+  {
+    "type": "attack-pattern",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id" : "attack-pattern--576af753-16e3-4eb2-8de1-295b87928aa1",
+    "name": "Targeted User Spoofing",
+    "description": "Somebody acts like they are a specific user."
+  },
+  {
+    "type": "attack-pattern",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id" : "attack-pattern--a2948eae-10b6-448c-8664-98cef7531105",
+    "name": "Targeted User Tampering",
+    "description": "Somebody modies information about a specific user."
+  },
+  {
+    "type": "attack-pattern",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id" : "attack-pattern--70faf2b9-ae58-49b2-bb6a-4c6c17ff45da",
+    "name": "Viral Incident",
+    "description": "An event gains large amounts of public attention."
+  },
+  {
+      "type": "course-of-action",
+      "spec_version": "2.1",
+      "created": "2023-12-09T20:45:00.000Z",
+      "modified": "2023-12-09T20:45:00.000Z",
+      "id" : "course-of-action--00d404f2-31e4-45e3-9dde-a84991013073",
+      "name": "Excess Stock Plan",
+      "description": "A plan of action for dealing with excess stock."
+  },
+  {
+      "type": "course-of-action",
+      "spec_version": "2.1",
+      "created": "2023-12-09T20:45:00.000Z",
+      "modified": "2023-12-09T20:45:00.000Z",
+      "id" : "course-of-action--4777d6e3-2603-4b34-a9e0-95476f8c520a",
+      "name": "Loyalty-based User Privilege",
+      "description": "Users gain privileges only obtainable through loyalty schemes."
+  },
+  {
+      "type": "course-of-action",
+      "spec_version": "2.1",
+      "created": "2023-12-09T20:45:00.000Z",
+      "modified": "2023-12-09T20:45:00.000Z",
+      "id" : "course-of-action--28fcd624-85d9-4129-9796-b9d27f9192bd",
+      "name": "Authenticated User Privilege",
+      "description": "Users gain privileges only obtainable through authentication."
+  },
+  {
+      "type": "course-of-action",
+      "spec_version": "2.1",
+      "created": "2023-12-09T20:45:00.000Z",
+      "modified": "2023-12-09T20:45:00.000Z",
+      "id" : "course-of-action--205a47bd-bd5f-4400-a535-f4e00604ca17",
+      "name": "Service Quality Checks",
+      "description": "Quality assurance checks for third party services."
+  },
+  {
+      "type": "course-of-action",
+      "spec_version": "2.1",
+      "created": "2023-12-09T20:45:00.000Z",
+      "modified": "2023-12-09T20:45:00.000Z",
+      "id" : "course-of-action--b523ef21-a451-4ea0-96d7-670494145c10",
+      "name": "Customer Communication Channel",
+      "description": "A mechanism through which customers can communicate with the business."
+  },
+  {
+      "type": "course-of-action",
+      "spec_version": "2.1",
+      "created": "2023-12-09T20:45:00.000Z",
+      "modified": "2023-12-09T20:45:00.000Z",
+      "id" : "course-of-action--18d0e88b-480d-4b75-8535-07f3c75de817",
+      "name": "Legal Repercussion",
+      "description": "The means to exercise legal procedures."
+  },
+  {
+      "type": "course-of-action",
+      "spec_version": "2.1",
+      "created": "2023-12-09T20:45:00.000Z",
+      "modified": "2023-12-09T20:45:00.000Z",
+      "id" : "course-of-action--62721c7d-ae7a-4708-9321-300a3de70f4c",
+      "name": "Market Completion Plan",
+      "description": "A plan to identify and capitalise on market oppurtunities."
+  },
+  {
+      "type": "course-of-action",
+      "spec_version": "2.1",
+      "created": "2023-12-09T20:45:00.000Z",
+      "modified": "2023-12-09T20:45:00.000Z",
+      "id" : "course-of-action--4ee7a27c-5cdf-40b8-bb8c-e7a227145f49",
+      "name": "Positive Face",
+      "description": "The appearance of a positive business."
+  },
+  {
+      "type": "course-of-action",
+      "spec_version": "2.1",
+      "created": "2023-12-09T20:45:00.000Z",
+      "modified": "2023-12-09T20:45:00.000Z",
+      "id" : "course-of-action--30d06c2e-2d7a-45cc-a1b7-145989d11ed2",
+      "name": "Business VPN",
+      "description": "A business VPN system."
+  },
+  {
+      "type": "course-of-action",
+      "spec_version": "2.1",
+      "created": "2023-12-09T20:45:00.000Z",
+      "modified": "2023-12-09T20:45:00.000Z",
+      "id" : "course-of-action--177b3342-ff62-48cf-b91e-02114d2949ec",
+      "name": "Property Insurance",
+      "description": "Insured assets."
+  },
+  {
+      "type": "course-of-action",
+      "spec_version": "2.1",
+      "created": "2023-12-09T20:45:00.000Z",
+      "modified": "2023-12-09T20:45:00.000Z",
+      "id" : "course-of-action--f2b56e1a-1242-44af-ab82-8e98457143f2",
+      "name": "Access Control",
+      "description": "An access control mechanism."
+  },
+  {
+      "type": "course-of-action",
+      "spec_version": "2.1",
+      "created": "2023-12-09T20:45:00.000Z",
+      "modified": "2023-12-09T20:45:00.000Z",
+      "id" : "course-of-action--742b684e-d506-40e6-af24-eabd767124c6",
+      "name": "Logging System",
+      "description": "An action and event logging system."
+  },
+  {
+      "type": "course-of-action",
+      "spec_version": "2.1",
+      "created": "2023-12-09T20:45:00.000Z",
+      "modified": "2023-12-09T20:45:00.000Z",
+      "id" : "course-of-action--edf99ebc-643a-4534-9f6c-7e994d6527ef",
+      "name": "Backup System",
+      "description": "A data backup system."
+  },
+  {
+      "type": "course-of-action",
+      "spec_version": "2.1",
+      "created": "2023-12-09T20:45:00.000Z",
+      "modified": "2023-12-09T20:45:00.000Z",
+      "id" : "course-of-action--554b235f-4604-4372-b906-404b2367b3db",
+      "name": "Represensatative Authentication",
+      "description": "A method to authenticate a third party service representative."
+  },
+  {
+      "type": "course-of-action",
+      "spec_version": "2.1",
+      "created": "2023-12-09T20:45:00.000Z",
+      "modified": "2023-12-09T20:45:00.000Z",
+      "id" : "course-of-action--cd40f486-67ee-4544-ae8d-4965fd60231d",
+      "name": "Role-based Employee Privilege",
+      "description": "Employees gain privileges based on their roles."
+  },
+  {
+      "type": "course-of-action",
+      "spec_version": "2.1",
+      "created": "2023-12-09T20:45:00.000Z",
+      "modified": "2023-12-09T20:45:00.000Z",
+      "id" : "course-of-action--57a8a28d-5bd0-43a1-bd47-39aede25f5f3",
+      "name": "Alternative Supply Chains",
+      "description": "Maintain alternative supply chains."
+  },
+  {
+      "type": "course-of-action",
+      "spec_version": "2.1",
+      "created": "2023-12-09T20:45:00.000Z",
+      "modified": "2023-12-09T20:45:00.000Z",
+      "id" : "course-of-action--9c82884a-2e46-4d06-b7dc-3b5af5ae75ef",
+      "name": "Backup Energy System",
+      "description": "A backup energy system for when energy is down."
+  },
+  {
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id" : "course-of-action--56f58ae9-f7a9-40ff-8419-0470ec478196",
+    "name": "Laod Balancing",
+    "description": "A load balancing mechanism."
+  },
+  {
+      "type": "course-of-action",
+      "spec_version": "2.1",
+      "created": "2023-12-09T20:45:00.000Z",
+      "modified": "2023-12-09T20:45:00.000Z",
+      "id" : "course-of-action--4449308d-2961-4d46-92f0-bd79029e7877",
+      "name": "Technical Service Partnerships",
+      "description": "A partnership with third party service that can perform maintenence duties."
+  },
+  {
+      "type": "course-of-action",
+      "spec_version": "2.1",
+      "created": "2023-12-09T20:45:00.000Z",
+      "modified": "2023-12-09T20:45:00.000Z",
+      "id" : "course-of-action--9c8ac727-bd9f-4976-9f5f-681216fd7181",
+      "name": "Backup Network System",
+      "description": "An backup network system for when internet service is down."
+  },
+  {
+      "type": "course-of-action",
+      "spec_version": "2.1",
+      "created": "2023-12-09T20:45:00.000Z",
+      "modified": "2023-12-09T20:45:00.000Z",
+      "id" : "course-of-action--bbb70373-93c7-4a4c-a816-5ab2dbad3b60",
+      "name": "Protection Service Partnerships",
+      "description": "A partnership with third party service that can perform protection duties."
+  },
+  {
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id" : "course-of-action--20c1f181-e13e-4152-a87b-1533e1275a84",
+    "name": "Two Factor Authentication",
+    "description": "Two factor authentication mechanism."
+  },
+  {
+      "type": "course-of-action",
+      "spec_version": "2.1",
+      "created": "2023-12-09T20:45:00.000Z",
+      "modified": "2023-12-09T20:45:00.000Z",
+      "id" : "course-of-action--8fd91e68-6418-4d6c-b4a3-a8c0df0f6ec3",
+      "name": "Regulation Subscription",
+      "description": "A mechanism to learn about regulation changes."
+  },
+  {
+      "type": "course-of-action",
+      "spec_version": "2.1",
+      "created": "2023-12-09T20:45:00.000Z",
+      "modified": "2023-12-09T20:45:00.000Z",
+      "id" : "course-of-action--08897c7e-24b9-4f23-aecf-e4b3b68f381f",
+      "name": "Data Encryption",
+      "description": "The encryption of stored data."
+  },
+  {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "created": "2023-12-09T20:45:00.000Z",
+      "modified": "2023-12-09T20:45:00.000Z",
+      "id": "relationship--0963f76f-9aed-4a1b-80cd-abb73c637397",
+      "relationship_type": "mitigates",
+      "source_ref": "course-of-action--00d404f2-31e4-45e3-9dde-a84991013073",
+      "target_ref": "attack-pattern--5293f931-9c86-4ed6-8b98-397fa6e28689"
+  },
+  {
+    "type": "relationship",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id": "relationship--cbef66cc-4663-4e1e-857e-a9097f01545a",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--4777d6e3-2603-4b34-a9e0-95476f8c520a",
+    "target_ref": "attack-pattern--5293f931-9c86-4ed6-8b98-397fa6e28689"
+  },
+  {
+    "type": "relationship",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id": "relationship--7c443c1b-9af0-4456-914e-688ad83a08f2",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--28fcd624-85d9-4129-9796-b9d27f9192bd",
+    "target_ref": "attack-pattern--5293f931-9c86-4ed6-8b98-397fa6e28689"
+  },
+  {
+    "type": "relationship",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id": "relationship--c84ad0a0-2136-42f2-b15c-fddba683ed80",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--205a47bd-bd5f-4400-a535-f4e00604ca17",
+    "target_ref": "attack-pattern--79f64ee3-4fa2-49a2-9ae7-f4228dd2db30"
+  },
+  {
+    "type": "relationship",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id": "relationship--508db0da-0c90-4906-b93a-9d8f807065df",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--b523ef21-a451-4ea0-96d7-670494145c10",
+    "target_ref": "attack-pattern--eee5e98a-8278-4ac4-80d3-aed0cdbb93f6"
+  },
+  {
+    "type": "relationship",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id": "relationship--1be2ca49-2f97-425d-97f4-5195ec164db8",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--18d0e88b-480d-4b75-8535-07f3c75de817",
+    "target_ref": "attack-pattern--eee5e98a-8278-4ac4-80d3-aed0cdbb93f6"
+  },
+  {
+    "type": "relationship",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id": "relationship--93a238b9-ee57-4d9e-b3d2-983ec157bdbf",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--62721c7d-ae7a-4708-9321-300a3de70f4c",
+    "target_ref": "attack-pattern--eee5e98a-8278-4ac4-80d3-aed0cdbb93f6"
+  },
+  {
+    "type": "relationship",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id": "relationship--9cb1d8ba-f7cf-4448-8ada-aad5dfa5ffa8",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--4ee7a27c-5cdf-40b8-bb8c-e7a227145f49",
+    "target_ref": "attack-pattern--eee5e98a-8278-4ac4-80d3-aed0cdbb93f6"
+  },
+  {
+    "type": "relationship",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id": "relationship--ff260e3b-231b-4902-9e6b-763cee6682b5",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--30d06c2e-2d7a-45cc-a1b7-145989d11ed2",
+    "target_ref": "attack-pattern--822c4260-a305-43f0-bd4c-2d1a7944abbd"
+  },
+  {
+    "type": "relationship",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id": "relationship--d6128715-520e-4f95-b409-9901d96d7d1f",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--177b3342-ff62-48cf-b91e-02114d2949ec",
+    "target_ref": "attack-pattern--d155459f-07c5-47a0-ad05-56a2ad0a598b"
+  },
+  {
+    "type": "relationship",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id": "relationship--d5ae723c-3487-49fc-83c1-b49bc75342d8",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--177b3342-ff62-48cf-b91e-02114d2949ec",
+    "target_ref": "attack-pattern--923619ec-28f5-409e-b975-496edf31375a"
+  },
+  {
+    "type": "relationship",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id": "relationship--1df410a8-b935-490d-bb6b-920c476456db",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--f2b56e1a-1242-44af-ab82-8e98457143f2",
+    "target_ref": "attack-pattern--8354495d-bbc6-43ae-a9c7-83e4a85edcf7"
+  },
+  {
+    "type": "relationship",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id": "relationship--b0fd4e7b-e0cc-4d73-916a-125028b2ef16",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--742b684e-d506-40e6-af24-eabd767124c6",
+    "target_ref": "attack-pattern--8354495d-bbc6-43ae-a9c7-83e4a85edcf7"
+  },
+  {
+    "type": "relationship",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id": "relationship--761b4b3d-611a-4e87-bbd5-dec74922b9f3",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--edf99ebc-643a-4534-9f6c-7e994d6527ef",
+    "target_ref": "attack-pattern--8354495d-bbc6-43ae-a9c7-83e4a85edcf7"
+  },
+  {
+    "type": "relationship",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id": "relationship--c66bd27a-5a60-4273-a6cd-6f19ebd74354",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--f2b56e1a-1242-44af-ab82-8e98457143f2",
+    "target_ref": "attack-pattern--1a8da473-a6cc-4d6c-a126-1ed8cd8ee99b"
+  },
+  {
+    "type": "relationship",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id": "relationship--2ecd8115-072d-4b05-b8a2-65bd9ffe9119",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--742b684e-d506-40e6-af24-eabd767124c6",
+    "target_ref": "attack-pattern--1a8da473-a6cc-4d6c-a126-1ed8cd8ee99b"
+  },
+  {
+    "type": "relationship",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id": "relationship--f8018b4a-caa0-4c33-b142-f7cf7a590a8e",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--edf99ebc-643a-4534-9f6c-7e994d6527ef",
+    "target_ref": "attack-pattern--1a8da473-a6cc-4d6c-a126-1ed8cd8ee99b"
+  },
+  {
+    "type": "relationship",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id": "relationship--b1624f84-ad7f-41b0-b3b4-24c6e3e3f2a3",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--554b235f-4604-4372-b906-404b2367b3db",
+    "target_ref": "attack-pattern--e9703619-dd9f-45a8-8ec3-e08661772405"
+  },
+  {
+    "type": "relationship",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id": "relationship--edef781f-6a14-4a85-b11f-606f2f7605c7",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--edf99ebc-643a-4534-9f6c-7e994d6527ef",
+    "target_ref": "attack-pattern--b7c8bb18-4e11-4c83-96bb-2f32f6e49cad"
+  },
+  {
+    "type": "relationship",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id": "relationship--5858cd64-f2dd-414f-8c34-d682ad182ee2",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--742b684e-d506-40e6-af24-eabd767124c6",
+    "target_ref": "attack-pattern--4817451c-c924-4bd5-8260-41910c9c23f8"
+  },
+  {
+    "type": "relationship",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id": "relationship--a6fefa37-5b54-4ca2-9a5f-0fb2a772777b",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--f2b56e1a-1242-44af-ab82-8e98457143f2",
+    "target_ref": "attack-pattern--89b0eda2-be6e-4259-91b9-4b0dcf3cd2b1"
+  },
+  {
+    "type": "relationship",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id": "relationship--c63d6798-a48f-4730-a3b3-0d7cb4ddd510",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--742b684e-d506-40e6-af24-eabd767124c6",
+    "target_ref": "attack-pattern--89b0eda2-be6e-4259-91b9-4b0dcf3cd2b1"
+  },
+  {
+    "type": "relationship",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id": "relationship--5c537d24-c4db-404c-bb46-a7d68360c0bc",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--cd40f486-67ee-4544-ae8d-4965fd60231d",
+    "target_ref": "attack-pattern--89b0eda2-be6e-4259-91b9-4b0dcf3cd2b1"
+  },
+  {
+    "type": "relationship",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id": "relationship--a9de68a9-e85e-4a0c-ae86-b773fde05928",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--cd40f486-67ee-4544-ae8d-4965fd60231d",
+    "target_ref": "attack-pattern--fe088adb-f74b-4d5e-b2c9-13437599b643"
+  },
+  {
+    "type": "relationship",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id": "relationship--703d3f61-701c-4905-be56-99adce6a8293",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--57a8a28d-5bd0-43a1-bd47-39aede25f5f3",
+    "target_ref": "attack-pattern--88d2f517-6353-434c-bb97-051c5b3bd64e"
+  },
+  {
+    "type": "relationship",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id": "relationship--e4a72e1a-8ed9-442f-aa29-7df2b768cdf6",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--9c82884a-2e46-4d06-b7dc-3b5af5ae75ef",
+    "target_ref": "attack-pattern--ee4cf5ed-3b67-41d5-bccc-f90459ec953f"
+  },
+  {
+    "type": "relationship",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id": "relationship--79878bf2-dc7f-4f6c-bb1f-a5224bffb625",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--4449308d-2961-4d46-92f0-bd79029e7877",
+    "target_ref": "attack-pattern--ee4cf5ed-3b67-41d5-bccc-f90459ec953f"
+  },
+  {
+    "type": "relationship",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id": "relationship--3e10834a-b11f-426c-b30d-7a8198cc47a2",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--9c8ac727-bd9f-4976-9f5f-681216fd7181",
+    "target_ref": "attack-pattern--608d37ef-3299-465f-9896-a772eac76479"
+  },
+  {
+    "type": "relationship",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id": "relationship--4f9d03bd-3d1f-42ba-8b77-080267ce6457",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--bbb70373-93c7-4a4c-a816-5ab2dbad3b60",
+    "target_ref": "attack-pattern--c535722a-59f7-41a2-9629-fce06a2f29da"
+  },
+  {
+    "type": "relationship",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id": "relationship--9ba30b8d-d6d4-4120-bb00-3f635df4f751",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--8fd91e68-6418-4d6c-b4a3-a8c0df0f6ec3",
+    "target_ref": "attack-pattern--7663bbf8-ba21-41c3-9c37-e8a84130a250"
+  },
+  {
+    "type": "relationship",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id": "relationship--be67575e-618a-419b-82f5-67603f080135",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--cd40f486-67ee-4544-ae8d-4965fd60231d",
+    "target_ref": "attack-pattern--65c9602d-3597-4878-a37a-2f10987a8051"
+  },
+  {
+    "type": "relationship",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id": "relationship--9f070f3b-961a-4c7a-b1a4-3f187900411f",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--08897c7e-24b9-4f23-aecf-e4b3b68f381f",
+    "target_ref": "attack-pattern--8a141a7a-6f63-46b5-a2cf-196862497c18"
+  },
+  {
+    "type": "relationship",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id": "relationship--4fbc3b8a-19fd-4a52-90c7-0f825d6736aa",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--742b684e-d506-40e6-af24-eabd767124c6",
+    "target_ref": "attack-pattern--70faf2b9-ae58-49b2-bb6a-4c6c17ff45da"
+  },
+  {
+    "type": "relationship",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id": "relationship--e66eda8f-6ece-47bd-a1b6-c81911e39f7a",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--4ee7a27c-5cdf-40b8-bb8c-e7a227145f49",
+    "target_ref": "attack-pattern--70faf2b9-ae58-49b2-bb6a-4c6c17ff45da"
+  },
+  {
+    "type": "relationship",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id": "relationship--13fb8662-cdec-4588-8c36-81df70051082",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--20c1f181-e13e-4152-a87b-1533e1275a84",
+    "target_ref": "attack-pattern--576af753-16e3-4eb2-8de1-295b87928aa1"
+  },
+  {
+    "type": "relationship",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id": "relationship--30f44dd4-f44a-4512-a3ec-87a9d65c2753",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--f2b56e1a-1242-44af-ab82-8e98457143f2",
+    "target_ref": "attack-pattern--a2948eae-10b6-448c-8664-98cef7531105"
+  },
+  {
+    "type": "relationship",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id": "relationship--7ec94b11-188c-4ad5-a207-abb30f7fabc9",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--08897c7e-24b9-4f23-aecf-e4b3b68f381f",
+    "target_ref": "attack-pattern--f90c9c83-4ad0-455c-a642-1efa0f152684"
+  },
+  {
+    "type": "relationship",
+    "spec_version": "2.1",
+    "created": "2023-12-09T20:45:00.000Z",
+    "modified": "2023-12-09T20:45:00.000Z",
+    "id": "relationship--57ee4e65-1c48-454e-b507-7df7d5db8010",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--56f58ae9-f7a9-40ff-8419-0470ec478196",
+    "target_ref": "attack-pattern--cb6940ec-d8c6-4e15-bc3e-387fc7a8acf3"
+  }
+]
