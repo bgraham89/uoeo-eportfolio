@@ -1,0 +1,242 @@
+<!DOCTYPE HTML>
+<!--
+	Template by Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Week 8 & 9 - BGraham89 UoEO ePortfolio</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="../../assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="../../assets/css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<a href="../../index.html" class="logo">Bradley Graham</a>
+			<nav>
+				<a href="#menu">Menu</a>
+			</nav>
+		</header>
+
+		<!-- Menu -->
+		<nav id="menu">
+			<ul class="links">
+				<li><a href="../../index.html">Home</a></li>
+				<li><a href="../../sections/lics.html">Launching into Computer Science</a></li>
+				<li><a href="../../sections/oop.html">Object-Oriented Programming</a></li>
+				<li><a href="../../sections/ssd.html">Secure Software Development</a></li>
+				<li><a href="../../sections/ism.html">Information Security Management</a></li>
+				<li><a href="../../sections/sepm.html">Software Engineering Project Management</a></li>
+			</ul>
+		</nav>
+
+		<!-- Main -->
+		<div id="main" class="alt">
+
+			<!-- Links -->
+			<section id="one">
+				<div class="inner">
+					<header class="major">
+						<h1>Week 8 & 9</h1>
+                    </header>
+                    <br>
+					<h2><u>Reading</u></h2>
+					<p style="color: lavenderblush">
+                        Weeks 8 and 9 were centred on data structures and software quality. The core reading expanded upon the content of previous modules, but I again I felt these topics 
+						were only loosley connected to a software project managers role. It might be beneficial for a software project manger to be familiar with software architecture 
+						and code quality to streamline conversion with engineers, but I still believe that it's more advantageous for a project manager to be able to direct problems to the 
+						most qualified people when problems are being raised to the them. Without trust in team, the project is more likely to devolve into discontent; a 
+						sentiment shared in literature too. 
+                    </p>
+					<p style="color: lavenderblush">
+                        Abeykoon et al's 2020 paper titled 'Data Engineering for HPC with Python' was my favourite paper of week 8. It explored high performance computing 
+						with Python, a language not traditionally fitting high performance computing, and I appreciated the effort to extend python with faster data engineering tools.
+						I've been looking into data engineering more closely recently, as it broadly encompases some of my interests, and it plays a massive role in data science, which
+						is another huge domain in computer science. Speaking with work colleagues about high performance computing, I was advised by work colleagues to learn the Rust
+						programming language. So the first project I decided to take on was creating a super fast poker engine, with the intent to train world
+						class poker bots. For that, it's essential to use highly efficient data structures and algorithms, as I will eventually need to simulate a massive amount
+						of poker games. As this is an educational project, it's important for me to maintain good software quality standards too. This is my progress so far, designing and
+						implementing a card struct:
+                    </p>
+					<img src="../../assets/artefacts/sepm/rust/card_factory.png" alt="card_factory" 
+						style="
+							width: 70vw;
+							display: block;
+							min-width: 400px;
+							margin-left: auto; 
+							margin-right: auto;
+							margin-bottom: 20px;
+							padding: 20px;
+							border-style: solid;
+							height: auto;
+							border-style: solid; 
+							border-width: 5px;
+					/">
+					<img src="../../assets/artefacts/sepm/rust/card_int0.png" alt="card int" 
+					style="
+						width: 70vw;
+						display: block;
+						min-width: 400px;
+						margin-left: auto; 
+						margin-right: auto;
+						margin-bottom: 20px;
+						padding: 20px;
+						border-style: solid;
+						height: auto;
+						border-style: solid; 
+						border-width: 5px;
+					/">
+					<img src="../../assets/artefacts/sepm/rust/card_int1.png" alt="card int" 
+						style="
+							width: 50vw;
+							display: block;
+							min-width: 400px;
+							margin-left: auto; 
+							margin-right: auto;
+							margin-bottom: 20px;
+							padding: 20px;
+							border-style: solid;
+							height: auto;
+							border-style: solid; 
+							border-width: 5px;
+					/">
+					<img src="../../assets/artefacts/sepm/rust/card_repr.png" alt="card int" 
+					style="
+						width: 50vw;
+						display: block;
+						min-width: 400px;
+						margin-left: auto; 
+						margin-right: auto;
+						margin-bottom: 20px;
+						padding: 20px;
+						border-style: solid;
+						height: auto;
+						border-style: solid; 
+						border-width: 5px;
+					/">
+					<p style="color: lavenderblush">
+						I touched on Python briefly on a linkedin post too:
+					</p>
+					<img src="../../assets/artefacts/sepm/linkedin/python.png" alt="python" 
+					style="
+						width: 50vw;
+						display: block;
+						min-width: 400px;
+						margin-left: auto; 
+						margin-right: auto;
+						margin-bottom: 20px;
+						padding: 20px;
+						border-style: solid;
+						height: auto;
+						border-style: solid; 
+						border-width: 5px;
+					/">
+					<p style="color: lavenderblush">
+						In week 9, I found Fitzpatrick's 1996 paper titled 'Software quality: definitions and strategic issues' most interesting for it's clarity.
+						By that, I mean the paper is extremely easy to scan it and pull out key information compared to many other academic papers that prefer density.
+						I understand that the general depth of a topic in academic research necessitates some level of assumption of the readers understanding, but I don't
+						think that's a good excuse to not include contextual prerequisites in an academic paper, to clarify the epsitemological assumptions of the authors too.
+						So I value the inclusion of glossaries in academic research too. It reflects my position in critical theory and the social philosophy of science. 
+					</p>
+					<h2><u>Group Project</u></h2>
+					<p>
+						For the group project I've been requirements gathering and system designing, drawing on insights of published project managers to make this
+						as simple and effective as possible. I spent some time too reviewing my colleagues code as we had decided to use traditional git branching
+						to collaborate on code. Pull requests are a projects first line of defense against poor quality code.
+					</p>
+					<img src="../../assets/artefacts/sepm/github/comments.png" alt="card int" 
+					style="
+						width: 50vw;
+						display: block;
+						min-width: 400px;
+						margin-left: auto; 
+						margin-right: auto;
+						margin-bottom: 20px;
+						padding: 20px;
+						border-style: solid;
+						height: auto;
+						border-style: solid; 
+						border-width: 5px;
+					/">
+					<img src="../../assets/artefacts/sepm/github/reviewers.png" alt="card int" 
+					style="
+						width: 50vw;
+						display: block;
+						min-width: 400px;
+						margin-left: auto; 
+						margin-right: auto;
+						margin-bottom: 20px;
+						padding: 20px;
+						border-style: solid;
+						height: auto;
+						border-style: solid; 
+						border-width: 5px;
+					/">
+					</div>
+			</section>
+		</div>
+
+		<!-- Contact -->
+		<section id="contact">
+			<div class="inner">
+				<section class="split">
+					<section>
+						<div class="contact-method">
+							<span class="icon solid alt fa-envelope"></span>
+							<h3>Email</h3>
+							<p>bg22514@essex.ac.uk</p>
+						</div>
+					</section>
+					<section>
+						<div class="contact-method">
+							<span class="icon solid alt fa-home"></span>
+							<h3>Address</h3>
+							<span>Bath, United Kingdom</span>
+						</div>
+					</section>
+				</section>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<ul class="icons">
+					<li><a href="https://github.com/bgraham89" class="icon brands alt fa-github"><span class="label"
+								target="_blank">GitHub</span></a></li>
+					<li><a href="https://www.linkedin.com/in/bradley-graham-a7bb4a136/"
+							class="icon brands alt fa-linkedin-in" target="_blank"><span
+								class="label">LinkedIn</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>Bradley Graham</li>
+					<li>Design: <a href="https://html5up.net" target="_blank">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</footer>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/jquery.scrolly.min.js"></script>
+	<script src="../../assets/js/jquery.scrollex.min.js"></script>
+	<script src="../../assets/js/browser.min.js"></script>
+	<script src="../../assets/js/breakpoints.min.js"></script>
+	<script src="../../assets/js/util.js"></script>
+	<script src="../../assets/js/main.js"></script>
+
+</body>
+
+</html>
