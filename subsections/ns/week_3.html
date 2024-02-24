@@ -49,30 +49,104 @@
 			<section id="one">
 				<div class="inner">
 					<header class="major">
-						<h1>Week 4</h1>
+						<h1>Week 3</h1>
                     </header>
+					<h2>SolarWinds Hack - A Case Study</h2>
+					<p>This week I reviewed the huge SolarWinds hack reported in 2020, examining vulnerabilties that
+						lead to it, and how those vulnerabilities might have been mitigated. First, I modelled the
+						SolarWinds hack using a stage-based attack model known as the Cyber Kill Chain model, which is widely
+						discussed in academia. This way I could critically examine the model. The purpose of modelling the 
+						hack into stages is to identify vulnerabiltiies that were exploited, that might occur in sequence.
+						Below is the resulting outline of the SolarWinds attack. 
+					</p>
+					<img src="../../assets/artefacts/ns/ppt/exploit.png" alt="Solarwinds exploit summary" 
+					style="
+						width: 50vw;
+						display: block;
+						min-width: 400px;
+						margin-left: auto; 
+						margin-right: auto;
+						margin-bottom: 20px;
+						padding: 20px;
+						border-style: solid;
+						height: auto;
+						border-style: solid; 
+						border-width: 5px;
+					/">
+					<p>Through modelling the attack, I began to find a limitation of the Cyber Kill Chain model for my purpose.
+						The fixed ordering of the model was not flexible enough to fully capture all important details of the hack that
+						correspond to vulnerabilities. For example, during the SolarWinds attack, once a payload had been delivered to
+						a machine, a second round of reconnaissance occured to learn more about the machine hosting the payload. 
+						We could argue that it was not actually reconnaissance as reconnaissance happened at the start of the whole hack
+						to identify the initial supply chain attack, but what happened later was similar to reconnaissance no doubt.
+						The point here is that the Cyber Kill Chain model has room for intepretations that cannot be fully
+						realised in it's current state. Is it really impossible for a hack to consist of repeated stages? Therefore,
+						from my experience, I would give more value to a component-wise model of hacks, where stages are represented
+						by components on a diagram, and can be arranged with much more flexibiility. This idea takes inspiration
+						from UML, which provides freedom by having well defined entities and relationships between them.
+					</p>
+					<p>
+						Below is more detail about the SolarWinds hack payload and the tests it did before installing itself on a machine.
+					</p>
+					<img src="../../assets/artefacts/ns/ppt/installation.png" alt="Solarwinds installation summary" 
+					style="
+						width: 50vw;
+						display: block;
+						min-width: 400px;
+						margin-left: auto; 
+						margin-right: auto;
+						margin-bottom: 20px;
+						padding: 20px;
+						border-style: solid;
+						height: auto;
+						border-style: solid; 
+						border-width: 5px;
+					/">
+					<p>
+						Next, I began to link each stage to vulnerability mitigations. However, I found this 
+						challenging. I had identified a couple of mitigations, but I needed a better mitigation model to
+						be more exhaustive of the range of mitigations that we could use. Eventually, I found a model
+						of security controls, that I would utilise in future mitigation planning, which includes
+						multiple mitigation tactics that can be considered for each vulnerability, namely; preventative,
+						detective and corrective mitigations.  
+					</p>
                     <br>
-					<h2><u>Reading</u></h2>
-					<p style="color: lavenderblush">
-                        The core readings of the week consisted of Verner et al's 
-						'<b>Risks and Risk Mitigation in Global Software Development</b>' (2014), and Anton & Nucu's '<b>Enterprise Risk Management:
-						A Literature Review and Agenda for Future Research</b>' which gave a broad overview of risk mitigation.
+					<h2>Digitalisation - What are the Security Implications?</h2>
+					<p>Also, this week we further discussed the security implications of digitialisation, where I focused on stage-based
+						models that SME's can immediately adopt and utilise. These are the responses
+						I gave to my colleagues in response to their own posts about digitialisation:  
 					</p>
-					<p>
-						In relation to Anton & Nucu's SLR; towards the 
-						beginning of this course I specifically praised systematic literature reviews for their aid when trying to navigate research. 
-						During this module, I gained an additional perspective because I relaised I already have a large directory of articles on risk management
-						stored on Notion. At this point, I believe I would benefit most from tracking the most recent publications on risk 
-						mitigations, which provide the most contemporary insights, instead of gaining a broader subject view. Unfortunately, SLR's are not 
-						timeless, they are time-locked reviews of research. So now I'm more curious about timeless, (updateable) mediums for research. 
+					<img src="../../assets/artefacts/ns/forum/week_2/microsoft.png" alt="forum response" 
+					style="
+						width: 70vw;
+						display: block;
+						min-width: 400px;
+						margin-left: auto; 
+						margin-right: auto;
+						margin-bottom: 20px;
+						padding: 20px;
+						border-style: solid;
+						height: auto;
+						border-style: solid; 
+						border-width: 5px;
+					/">
+					<img src="../../assets/artefacts/ns/forum/week_2/cybersecurity.png" alt="forum response" 
+					style="
+						width: 70vw;
+						display: block;
+						min-width: 400px;
+						margin-left: auto; 
+						margin-right: auto;
+						margin-bottom: 20px;
+						padding: 20px;
+						border-style: solid;
+						height: auto;
+						border-style: solid; 
+						border-width: 5px;
+					/">
+					<p>Below are two replies I recieved on my own post from last week:  
 					</p>
-					<p>
-						I've talked about my interest
-						in model-based reasoning and ontologies in the past, and this new insight, I feel, once again shows me my interest
-						lays with knowledge management.
-					</p>
-					<h3>Example of Risk-Related Paper Archive</h3>
-					<img src="../../assets/artefacts/sepm/screenshots/risk-management-papers.png" alt="risk-management-papers" 
+					<img src="../../assets/artefacts/ns/forum/week_2/sme.png" alt="forum response" 
 					style="
 						width: 70vw;
 						display: block;
@@ -86,12 +160,7 @@
 						border-style: solid; 
 						border-width: 5px;
 					/">
-					<p>
-						I've definitely got a strong interest in knowledge management to complement by interest in project management. So I find risk management itself 
-						a really interesting topic too as risks are such a valuable type of knowledge, crucial to the management of projects.
-                    </p>
-					<h3>Example of Risk-Related Key Ideas Archive</h3>
-					<img src="../../assets/artefacts/sepm/screenshots/ERM-adoption.png" alt="ERM-adoption" 
+					<img src="../../assets/artefacts/ns/forum/week_2/compliance.png" alt="forum response" 
 					style="
 						width: 70vw;
 						display: block;
@@ -105,85 +174,6 @@
 						border-style: solid; 
 						border-width: 5px;
 					/">
-					<img src="../../assets/artefacts/sepm/screenshots/ERM-techiques.png" alt="ERM-techniques" 
-					style="
-						width: 70vw;
-						display: block;
-						min-width: 400px;
-						margin-left: auto; 
-						margin-right: auto;
-						margin-bottom: 20px;
-						padding: 20px;
-						border-style: solid;
-						height: auto;
-						border-style: solid; 
-						border-width: 5px;
-					/">
-					<h2><u>Group Project</u></h2>
-                    <p style="color: lavenderblush">
-                        This was my proposal for the project workforce.  
-                    </p>
-					<img src="../../assets/artefacts/sepm/screenshots/Staff-1.png" alt="workforce breakdown" 
-						style="
-							width: 70vw;
-							display: block;
-							min-width: 400px;
-							margin-left: auto; 
-							margin-right: auto;
-							margin-bottom: 20px;
-							padding: 20px;
-							border-style: solid;
-							height: auto;
-							border-style: solid; 
-							border-width: 5px;
-					/">
-					<img src="../../assets/artefacts/sepm/screenshots/Staff-2.png" alt="workforce breakdown" 
-					style="
-						width: 70vw;
-						display: block;
-						min-width: 400px;
-						margin-left: auto; 
-						margin-right: auto;
-						margin-bottom: 20px;
-						padding: 20px;
-						border-style: solid;
-						height: auto;
-						border-style: solid; 
-						border-width: 5px;
-					/">
-					<img src="../../assets/artefacts/sepm/screenshots/Staff-3.png" alt="workforce breakdown" 
-					style="
-						width: 70vw;
-						display: block;
-						min-width: 400px;
-						margin-left: auto; 
-						margin-right: auto;
-						margin-bottom: 20px;
-						padding: 20px;
-						border-style: solid;
-						height: auto;
-						border-style: solid; 
-						border-width: 5px;
-					/">
-					<img src="../../assets/artefacts/sepm/screenshots/Staff-4.png" alt="workforce breakdown" 
-					style="
-						width: 70vw;
-						display: block;
-						min-width: 400px;
-						margin-left: auto; 
-						margin-right: auto;
-						margin-bottom: 20px;
-						padding: 20px;
-						border-style: solid;
-						height: auto;
-						border-style: solid; 
-						border-width: 5px;
-					/">
-					<p>
-						To help with critical decision making, I made sure to create multiple options for our project, tracking tangible quantities and qualities (financial / risk). Depending on
-						the amount of money we can budget for our workforce, we've got different solutions. 
-					</p>
-				</div>
 			</section>
 		</div>
 
